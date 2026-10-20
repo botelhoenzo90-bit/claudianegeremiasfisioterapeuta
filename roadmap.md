@@ -1,0 +1,9 @@
+- [x] Adicionar as quatro fotos restantes aos procedimentos correspondentes
+- [x] Aplicar a imagem da clínica e a foto da Jaqueline
+- [x] Trocar o ícone do botão flutuante pelo WhatsApp enviado
+- [x] Centralizar o conteúdo e reduzir espaços vazios
+- [x] Verificar em computador e celular
+- [x] Conectar a conta do Google Search Console
+- [x] Preparar a confirmação do Google e o mapa de páginas
+- [x] Publicar a confirmação e verificar o site no Google
+- [x] Enviar o mapa de páginas ao Google

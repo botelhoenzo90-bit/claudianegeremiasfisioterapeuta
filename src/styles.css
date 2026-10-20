@@ -442,3 +442,8 @@ body,.jt-site{color:#142c50;background:#fff}
  .maria-site .faq-item button{font-size:15px;padding:16px;min-height:60px}
  .maria-site .maria-floating-wa{width:60px;height:60px;min-width:60px;min-height:60px}
 }
+
+
+/* Carrossel de áreas de atuação mais rápido */
+.procedure-track{animation-duration:32s!important}
+@media(max-width:780px){.procedure-track{animation-duration:30s!important}}

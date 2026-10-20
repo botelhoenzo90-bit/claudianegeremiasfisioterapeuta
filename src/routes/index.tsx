@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import compartilhamentoMaria from "@/assets/compartilhamento-maria.png.asset.json";
 import { useState } from "react";
 import {
   Activity, ArrowRight, Bandage, Check, ChevronDown, CircleCheck, HeartPulse,
@@ -13,6 +14,9 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Maria de Jesus | Enfermagem Dermatológica" },
       { property: "og:description", content: "Cuidado especializado e individualizado no tratamento de feridas." },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: `https://mariaenfermeiradermatologica.lovable.app${compartilhamentoMaria.url}` },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: `https://mariaenfermeiradermatologica.lovable.app${compartilhamentoMaria.url}` },
       { name: "theme-color", content: "#142b45" },
     ],
   }),

@@ -161,3 +161,72 @@ body,.jt-site{background:#fff;color:#182b40}
  .medical-orbit{width:220px;height:220px}
  .orbit-two{width:170px;height:170px}
 }
+
+
+/* Paleta de referência enviada: azul-marinho profundo + dourado luminoso */
+:root{
+  --cream:#f2f5fa;--cream2:#ffffff;--gold:#e8bf4f;--gold-dark:#b58a22;
+  --gold-soft:#f2d778;--ink:#142c50;--muted:#64748b;--line:#d9e1ed;
+  --white:#ffffff;--dark:#10264a;
+}
+body,.jt-site{color:#142c50;background:#fff}
+.site-header{background:rgba(255,255,255,.97);border-bottom:1px solid rgba(20,44,80,.12)}
+.brand-mark{color:#e8bf4f;border-color:#e8bf4f;background:linear-gradient(145deg,#173763,#10264a);box-shadow:0 5px 16px rgba(16,38,74,.18)}
+.brand strong{color:#142c50}.brand small{color:#66758c}
+.nav{color:#415574}.nav a:hover{color:#b58a22}
+.header-cta,.btn-primary,.btn-dark,.btn-light{background:linear-gradient(120deg,#f5d66c 0%,#e6b93f 55%,#f1d16a 100%);color:#142c50;box-shadow:0 11px 25px rgba(16,38,74,.16)}
+.header-cta:hover,.btn-primary:hover{background:linear-gradient(120deg,#f8e18a,#e8bf4f)}
+.btn-outline{border:1px solid #d8b44e;color:#142c50;background:#fff}
+.hero,.maria-hero{background:linear-gradient(145deg,#10264a 0%,#142f59 58%,#193963 100%);color:#fff}
+.hero-glow{background:radial-gradient(circle,rgba(232,191,79,.22),rgba(232,191,79,.06) 42%,transparent 68%)}
+.hero h1{color:#fff}.hero h1 em{color:#edc853}
+.hero-lead{color:#e0e7f0}
+.eyebrow{color:#cba53e}
+.hero-trust{color:#e1e8f1}.hero-trust svg{color:#edc853}
+.hero-seal{display:flex;align-items:center;justify-content:center;gap:12px;width:max-content;max-width:100%;margin:30px auto 0;padding:13px 20px;border:1px solid rgba(232,191,79,.35);border-radius:18px;background:rgba(255,255,255,.055);text-align:left}
+.hero-seal>span{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:rgba(232,191,79,.13);color:#edc853}
+.hero-seal strong,.hero-seal small{display:block}.hero-seal strong{font-size:12px;color:#fff}.hero-seal small{font-size:10px;color:#d5deeb;margin-top:4px}
+.info-marquee{background:linear-gradient(90deg,#0d2142,#173762,#10264a,#173762,#0d2142);border-color:#d9b649;color:#fff}
+.marquee-group span{color:#f3d36b}
+.intro-section,.how-section,.benefits-section,.location-section{background:#fff}
+.intro-illustration{background:linear-gradient(145deg,#10264a,#1a3b69);border-color:rgba(232,191,79,.7)}
+.medical-emblem{color:#f0cd61;border-color:rgba(240,205,97,.62)}
+.illustration-tag{color:#142c50}.illustration-tag svg{color:#b58a22}
+.pain-section,.about-section,.procedures-section,.reviews-section,.highlight-section,.faq-section{background:#f1f4f9}
+.pain-section{background:linear-gradient(135deg,#f1f4f9,#fff)}
+.check-list svg{background:#fff4d2;color:#a67e20}
+.centered-list div{background:#fff;border-color:#dfe5ee}
+.maria-service-card{background:#fff;border-color:#dce3ed;box-shadow:0 14px 32px rgba(16,38,74,.08)}
+.maria-service-art{background:linear-gradient(135deg,#10264a,#1c416f);color:#f0cb59}
+.maria-service-art span{color:#f2d778}
+.maria-service-card .procedure-icon{background:#fff5d9;color:#a77d19;border-color:#ead28a}
+.maria-service-card h3{color:#142c50}
+.maria-approach{background:#fff}
+.approach-panel>div{border-color:#dce3ed;background:linear-gradient(145deg,#fff,#f3f6fa)}
+.approach-panel>div>span{background:#fff2cc;color:#a77d19}
+.approach-panel strong{color:#142c50}
+.step-card{background:#fff;border-color:#dce3ed;box-shadow:0 10px 26px rgba(16,38,74,.05)}
+.step-number{background:linear-gradient(145deg,#f7df8b,#e6bc4c);color:#142c50;border-color:#d8b54e}
+.step-card h3,.benefit-grid h3{color:#142c50}
+.benefit-grid article{background:linear-gradient(145deg,#fff,#f1f4f9);border-color:#dce3ed}
+.benefit-grid article>span,.benefit-grid svg,.mini-benefits svg{color:#b58a22}
+.mini-benefits>div{background:#fff;border-color:#dce3ed}
+.highlight-section{background:linear-gradient(135deg,#eef2f8,#fff)}
+.faq-section{background:linear-gradient(135deg,#f0f3f8,#fff)}
+.faq-item{background:#fff;border-color:#dce3ed}
+.faq-item button{color:#142c50;text-align:left}
+.faq-item button svg{color:#b58a22}
+.final-cta.maria-final{background:linear-gradient(135deg,#10264a 0%,#17365f 62%,#1b3c68 100%);color:#fff}
+.maria-final .eyebrow{color:#f0ce68}.maria-final h2{color:#fff}.maria-final h2 em{color:#f0ce68}.maria-final p{color:#e0e7f0}
+.maria-footer{background:#0e2242;color:#edf2f8;border-top:1px solid rgba(232,191,79,.65)}
+.maria-footer .brand strong{color:#fff}.maria-footer .brand small{color:#c7d2e1}
+.maria-footer .brand-mark{background:linear-gradient(145deg,#1a3a66,#10264a);color:#f0cb59;border-color:#e8bf4f}
+.maria-footer p,.maria-footer .footer-grid a,.maria-footer .footer-grid span,.maria-footer .footer-bottom{color:#c7d2e1}
+.maria-footer h4{color:#f0ce68}.maria-footer .footer-bottom{border-color:rgba(232,191,79,.3)}.maria-footer .footer-grid a:hover{color:#f0ce68}
+.maria-floating-wa{background:#16c765;color:#fff;border:3px solid #fff;box-shadow:0 12px 28px rgba(16,38,74,.28)}
+@media(max-width:780px){
+ .maria-hero{padding:48px 0 42px}
+ .maria-hero .hero h1{font-size:44px}
+ .hero-seal{width:100%;justify-content:flex-start}
+}
+@media(max-width:480px){.maria-hero h1{font-size:39px;letter-spacing:-1.5px}}

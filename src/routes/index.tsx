@@ -1,139 +1,101 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import {
-  ArrowRight, Check, ChevronDown, Clock3, Dumbbell, Heart, Instagram,
-  MapPin, MessageCircle, MoveRight, Navigation, Phone, Sparkles, Star,
-  Waves, Wind, X, Zap,
+  Activity, ArrowRight, Bandage, Check, ChevronDown, CircleCheck, HeartPulse,
+  MessageCircle, Microscope, ShieldCheck, Sparkles, Stethoscope, Waves, Zap,
 } from "lucide-react";
-import logoAsset from "@/assets/jaqueline-teixeira-logo.png.asset.json";
-import novaLogoAsset from "@/assets/jaqueline-teixeira-logo-nova.png.asset.json";
-import drenagemAsset from "@/assets/drenagem-linfatica.png.asset.json";
-import drenagemModelacaoAsset from "@/assets/drenagem-modelacao.png.asset.json";
-import posGestacaoAsset from "@/assets/pos-gestacao.png.asset.json";
-import radioCorporalAsset from "@/assets/radiofrequencia-corporal.png.asset.json";
-import radioFacialAsset from "@/assets/radiofrequencia-facial.png.asset.json";
-import redutorAsset from "@/assets/tratamento-redutor.png.asset.json";
-import spaPesAsset from "@/assets/spa-dos-pes.png.asset.json";
-import banhoLuaAsset from "@/assets/banho-de-lua.png.asset.json";
-import whatsappAsset from "@/assets/whatsapp.png.asset.json";
-import bronzeadoraAsset from "@/assets/massagem-bronzeadora.png.asset.json";
-import detoxAsset from "@/assets/massagem-detox.png.asset.json";
-import doresAsset from "@/assets/tratamento-para-dores.png.asset.json";
-import clinicaAsset from "@/assets/clinica.png.asset.json";
-import jaquelineAsset from "@/assets/jaqueline-teixeira.png.asset.json";
-import limineAsset from "@/assets/limine-radiofrequencia.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Jaqueline Teixeira | Estética & Massoterapia" },
-      { name: "description", content: "Estética e massoterapia em Formosa-GO. Drenagem, modeladora, tratamentos corporais, laser, radiofrequência, massagens e cuidados personalizados." },
-      { property: "og:title", content: "Jaqueline Teixeira | Estética & Massoterapia" },
-      { property: "og:description", content: "Corpo leve, cuidado personalizado e uma experiência pensada para você." },
+      { title: "Maria de Jesus | Enfermagem Dermatológica e Tratamento de Feridas" },
+      { name: "description", content: "Atendimento em enfermagem dermatológica com foco no cuidado de feridas, pós-operatório, lesões por pressão, laserterapia, ozonioterapia, PRP e PRF." },
+      { property: "og:title", content: "Maria de Jesus | Enfermagem Dermatológica" },
+      { property: "og:description", content: "Cuidado especializado e individualizado no tratamento de feridas." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:url", content: "https://jaquelineteixeira.lovable.app/" },
-      { property: "og:image", content: "https://jaquelineteixeira.lovable.app/__l5e/assets-v1/14c5b3eb-8e57-4b52-96a1-12fb5c400f7e/compartilhamento-jaqueline-teixeira.png" },
-      { name: "twitter:image", content: "https://jaquelineteixeira.lovable.app/__l5e/assets-v1/14c5b3eb-8e57-4b52-96a1-12fb5c400f7e/compartilhamento-jaqueline-teixeira.png" },
-      { name: "theme-color", content: "#c9a227" },
+      { name: "theme-color", content: "#142b45" },
     ],
-    links: [{ rel: "canonical", href: "https://jaquelineteixeira.lovable.app/" }],
   }),
   component: Index,
 });
 
-const WHATSAPP = "https://wa.me/556198046306";
-const INSTAGRAM = "https://www.instagram.com/jaquelineteixeira_estetica/";
-const MAP = "https://www.google.com/maps/search/?api=1&query=Rua+Juselino+Malheiros,+125,+Centro,+Formosa,+GO";
-
-const procedures = [
-  { title: "Drenagem Linfática", text: "Técnica voltada para uma sensação de leveza e cuidado corporal.", icon: Waves, image: drenagemAsset.url },
-  { title: "Drenagem + Modelação", text: "Um protocolo que combina técnicas para cuidar do contorno corporal.", icon: Sparkles, image: drenagemModelacaoAsset.url },
-  { title: "Tratamento Redutor de Medidas", text: "Protocolos personalizados de acordo com seus objetivos e avaliação.", icon: Zap, image: redutorAsset.url },
-  { title: "Radiofrequência Corporal", text: "Tecnologia aplicada aos cuidados e ao contorno corporal.", icon: Wind, image: radioCorporalAsset.url },
-  { title: "Radiofrequência Facial", text: "Tecnologia para um cuidado facial personalizado.", icon: Sparkles, image: radioFacialAsset.url },
-  { title: "Massagem Detox", text: "Uma experiência de cuidado para desacelerar e se sentir mais leve.", icon: Heart, image: detoxAsset.url },
-  { title: "Massagem Bronzeadora", text: "Cuidado corporal para realçar o visual e a autoestima.", icon: SunIcon, image: bronzeadoraAsset.url },
-  { title: "Gestantes", text: "Atendimento pensado para o momento e as necessidades de cada gestante.", icon: Heart, image: posGestacaoAsset.url },
-  { title: "Pós-Operatório", text: "Cuidados estéticos realizados com atenção e orientação adequada.", icon: Check, image: drenagemAsset.url },
-  { title: "Spa dos Pés", text: "Um ritual de cuidado para relaxar e renovar a sensação de bem-estar.", icon: Waves, image: spaPesAsset.url },
-  { title: "Banho de Lua", text: "Cuidado corporal para uma pele com aparência mais uniforme e iluminada.", icon: Sparkles, image: banhoLuaAsset.url },
-  { title: "Tratamento para Dores", text: "Massoterapia direcionada para promover conforto e relaxamento.", icon: MoveRight, image: doresAsset.url },
+const WHATSAPP = "https://wa.me/556696434578";
+const services = [
+  { title: "Feridas agudas e crônicas", text: "Avaliação e cuidado individualizado de feridas, considerando as características de cada lesão e as necessidades de cada pessoa.", icon: Bandage },
+  { title: "Cuidados no pós-operatório", text: "Acompanhamento e orientações de enfermagem para apoiar o cuidado da ferida cirúrgica durante a recuperação.", icon: HeartPulse },
+  { title: "Lesões por pressão", text: "Cuidados especializados para lesões por pressão, com atenção à pele, ao conforto e à prevenção de novas lesões.", icon: ShieldCheck },
+  { title: "Úlceras venosas e arteriais", text: "Avaliação de enfermagem e plano de cuidado individualizado para úlceras de origem vascular.", icon: Activity },
+  { title: "Laserterapia", text: "Recurso terapêutico que pode ser considerado conforme a avaliação, a indicação e os objetivos do tratamento.", icon: Zap },
+  { title: "Ozonioterapia", text: "Abordagem complementar avaliada caso a caso, considerando indicação, segurança e evidências disponíveis.", icon: Waves },
+  { title: "PRP e PRF", text: "Terapias regenerativas com plasma rico em plaquetas ou fibrina, quando houver indicação e condições adequadas.", icon: Microscope },
 ];
-
-const reviews = [
-  { name: "Cliente Jaqueline", text: "Um atendimento muito acolhedor, com atenção aos detalhes e uma experiência que faz a gente se sentir bem cuidada.", treatment: "Atendimento personalizado" },
-  { name: "Cliente Jaqueline", text: "Gostei muito do cuidado durante o atendimento. Tudo foi explicado com calma e me senti muito à vontade.", treatment: "Massoterapia" },
-  { name: "Cliente Jaqueline", text: "Um espaço agradável e um atendimento cuidadoso. Foi um momento realmente reservado para mim.", treatment: "Estética corporal" },
-  { name: "Cliente Jaqueline", text: "A experiência foi muito positiva do início ao fim. Atendimento atencioso e ambiente muito confortável.", treatment: "Drenagem linfática" },
-  { name: "Cliente Jaqueline", text: "Fui muito bem recebida e senti que o atendimento foi pensado para o que eu precisava naquele momento.", treatment: "Cuidado personalizado" },
-  { name: "Cliente Jaqueline", text: "Um daqueles atendimentos em que você sai sentindo que valeu a pena separar um tempo para se cuidar.", treatment: "Massoterapia" },
-];
-
 const faqs = [
-  ["Como funciona a primeira avaliação?", "Conversamos sobre seus objetivos, rotina e o que você deseja melhorar. A partir disso, são indicados os cuidados mais adequados para o seu momento."],
-  ["Quais procedimentos vocês realizam?", "A clínica oferece drenagem linfática, modeladora, tratamentos redutores, radiofrequência facial, corporal e íntima, massagens, cuidados para gestantes, pós-operatório, depilação a laser, banho de lua, spa dos pés e outros cuidados."],
-  ["A drenagem é indicada para todo mundo?", "A indicação depende das condições individuais. Por isso, o ideal é conversar com a profissional antes de iniciar qualquer protocolo."],
-  ["Vocês atendem pós-operatório?", "Sim. Há atendimento voltado ao pós-operatório, sempre respeitando o período de recuperação e as orientações do profissional de saúde responsável."],
-  ["Onde fica a clínica?", "Rua Juselino Malheiros, nº 125, Centro, Formosa - GO, CEP 73801-190."],
-  ["Como faço para agendar?", "Clique em qualquer botão de WhatsApp da página e fale diretamente com a equipe para verificar horários e escolher o melhor atendimento."],
+  ["Quais tipos de feridas são atendidos?", "O atendimento é voltado a feridas agudas e crônicas, feridas no pós-operatório, lesões por pressão e úlceras venosas e arteriais. A conduta é definida após avaliação individual."],
+  ["Como funciona a primeira consulta?", "O primeiro passo é conversar sobre o histórico e as necessidades de cuidado. A enfermeira avalia a situação e explica as possibilidades de acompanhamento e os próximos passos."],
+  ["Laserterapia, ozonioterapia, PRP e PRF são indicados para todos?", "Não. A indicação depende de avaliação individual, condições clínicas, segurança, evidências disponíveis e regulamentação profissional aplicável. Nem todo recurso é adequado para todos os casos."],
+  ["O atendimento substitui uma consulta médica?", "O atendimento de enfermagem tem seu próprio papel no cuidado e não substitui avaliação médica quando ela é necessária. Em sinais de urgência, procure um serviço de saúde."],
+  ["Como posso agendar?", "Clique em qualquer botão de WhatsApp nesta página para conversar com Maria e consultar informações sobre atendimento e disponibilidade."],
 ];
-
-function SunIcon(props: { size?: number }) { return <Sparkles size={props.size ?? 25} />; }
 
 function Index() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
-  const goWhatsapp = (label: string) => window.open(`${WHATSAPP}?text=${encodeURIComponent(`Olá! Vim pelo site da Jaqueline Teixeira e gostaria de ${label.toLowerCase()}.`)}`, "_blank", "noopener,noreferrer");
+  const goWhatsapp = (label: string) => window.open(`${WHATSAPP}?text=${encodeURIComponent(`Olá, Maria! Vim pelo seu site e gostaria de ${label.toLowerCase()}.`)}`, "_blank", "noopener,noreferrer");
 
   return (
-    <main className="jt-site">
-      <section className="hero" id="inicio"><div className="container hero-grid">
-        <div className="hero-copy center-hero"><a className="hero-logo" href="#inicio" aria-label="Jaqueline Teixeira Estética e Massoterapia"><img src={novaLogoAsset.url} alt="Jaqueline Teixeira" /><span>Estética e Massoterapia</span></a><h1>Seu cuidado merece ser <em>sentido.</em></h1><p className="hero-lead">Tratamentos estéticos e massagens personalizados para você se sentir mais leve, cuidada e confiante — com atenção em cada detalhe.</p>
-        <div className="hero-actions"><button className="btn btn-primary" onClick={() => goWhatsapp("agendar uma avaliação personalizada")}><MessageCircle size={19} /> Quero agendar</button><a className="btn btn-outline" href="#procedimentos">Conhecer procedimentos <ArrowRight size={18} /></a></div>
-        <div className="hero-trust"><span><Check size={15} /> Atendimento personalizado</span><span><Check size={15} /> Formosa • GO</span></div></div>
-      </div></section>
+    <main className="jt-site maria-site">
+      <header className="site-header">
+        <div className="container header-inner">
+          <a className="brand maria-brand" href="#inicio" aria-label="Maria de Jesus, enfermagem dermatológica">
+            <span className="brand-mark"><HeartPulse size={22}/></span>
+            <span><strong>MARIA DE JESUS</strong><small>ENFERMAGEM DERMATOLÓGICA</small></span>
+          </a>
+          <nav className="nav maria-nav" aria-label="Navegação principal">
+            <a href="#sobre">Sobre</a><a href="#tratamentos">Tratamentos</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Dúvidas</a>
+          </nav>
+          <button className="header-cta" onClick={() => goWhatsapp("agendar um atendimento")}><MessageCircle size={16}/> Falar com Maria</button>
+        </div>
+      </header>
 
-      <div className="info-marquee" aria-label="Destaques da clínica"><div className="marquee-track">{[1,2].map((copy) => <div className="marquee-group" key={copy}><span>✦ DRENAGEM LINFÁTICA</span><span>✦ MODELADORA</span><span>✦ RADIOFREQUÊNCIA</span><span>✦ MASSOTERAPIA</span><span>✦ GESTANTES</span><span>✦ PÓS-OPERATÓRIO</span><span>✦ DEPILAÇÃO A LASER</span><span>✦ CUIDADO PERSONALIZADO</span></div>)}</div></div>
-      <section className="section how-section" id="como-funciona"><div className="container"><div className="section-heading center"><span className="eyebrow">COMO FUNCIONA</span><h2>Seu atendimento em <em>4 passos simples.</em></h2><p>Do primeiro contato ao momento de relaxar, tudo começa com uma conversa.</p></div><div className="steps-grid">{[['01','Você chama','Fale pelo WhatsApp e conte o que você procura.'],['02','Conversamos','Entendemos seus objetivos e o que faz sentido para você.'],['03','Escolhemos','O atendimento é organizado de acordo com a sua necessidade.'],['04','Você se cuida','É hora de desacelerar e aproveitar seu momento.']].map(([n,t,d])=><article className="step-card" key={n}><span className="step-number">{n}</span><div><h3>{t}</h3><p>{d}</p></div></article>)}</div><div className="section-action center"><button className="btn btn-primary" onClick={() => goWhatsapp("dar o primeiro passo e agendar")}><MessageCircle size={18}/> Dar o primeiro passo</button></div></div></section>
+      <section className="hero maria-hero" id="inicio">
+        <div className="hero-glow"/>
+        <div className="container hero-grid">
+          <div className="hero-copy center-hero">
+            <span className="eyebrow">CUIDADO ESPECIALIZADO • ATENÇÃO INDIVIDUAL</span>
+            <h1>Tratamento de feridas com <em>conhecimento e cuidado.</em></h1>
+            <p className="hero-lead">Sou Maria de Jesus de Souza Costa, enfermeira dermatológica. Meu trabalho é oferecer cuidado individualizado no tratamento de feridas e no acompanhamento da recuperação, com atenção à sua história e às suas necessidades.</p>
+            <div className="hero-actions">
+              <button className="btn btn-primary" onClick={() => goWhatsapp("conversar sobre meu caso")}><MessageCircle size={18}/> Conversar com a enfermeira</button>
+              <a className="btn btn-outline" href="#tratamentos">Conhecer os cuidados <ArrowRight size={17}/></a>
+            </div>
+            <div className="hero-trust"><span><Check size={15}/> Avaliação individual</span><span><Check size={15}/> Cuidado humanizado</span><span><Check size={15}/> Orientação profissional</span></div>
+            <div className="hero-seal"><span><HeartPulse size={24}/></span><div><strong>Enfermagem dermatológica</strong><small>Foco no cuidado integral da pele e das feridas</small></div></div>
+          </div>
+        </div>
+      </section>
 
+      <div className="info-marquee" aria-label="Áreas de atendimento"><div className="marquee-track">{[1,2].map(n=><div className="marquee-group" key={n}><span>✦ FERIDAS AGUDAS E CRÔNICAS</span><span>✦ PÓS-OPERATÓRIO</span><span>✦ LESÕES POR PRESSÃO</span><span>✦ ÚLCERAS VASCULARES</span><span>✦ LASERTERAPIA</span><span>✦ PRP E PRF</span><span>✦ CUIDADO INDIVIDUALIZADO</span></div>)}</div></div>
 
-      <section className="section intro-section"><div className="container intro-grid"><div className="intro-photo"><img src={clinicaAsset.url} alt="Recepção da clínica Jaqueline Teixeira" loading="lazy"/></div><div className="intro-copy"><span className="eyebrow">SOBRE A CLÍNICA</span><h2>Um espaço para cuidar do corpo, da autoestima e do <em>seu bem-estar.</em></h2><p>Na Jaqueline Teixeira Estética & Massoterapia, cada atendimento foi pensado para transformar o autocuidado em uma experiência acolhedora, personalizada e profissional. Você encontra diferentes procedimentos em um só lugar, com atenção ao que realmente faz sentido para o seu momento.</p><button className="btn btn-primary" onClick={() => goWhatsapp("agendar meu atendimento")}><MessageCircle size={18}/> Agendar meu atendimento</button></div></div></section>
+      <section className="section intro-section" id="sobre"><div className="container intro-grid"><div className="intro-illustration"><div className="medical-orbit orbit-one"/><div className="medical-orbit orbit-two"/><div className="medical-emblem"><HeartPulse size={74} strokeWidth={1.2}/></div><span className="illustration-tag"><ShieldCheck size={16}/> Cuidado com responsabilidade</span></div><div className="intro-copy"><span className="eyebrow">PRAZER, SOU MARIA</span><h2>Um cuidado que olha para a ferida — e para <em>você por inteiro.</em></h2><p>Sou Maria de Jesus de Souza Costa, enfermeira dermatológica, e trabalho com consultório de enfermagem e tratamento de feridas. Cada pessoa tem uma história e cada ferida exige atenção própria. Por isso, o cuidado começa com escuta, avaliação e orientação clara sobre as possibilidades de acompanhamento.</p><p>Meu compromisso é conduzir cada atendimento com respeito, responsabilidade profissional e foco na segurança.</p><button className="btn btn-primary" onClick={() => goWhatsapp("conhecer o atendimento de enfermagem")}><MessageCircle size={18}/> Falar sobre atendimento</button></div></div></section>
 
+      <section className="section pain-section"><div className="container narrow center"><span className="eyebrow">QUANDO PROCURAR APOIO</span><h2>Uma ferida merece atenção e um plano de cuidado <em>individualizado.</em></h2><p>Feridas que demoram a cicatrizar, lesões após uma cirurgia ou alterações na pele podem exigir acompanhamento profissional. A avaliação ajuda a entender as necessidades de cuidado e quando é importante trabalhar em conjunto com outros profissionais de saúde.</p><div className="check-list centered-list"><div><Check size={17}/><span>Você precisa de orientação para cuidar de uma ferida aguda ou crônica.</span></div><div><Check size={17}/><span>Está no período pós-operatório e precisa de acompanhamento da ferida.</span></div><div><Check size={17}/><span>Convive com lesões por pressão ou úlceras venosas e arteriais.</span></div></div><button className="btn btn-primary" onClick={() => goWhatsapp("tirar dúvidas sobre o cuidado de uma ferida")}><MessageCircle size={18}/> Quero tirar minhas dúvidas</button></div></section>
 
-      <section className="section pain-section"><div className="container narrow center"><span className="eyebrow">TALVEZ VOCÊ ESTEJA SENTINDO ISSO</span><h2>Quando você olha no espelho e sente que <em>poderia se cuidar mais.</em></h2><p>Inchaço, sensação de peso, tensão muscular, falta de tempo para você ou simplesmente vontade de se sentir melhor com o próprio corpo. Esses sinais merecem atenção — sem pressão e sem promessas milagrosas.</p><div className="check-list centered-list"><div><Check size={17}/><span>Você quer uma rotina de autocuidado que caiba na sua vida.</span></div><div><Check size={17}/><span>Busca procedimentos escolhidos de acordo com seus objetivos.</span></div><div><Check size={17}/><span>Quer sair do atendimento sentindo que aquele tempo valeu a pena.</span></div></div><button className="btn btn-primary" onClick={() => goWhatsapp("entender qual procedimento combina comigo")}><MessageCircle size={18}/> Quero entender meu atendimento</button></div></section>
+      <section className="section procedures-section" id="tratamentos"><div className="container"><div className="section-heading center"><span className="eyebrow">ÁREAS DE ATUAÇÃO</span><h2>Cuidados e recursos para diferentes necessidades.</h2><p>Conheça as principais áreas de atuação. A indicação de cada cuidado ou tecnologia depende de avaliação individual, critérios de segurança e necessidade clínica.</p></div><div className="procedure-window"><div className="procedure-track">{[...services,...services].map(({title,text,icon:Icon},i)=><article className="procedure-card maria-service-card" key={`${title}-${i}`}><div className="maria-service-art"><Icon size={38} strokeWidth={1.35}/><span>{String((i%services.length)+1).padStart(2,"0")}</span></div><div className="procedure-content"><div className="procedure-icon"><Icon size={21}/></div><h3>{title}</h3><p>{text}</p></div></article>)}</div></div><div className="section-action center"><button className="btn btn-primary" onClick={() => goWhatsapp("saber qual atendimento pode ser adequado para mim")}><MessageCircle size={18}/> Consultar sobre meu caso</button></div></div></section>
 
+      <section className="section limine-section maria-approach"><div className="container limine-grid"><div className="limine-copy"><span className="eyebrow">RECURSOS TERAPÊUTICOS</span><h2>Tecnologias consideradas com critério e <em>responsabilidade.</em></h2><div className="approach-panel"><div><span><Zap size={22}/></span><strong>Laserterapia</strong><p>Recurso que pode fazer parte do plano de cuidado quando houver indicação apropriada.</p></div><div><span><Waves size={22}/></span><strong>Ozonioterapia</strong><p>Avaliada com atenção às condições individuais, à segurança e às evidências disponíveis.</p></div><div><span><Microscope size={22}/></span><strong>PRP e PRF</strong><p>Terapias regenerativas que exigem avaliação criteriosa e indicação profissional adequada.</p></div></div><p>Esses recursos não são indicados indistintamente para todas as feridas. A escolha é individual, e nenhuma técnica garante resultados específicos. Quando necessário, o cuidado é articulado com outros profissionais de saúde.</p><button className="btn btn-primary" onClick={() => goWhatsapp("saber mais sobre os recursos terapêuticos")}><MessageCircle size={18}/> Saber mais sobre os recursos</button></div></div></section>
 
-      <section className="section limine-section" id="limine"><div className="container limine-grid"><div className="limine-copy"><span className="eyebrow">TECNOLOGIA LIMINE</span><h2>Radiofrequência para um cuidado <em>completo e personalizado.</em></h2><div className="limine-photo"><img src={limineAsset.url} alt="Aplicação de radiofrequência corporal com o aparelho Limine" loading="lazy" /></div><p>O Limine é um equipamento de radiofrequência multifrequencial e multipolar, utilizado em protocolos estéticos faciais e corporais. Sua tecnologia permite adaptar o atendimento às necessidades avaliadas pela profissional.</p><div className="limine-benefits"><span><Sparkles size={19}/><strong>Tecnologia versátil</strong><small>Aplicações faciais e corporais.</small></span><span><Zap size={19}/><strong>Protocolo personalizado</strong><small>Escolhido após avaliação individual.</small></span><span><Heart size={19}/><strong>Conforto e cuidado</strong><small>Atendimento acompanhado pela profissional.</small></span></div><button className="btn btn-primary" onClick={() => goWhatsapp("saber mais sobre o tratamento com Limine")}><MessageCircle size={18}/> Quero saber mais</button></div></div></section>
+      <section className="section how-section" id="como-funciona"><div className="container"><div className="section-heading center"><span className="eyebrow">COMO FUNCIONA</span><h2>Um caminho de cuidado em <em>quatro etapas.</em></h2><p>O acompanhamento começa com uma conversa e segue conforme as necessidades identificadas na avaliação.</p></div><div className="steps-grid">{[["01","Primeiro contato","Você explica brevemente o que está acontecendo e tira suas primeiras dúvidas."],["02","Avaliação","São consideradas a ferida, seu histórico e os fatores relevantes para o cuidado."],["03","Plano individual","As possibilidades de cuidado e orientações são explicadas com clareza."],["04","Acompanhamento","O cuidado é revisto conforme a evolução e a necessidade de cada caso."]].map(([n,t,d])=><article className="step-card" key={n}><span className="step-number">{n}</span><div><h3>{t}</h3><p>{d}</p></div></article>)}</div><div className="section-action center"><button className="btn btn-primary" onClick={() => goWhatsapp("iniciar uma conversa sobre atendimento")}><MessageCircle size={18}/> Iniciar uma conversa</button></div></div></section>
 
-      <section className="section procedures-section" id="procedimentos"><div className="container"><div className="section-heading center"><span className="eyebrow">TRATAMENTOS & PROCEDIMENTOS</span><h2>Cuidados pensados para <em>diferentes objetivos.</em></h2><p>Conheça alguns dos procedimentos disponíveis na clínica. A combinação ideal depende da avaliação e do seu momento.</p></div><div className="procedure-window"><div className="procedure-track">{[...procedures,...procedures].map(({title,text,icon:Icon,image},i)=><article className={`procedure-card${image ? " has-image" : ""}`} key={`${title}-${i}`}>{image ? <img className="procedure-photo" src={image} alt={`${title} na Jaqueline Teixeira`} loading="lazy" /> : <div className="procedure-placeholder" aria-hidden="true"><Icon size={32}/></div>}<div className="procedure-content"><div className="procedure-icon"><Icon size={21}/></div><span className="procedure-number">{String((i%procedures.length)+1).padStart(2,"0")}</span><h3>{title}</h3><p>{text}</p></div></article>)}</div></div><div className="section-action center"><button className="btn btn-primary" onClick={() => goWhatsapp("ver os procedimentos e horários disponíveis")}><MessageCircle size={18}/> Ver opções e horários</button></div></div></section>
+      <section className="section benefits-section"><div className="container"><div className="section-heading center"><span className="eyebrow">NOSSO COMPROMISSO</span><h2>Informação clara, acolhimento e <em>responsabilidade.</em></h2></div><div className="benefit-grid maria-benefits"><article><span>01</span><HeartPulse/><h3>Olhar individualizado</h3><p>Cada pessoa e cada ferida têm características próprias que precisam ser consideradas.</p></article><article><span>02</span><ShieldCheck/><h3>Segurança em primeiro lugar</h3><p>As condutas consideram avaliação, critérios profissionais e necessidades clínicas.</p></article><article><span>03</span><Stethoscope/><h3>Orientação responsável</h3><p>Você recebe informações claras sobre cuidados, possibilidades e próximos passos.</p></article><article><span>04</span><CircleCheck/><h3>Cuidado em conjunto</h3><p>Quando necessário, o acompanhamento considera a atuação integrada com outros profissionais.</p></article></div></div></section>
 
+      <section className="section highlight-section"><div className="container narrow center"><span className="eyebrow">CUIDADO COM PROPÓSITO</span><h2>Você não precisa lidar com suas dúvidas <em>sem orientação.</em></h2><p>Entre em contato para explicar sua necessidade e saber quais são as possibilidades de atendimento. A avaliação individual é o ponto de partida para definir os próximos passos com segurança.</p><div className="mini-benefits centered-mini"><div><HeartPulse size={22}/><span><strong>Acolhimento</strong><small>Escuta e respeito à sua história.</small></span></div><div><ShieldCheck size={22}/><span><strong>Responsabilidade</strong><small>Orientação sem promessas irreais.</small></span></div><div><Activity size={22}/><span><strong>Acompanhamento</strong><small>Cuidado conforme a necessidade.</small></span></div></div><button className="btn btn-primary" onClick={() => goWhatsapp("conversar com Maria sobre meu caso")}><MessageCircle size={18}/> Conversar com Maria</button></div></section>
 
-      <section className="section reviews-section" id="avaliacoes"><div className="reviews-heading"><span className="eyebrow">AVALIAÇÕES</span><h2>Experiências que <em>ficam na memória.</em></h2><p>Um espaço para reunir o que nossas clientes sentem ao viver a experiência de cuidado da Jaqueline.</p></div><div className="reviews-window"><div className="reviews-track">{[...reviews,...reviews].map((review,i)=><article className="review-card" key={i}><div className="review-stars">{[1,2,3,4,5].map(star=><Star key={star} size={15} fill="currentColor"/>)}</div><p>“{review.text}”</p><div className="review-footer"><div className="review-avatar">{review.name.charAt(0)}</div><div><strong>{review.name}</strong><span>{review.treatment}</span></div></div></article>)}</div></div><div className="section-action center"><button className="btn btn-primary" onClick={() => goWhatsapp("conhecer a clínica e agendar meu atendimento")}><MessageCircle size={18}/> Quero viver essa experiência</button></div></section>
+      <section className="section faq-section" id="duvidas"><div className="container faq-layout"><div className="faq-intro"><span className="eyebrow">PERGUNTAS FREQUENTES</span><h2>Suas dúvidas também <em>fazem parte do cuidado.</em></h2><p>Se não encontrar sua pergunta aqui, fale diretamente comigo pelo WhatsApp.</p><button className="btn btn-primary" onClick={() => goWhatsapp("tirar uma dúvida")}><MessageCircle size={18}/> Tirar uma dúvida</button></div><div className="faq-list">{faqs.map(([q,a],i)=><div className={openFaq===i?"faq-item active":"faq-item"} key={q}><button onClick={() => setOpenFaq(openFaq===i?null:i)} aria-expanded={openFaq===i}><span>{q}</span><ChevronDown size={18}/></button>{openFaq===i&&<div className="faq-answer"><p>{a}</p></div>}</div>)}</div></div></section>
 
-      <section className="section about-section" id="jaqueline"><div className="container about-card"><div className="about-photo"><img src={jaquelineAsset.url} alt="Jaqueline Teixeira, massoterapeuta" loading="lazy" /></div><div className="about-copy"><span className="eyebrow">QUEM É JAQUELINE TEIXEIRA</span><h2>Mais do que procedimentos, <em>uma forma de cuidar.</em></h2><p>Jaqueline Teixeira atua com estética e massoterapia em Formosa, Goiás, com uma proposta que une cuidado corporal, bem-estar e atenção individual.</p><p>O trabalho parte da escuta: entender o que você procura, respeitar seu momento e escolher, junto com você, os cuidados que realmente fazem sentido. A experiência foi pensada para que cada atendimento seja acolhedor, profissional e sem pressa.</p><div className="about-points"><span><Sparkles size={17}/> Cuidado personalizado</span><span><Heart size={17}/> Acolhimento em cada atendimento</span><span><Check size={17}/> Expectativas reais e orientação</span></div><button className="btn btn-primary" onClick={() => goWhatsapp("conhecer o trabalho da Jaqueline")}><MessageCircle size={18}/> Conhecer e agendar</button></div></div></section>
+      <section className="section final-cta maria-final"><div className="final-glow"/><div className="container narrow center"><span className="eyebrow">VAMOS CONVERSAR?</span><h2>O próximo passo começa com uma conversa.</h2><p>Entre em contato para compartilhar sua necessidade e receber informações sobre o atendimento de enfermagem dermatológica.</p><button className="btn btn-primary" onClick={() => goWhatsapp("conversar sobre atendimento")}><MessageCircle size={18}/> Falar com Maria pelo WhatsApp</button></div></section>
 
+      <footer className="footer maria-footer"><div className="container footer-grid"><div className="footer-brand"><a className="brand maria-brand" href="#inicio"><span className="brand-mark"><HeartPulse size={22}/></span><span><strong>MARIA DE JESUS</strong><small>ENFERMAGEM DERMATOLÓGICA</small></span></a><p>Atendimento em enfermagem dermatológica com foco no cuidado de feridas, orientação e acompanhamento individualizado.</p></div><div><h4>Navegação</h4><a href="#sobre">Sobre Maria</a><a href="#tratamentos">Áreas de atuação</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Perguntas frequentes</a></div><div><h4>Contato</h4><a href={WHATSAPP} target="_blank" rel="noreferrer"><MessageCircle size={14}/> +55 (66) 96434-4578</a><span><ShieldCheck size={14}/> Cuidado responsável e individualizado</span></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Maria de Jesus de Souza Costa.</span><span>Enfermagem dermatológica • Tratamento de feridas</span></div></footer>
 
-      <section className="section highlight-section" id="experiencia"><div className="container narrow center"><span className="eyebrow">DESTAQUE</span><h2>Uma experiência de cuidado que começa <em>antes da maca.</em></h2><p>Do primeiro contato à escolha do protocolo, a proposta é ouvir você e entender o que faz sentido para sua rotina. Sem atendimento automático. Sem pressa.</p><div className="mini-benefits centered-mini"><div><Sparkles size={20}/><span><strong>Personalização</strong><small>Cuidados escolhidos com você.</small></span></div><div><Heart size={20}/><span><strong>Acolhimento</strong><small>Um espaço para desacelerar.</small></span></div><div><ShieldIcon/><span><strong>Responsabilidade</strong><small>Sem promessas irreais.</small></span></div></div><button className="btn btn-primary" onClick={() => goWhatsapp("marcar meu horário")}><MessageCircle size={18}/> Marcar meu horário</button></div></section>
-
-
-      <section className="section benefits-section"><div className="container"><div className="section-heading center"><span className="eyebrow">POR QUE ESCOLHER A JAQUELINE?</span><h2>Porque seu momento de cuidado <em>também importa.</em></h2></div><div className="benefit-grid"><article><span>01</span><Sparkles/><h3>Atendimento personalizado</h3><p>Você não é apenas mais um horário na agenda. O atendimento começa entendendo o que você busca.</p></article><article><span>02</span><Heart/><h3>Ambiente para desacelerar</h3><p>Um espaço pensado para você respirar, pausar e aproveitar o próprio tempo.</p></article><article><span>03</span><Dumbbell/><h3>Variedade de procedimentos</h3><p>Estética, massagens e tecnologias para diferentes necessidades e objetivos.</p></article><article><span>04</span><Check/><h3>Expectativas realistas</h3><p>Sem promessas mágicas: cada resultado depende de avaliação, rotina e características individuais.</p></article></div><div className="section-action center"><button className="btn btn-primary" onClick={() => goWhatsapp("agendar uma conversa")}><MessageCircle size={18}/> Quero conversar</button></div></div></section>
-
-
-
-
-
-      <section className="section faq-section" id="faq"><div className="container faq-layout"><div className="faq-intro"><span className="eyebrow">PERGUNTAS FREQUENTES</span><h2>Antes de agendar, <em>tire suas dúvidas.</em></h2><p>Se a sua pergunta não estiver aqui, fale diretamente com a equipe pelo WhatsApp.</p><button className="btn btn-primary" onClick={() => goWhatsapp("tirar uma dúvida")}><MessageCircle size={18}/> Tirar uma dúvida</button></div><div className="faq-list">{faqs.map(([q,a],i)=><div className={openFaq===i?"faq-item active":"faq-item"} key={q}><button onClick={() => setOpenFaq(openFaq===i?null:i)}><span>{q}</span>{openFaq===i?<X size={19}/>:<ChevronDown size={19}/>}</button>{openFaq===i&&<div className="faq-answer"><p>{a}</p></div>}</div>)}</div></div></section>
-
-
-      <section className="section location-section" id="localizacao"><div className="container location-grid"><div className="map-card"><iframe title="Localização da Jaqueline Teixeira Estética e Massoterapia" src="https://www.google.com/maps?q=Rua+Juselino+Malheiros,+125,+Centro,+Formosa,+GO&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade"/></div><div className="location-copy"><span className="eyebrow">ONDE ESTAMOS</span><h2>Seu próximo momento de cuidado começa <em>aqui.</em></h2><div className="address"><MapPin size={23}/><div><strong>Rua Juselino Malheiros, nº 125</strong><span>Centro • Formosa - GO</span><small>CEP 73801-190</small></div></div><div className="location-info"><div><Clock3 size={19}/><span><strong>Atendimento</strong>Com horário agendado</span></div><div><Phone size={19}/><span><strong>WhatsApp</strong>(61) 98046-306</span></div></div><div className="location-actions"><button className="btn btn-primary" onClick={() => goWhatsapp("agendar meu horário")}><MessageCircle size={18}/> Agendar pelo WhatsApp</button><a className="btn btn-outline" href={MAP} target="_blank" rel="noreferrer"><Navigation size={17}/> Ver no mapa</a></div></div></div></section>
-
-      <section className="final-cta"><div className="final-glow"/><div className="container center"><span className="eyebrow light">SEU MOMENTO COMEÇA COM UMA MENSAGEM</span><h2>Pronta para se colocar na sua própria lista de prioridades?</h2><p>Converse com a Jaqueline e encontre o atendimento que combina com o que você procura.</p><button className="btn btn-primary" onClick={() => goWhatsapp("agendar meu atendimento")}><MessageCircle size={19}/> Quero agendar meu atendimento</button></div></section>
-
-      <footer className="footer"><div className="container footer-grid"><div><a className="brand footer-brand brand-logo" href="#inicio"><img src={logoAsset.url} alt="Jaqueline Teixeira Estética e Massoterapia" /></a><p>Corpo leve, cuidado personalizado e um momento só seu em Formosa-GO.</p></div><div><h4>Atalhos</h4><a href="#procedimentos">Procedimentos</a><a href="#jaqueline">Quem é Jaqueline</a><a href="#como-funciona">Como funciona</a><a href="#faq">Perguntas frequentes</a><a href="#localizacao">Localização</a></div><div><h4>Contato</h4><a href={WHATSAPP} target="_blank" rel="noreferrer"><MessageCircle size={15}/> WhatsApp</a><a href={INSTAGRAM} target="_blank" rel="noreferrer"><Instagram size={15}/> Instagram</a><span><MapPin size={15}/> Formosa • Goiás</span></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Jaqueline Teixeira. Todos os direitos reservados.</span><span>Estética & Massoterapia</span></div></footer>
-
-      <a className="floating-wa" href={WHATSAPP} target="_blank" rel="noreferrer" aria-label="Falar no WhatsApp"><img src={whatsappAsset.url} alt="" /></a>
+      <a className="floating-wa maria-floating-wa" href={WHATSAPP} target="_blank" rel="noreferrer" aria-label="Falar com Maria pelo WhatsApp"><MessageCircle size={28}/><span>WhatsApp</span></a>
     </main>
   );
 }
-
-function ShieldIcon(){ return <Check size={20}/>; }

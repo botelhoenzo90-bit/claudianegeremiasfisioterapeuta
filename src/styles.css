@@ -273,3 +273,60 @@ body,.jt-site{color:#142c50;background:#fff}
  .maria-review-card{flex-basis:275px}
 }
 @media(prefers-reduced-motion:reduce){.maria-reviews-track{animation:none}}
+
+
+/* Ajustes de acabamento: mais azul-marinho, carrosséis edge-to-edge e avaliações */
+.pain-section{background:linear-gradient(135deg,#10264a,#17365f)!important;color:#fff}
+.pain-section h2,.pain-section h2 em{color:#fff}
+.pain-section .eyebrow{color:#f0ce68}
+.pain-section p,.pain-section .check-list div{color:#e0e8f2}
+.pain-section .centered-list div{background:rgba(255,255,255,.07);border-color:rgba(232,191,79,.25)}
+.pain-section .check-list svg{background:#f0ce68;color:#10264a}
+.how-section{background:linear-gradient(135deg,#10264a,#17365f)!important}
+.how-section h2,.how-section h2 em,.how-section .step-card h3{color:#fff}
+.how-section .eyebrow{color:#f0ce68}
+.how-section .section-heading p{color:#dbe5f1}
+.how-section .step-card{background:rgba(255,255,255,.07);border-color:rgba(232,191,79,.3)}
+.how-section .step-card p{color:#d5dfed}
+.how-section .step-number{background:linear-gradient(145deg,#f7df8b,#e6bc4c);color:#10264a}
+.benefits-section{background:linear-gradient(135deg,#132c50,#1a3c67)!important}
+.benefits-section h2,.benefits-section h2 em,.benefits-section .benefit-grid h3{color:#fff}
+.benefits-section .eyebrow{color:#f0ce68}
+.benefits-section .section-heading p{color:#dbe5f1}
+.benefits-section .benefit-grid article{background:rgba(255,255,255,.07);border-color:rgba(232,191,79,.3)}
+.benefits-section .benefit-grid p{color:#d5dfed}
+.benefits-section .benefit-grid article>span,.benefits-section .benefit-grid svg{color:#f0ce68}
+.highlight-section{background:linear-gradient(135deg,#fff,#f1f4f9)!important}
+.procedures-section{background:#f0f3f8!important}
+.maria-approach{background:linear-gradient(135deg,#10264a,#17365f)!important;color:#fff}
+.maria-approach h2,.maria-approach h2 em{color:#fff}
+.maria-approach .eyebrow{color:#f0ce68}
+.maria-approach .limine-copy>p{color:#dbe5f1}
+.maria-approach .approach-panel>div{background:rgba(255,255,255,.07);border-color:rgba(232,191,79,.3)}
+.maria-approach .approach-panel strong{color:#fff}
+.maria-approach .approach-panel p{color:#d5dfed}
+.maria-approach .approach-panel>div>span{background:#f0ce68;color:#10264a}
+.maria-reviews-section{background:#f0f3f8!important}
+.maria-reviews-window{width:100vw;margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);mask-image:none!important;-webkit-mask-image:none!important;padding:8px 0 20px}
+.maria-reviews-track{animation:mariaReviewsSlide 42s linear infinite;gap:18px}
+.maria-review-card{flex:0 0 330px}
+.review-stars{display:flex;justify-content:center;align-items:center;width:100%;text-align:center;letter-spacing:4px;color:#d9ad32;font-size:21px;margin:0 auto 18px}
+.maria-review-card{text-align:center;display:flex;flex-direction:column;justify-content:flex-start}
+.maria-review-card p{flex:1}
+.maria-review-card>span{display:block;text-align:center;border-top:1px solid #e3e8ef;padding-top:14px;font-size:12px;font-weight:700;color:#142c50}
+.maria-reviews-note{max-width:760px;padding:0 15px}
+.procedure-window{width:100vw!important;margin-left:calc(50% - 50vw)!important;margin-right:calc(50% - 50vw)!important;padding:8px 0 20px!important;mask-image:none!important;-webkit-mask-image:none!important}
+.procedure-track{animation:procedureLoop 52s linear infinite!important;gap:16px}
+.procedure-window:hover .procedure-track{animation-play-state:running!important}
+.maria-location-section{background:linear-gradient(135deg,#10264a,#17365f)!important;color:#fff}
+.maria-location-grid h2,.maria-location-grid h2 em{color:#fff}
+.maria-location-grid .eyebrow{color:#f0ce68}
+.maria-location-grid p{color:#dbe5f1}
+.maria-map-note{color:#c1cee0!important}
+.maria-map-frame{border-color:#e8bf4f;box-shadow:0 18px 40px rgba(0,0,0,.2)}
+@media(max-width:780px){
+ .maria-review-card{flex-basis:285px}
+ .maria-reviews-track{gap:12px}
+ .procedure-track{gap:12px}
+ .maria-location-section{padding:52px 0}
+}

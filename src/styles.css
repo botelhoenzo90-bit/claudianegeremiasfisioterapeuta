@@ -358,3 +358,8 @@ body,.jt-site{color:#142c50;background:#fff}
  .maria-review-author{font-size:13px}
  .maria-reviews-section .section-heading p{font-size:14px}
 }
+
+
+/* Imagem personalizada do botão flutuante do WhatsApp */
+.maria-floating-wa img{display:block;width:30px;height:30px;object-fit:contain;flex:0 0 30px}
+.maria-floating-wa{display:flex;align-items:center;justify-content:center;gap:8px}

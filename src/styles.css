@@ -363,3 +363,26 @@ body,.jt-site{color:#142c50;background:#fff}
 /* Imagem personalizada do botão flutuante do WhatsApp */
 .maria-floating-wa img{display:block;width:30px;height:30px;object-fit:contain;flex:0 0 30px}
 .maria-floating-wa{display:flex;align-items:center;justify-content:center;gap:8px}
+
+
+/* Ajustes finais solicitados: hero mobile, cards, imagem WhatsApp e espaçamentos */
+.hero-bottom-eyebrow{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:nowrap;white-space:nowrap;margin:22px auto 0;color:#f1cf63;font-size:clamp(9px,1.5vw,12px);font-weight:800;letter-spacing:1.2px;text-align:center}
+.hero-bottom-eyebrow span{color:#fff;opacity:.85}
+.maria-service-card{height:390px;overflow:hidden}
+.maria-service-card .procedure-content{padding:18px 18px 24px;overflow:visible}
+.maria-service-card h3{line-height:1.3;margin:0 0 10px;min-height:2.6em}
+.maria-service-card p{line-height:1.65;margin:0 0 4px}
+.maria-floating-wa{width:64px;height:64px;min-width:64px;min-height:64px;padding:0!important;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#16c765;border:3px solid #fff}
+.maria-floating-wa img{display:block;width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;flex:1 1 auto;border-radius:50%}
+.maria-floating-wa span,.maria-floating-wa svg{display:none!important}
+@media(max-width:780px){
+ .hero-profile-intro{max-width:100%;padding:0 14px}
+ .hero-profile-name{max-width:320px;font-size:clamp(22px,6vw,28px);line-height:1.15;text-wrap:balance;overflow-wrap:normal}
+ .hero-bottom-eyebrow{font-size:9px;letter-spacing:.6px;gap:5px;margin-top:18px}
+ .maria-service-card{height:400px}
+ .maria-service-card .procedure-content{padding:16px 16px 22px}
+}
+@media(max-width:360px){
+ .hero-bottom-eyebrow{font-size:8px;letter-spacing:.25px;gap:4px}
+ .hero-profile-name{font-size:22px}
+}

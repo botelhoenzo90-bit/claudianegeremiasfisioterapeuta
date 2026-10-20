@@ -230,3 +230,46 @@ body,.jt-site{color:#142c50;background:#fff}
  .hero-seal{width:100%;justify-content:flex-start}
 }
 @media(max-width:480px){.maria-hero h1{font-size:39px;letter-spacing:-1.5px}}
+
+
+/* Refinamento visual solicitado — faixa dourada, hero sem cabeçalho e novas seções */
+.site-header.maria-header-hidden{display:none!important}
+.maria-hero{padding-top:44px}
+.hero-profile-intro{display:flex;flex-direction:column;align-items:center;gap:8px;margin:0 auto 30px}
+.hero-profile-name{font-family:Georgia,'Times New Roman',serif;font-size:clamp(24px,4vw,36px);font-weight:600;line-height:1.2;letter-spacing:.1px;color:#fff}
+.hero-profile-role{font-size:11px;letter-spacing:2.4px;font-weight:800;color:#f1cf63;padding:10px 17px;border:1px solid rgba(241,207,99,.65);border-radius:999px}
+.info-marquee{background:linear-gradient(100deg,#f0cb58,#e5b83b 50%,#f4d775)!important;border-top:1px solid #f8e39c!important;border-bottom:1px solid #c69b2e!important;box-shadow:0 8px 22px rgba(20,44,80,.08)}
+.marquee-group span{color:#142c50!important;font-weight:800}
+.maria-profile-photo{padding:0;overflow:hidden;min-height:350px;position:relative;background:linear-gradient(145deg,#10264a,#1d416f);border-radius:28px 90px 28px 28px}
+.maria-profile-photo img{display:block;width:100%;height:100%;min-height:350px;object-fit:cover;position:absolute;inset:0}
+.maria-profile-photo .illustration-tag{z-index:2}
+.maria-reviews-section{background:linear-gradient(135deg,#f0f3f8,#fff);overflow:hidden}
+.maria-reviews-window{overflow:hidden;width:100%;margin-top:28px;mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.maria-reviews-track{display:flex;gap:18px;width:max-content;animation:mariaReviewsSlide 38s linear infinite}
+.maria-reviews-window:hover .maria-reviews-track{animation-play-state:running}
+.maria-review-card{flex:0 0 320px;min-height:210px;padding:27px 25px;background:#fff;border:1px solid #dbe2ec;border-radius:20px;box-shadow:0 12px 28px rgba(16,38,74,.07)}
+.review-stars{font-size:19px;letter-spacing:3px;color:#d9ad32;margin-bottom:15px}
+.maria-review-card p{color:#243b5a;font-size:15px;line-height:1.75;margin:0 0 18px}
+.maria-review-card>span{font-size:10px;line-height:1.5;color:#7a8799}
+.maria-reviews-note{font-size:11px;color:#7b8798;text-align:center;margin:18px auto 0;max-width:650px}
+@keyframes mariaReviewsSlide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.maria-location-section{background:#fff;padding:76px 0}
+.maria-location-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:42px;align-items:center}
+.maria-location-grid h2{color:#142c50;font-size:clamp(30px,4vw,44px);line-height:1.15;margin:14px 0}
+.maria-location-grid h2 em{color:#b58a22}
+.maria-location-grid p{color:#63738a;line-height:1.8;font-size:14px}
+.maria-map-note{font-size:11px!important;color:#8b95a4!important;margin-top:16px}
+.maria-map-frame{height:370px;overflow:hidden;border-radius:24px;border:1px solid #d7b64f;box-shadow:0 18px 40px rgba(16,38,74,.12);background:#edf1f6}
+.maria-map-frame iframe{width:100%;height:100%;border:0;display:block}
+@media(max-width:780px){
+ .maria-hero{padding-top:32px}
+ .hero-profile-intro{margin-bottom:24px}
+ .hero-profile-name{font-size:25px}
+ .hero-profile-role{font-size:9px;letter-spacing:1.7px}
+ .maria-profile-photo{min-height:300px;border-radius:24px 70px 24px 24px}
+ .maria-profile-photo img{min-height:300px}
+ .maria-location-grid{grid-template-columns:1fr;gap:25px}
+ .maria-map-frame{height:300px}
+ .maria-review-card{flex-basis:275px}
+}
+@media(prefers-reduced-motion:reduce){.maria-reviews-track{animation:none}}

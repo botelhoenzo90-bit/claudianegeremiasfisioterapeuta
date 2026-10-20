@@ -330,3 +330,11 @@ body,.jt-site{color:#142c50;background:#fff}
  .procedure-track{gap:12px}
  .maria-location-section{padding:52px 0}
 }
+
+
+/* Avatar circular sem fotografia nos cartões de avaliações */
+.maria-review-card>span{border-top:0;padding-top:0}
+.maria-review-author{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:14px;padding-top:14px;border-top:1px solid #e3e8ef;color:#142c50;font-size:12px;font-weight:700}
+.maria-review-avatar{display:inline-flex;flex:0 0 42px;width:42px;height:42px;border-radius:50%;background:linear-gradient(145deg,#f4f6f9,#e5eaf1);border:2px solid #e8bf4f;box-shadow:0 2px 8px rgba(16,38,74,.08);position:relative;overflow:hidden}
+.maria-review-avatar:before{content:"";position:absolute;top:8px;left:14px;width:11px;height:11px;border-radius:50%;background:#c8d1df}
+.maria-review-avatar:after{content:"";position:absolute;left:8px;bottom:-2px;width:23px;height:17px;border-radius:13px 13px 5px 5px;background:#c8d1df}

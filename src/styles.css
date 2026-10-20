@@ -444,6 +444,6 @@ body,.jt-site{color:#142c50;background:#fff}
 }
 
 
-/* Carrossel de áreas de atuação mais rápido */
-.procedure-track{animation-duration:32s!important}
-@media(max-width:780px){.procedure-track{animation-duration:30s!important}}
+/* Carrossel de áreas de atuação um pouco mais rápido */
+.procedure-track{animation-duration:29s!important}
+@media(max-width:780px){.procedure-track{animation-duration:28s!important}}

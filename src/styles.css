@@ -338,3 +338,23 @@ body,.jt-site{color:#142c50;background:#fff}
 .maria-review-avatar{display:inline-flex;flex:0 0 42px;width:42px;height:42px;border-radius:50%;background:linear-gradient(145deg,#f4f6f9,#e5eaf1);border:2px solid #e8bf4f;box-shadow:0 2px 8px rgba(16,38,74,.08);position:relative;overflow:hidden}
 .maria-review-avatar:before{content:"";position:absolute;top:8px;left:14px;width:11px;height:11px;border-radius:50%;background:#c8d1df}
 .maria-review-avatar:after{content:"";position:absolute;left:8px;bottom:-2px;width:23px;height:17px;border-radius:13px 13px 5px 5px;background:#c8d1df}
+
+
+/* Avaliações: tipografia mais expressiva, legível e elegante */
+.maria-review-card{flex-basis:360px;min-height:250px;padding:30px 28px 26px;border-radius:22px}
+.review-stars{font-size:24px;letter-spacing:5px;margin-bottom:20px}
+.maria-review-card p{font-size:17px;line-height:1.85;font-weight:500;color:#243b5a;margin-bottom:22px}
+.maria-review-author{gap:12px;margin-top:auto;padding-top:18px;font-size:14px;letter-spacing:.15px}
+.maria-review-avatar{flex-basis:48px;width:48px;height:48px}
+.maria-review-avatar:before{top:9px;left:16px;width:12px;height:12px}
+.maria-review-avatar:after{left:9px;bottom:-2px;width:26px;height:19px}
+.maria-reviews-section .section-heading h2{font-size:clamp(32px,4.2vw,46px);line-height:1.18}
+.maria-reviews-section .section-heading p{font-size:16px;line-height:1.75;max-width:660px;margin:12px auto 0}
+.maria-reviews-note{font-size:12px;line-height:1.7;margin-top:22px}
+@media(max-width:780px){
+ .maria-review-card{flex-basis:300px;min-height:250px;padding:24px 22px}
+ .maria-review-card p{font-size:16px;line-height:1.75}
+ .review-stars{font-size:22px}
+ .maria-review-author{font-size:13px}
+ .maria-reviews-section .section-heading p{font-size:14px}
+}

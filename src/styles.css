@@ -447,3 +447,21 @@ body,.jt-site{color:#142c50;background:#fff}
 /* Carrossel de áreas de atuação um pouco mais rápido */
 .procedure-track{animation-duration:29s!important}
 @media(max-width:780px){.procedure-track{animation-duration:28s!important}}
+
+
+/* Seção dedicada à terapia PRF */
+.prf-feature-section{background:#fff;padding:86px 0}
+.prf-feature-grid{display:grid;grid-template-columns:.92fr 1.08fr;align-items:center;gap:54px}
+.prf-feature-photo{position:relative;min-height:520px;overflow:hidden;border-radius:28px 90px 28px 28px;background:linear-gradient(145deg,#10264a,#1c416f);box-shadow:0 22px 48px rgba(16,38,74,.17)}
+.prf-feature-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.prf-photo-caption{position:absolute;left:18px;right:18px;bottom:18px;padding:13px 16px;border-radius:14px;background:rgba(16,38,74,.88);color:#f0ce68;font-size:11px;font-weight:800;letter-spacing:1px;text-align:center}
+.prf-feature-copy h2{font-size:clamp(30px,3.8vw,44px);line-height:1.2;color:#142c50;margin:14px 0 18px}
+.prf-feature-copy h2 em{color:#b58a22}
+.prf-feature-copy>p{color:#5f6f86;font-size:15px;line-height:1.8}
+.prf-benefit-list{display:grid;gap:13px;margin:24px 0}
+.prf-benefit-list>div{display:flex;align-items:flex-start;gap:12px;padding:15px 16px;border:1px solid #dce3ed;border-radius:15px;background:#f5f7fa}
+.prf-benefit-list>div>span{display:grid;place-items:center;flex:0 0 30px;width:30px;height:30px;border-radius:50%;background:#f8e9b5;color:#142c50}
+.prf-benefit-list p{margin:0;color:#405570;font-size:14px;line-height:1.7}
+.prf-benefit-list strong{color:#142c50}
+.prf-feature-copy .prf-disclaimer{font-size:12px;line-height:1.75;color:#778397;margin:20px 0}
+@media(max-width:780px){.prf-feature-section{padding:54px 0}.prf-feature-grid{grid-template-columns:1fr;gap:30px}.prf-feature-photo{min-height:340px;border-radius:24px 65px 24px 24px}.prf-feature-copy h2{font-size:clamp(29px,7vw,36px)}}

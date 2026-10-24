@@ -1,11 +1,16 @@
 .before-after-section{background:linear-gradient(145deg,#f8f2e7,#fffdf9,#f3ead8);padding:76px 0}
 .before-after-section .section-heading{max-width:790px;margin:0 auto 36px}
-.before-after-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.before-after-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .before-after-card{overflow:hidden;border:1px solid rgba(166,124,0,.2);border-radius:22px;background:#fffdf9;box-shadow:0 15px 38px rgba(45,36,20,.07);text-align:left;transition:transform .25s,box-shadow .25s}
 .before-after-card:hover{transform:translateY(-4px);box-shadow:0 20px 44px rgba(45,36,20,.11)}
 .before-after-images{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:12px;background:#f8f1e4}
+.before-after-single{padding:12px;background:#f8f1e4}
+.before-after-photo{position:relative;min-width:0;min-height:210px;border:1px solid rgba(166,124,0,.18);border-radius:13px;overflow:hidden;background:#f5eddb}
+.before-after-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.before-after-single .before-after-photo{min-height:0;height:400px}
+.before-after-single .before-after-photo img{object-fit:contain}
 .before-after-placeholder{position:relative;min-width:0;min-height:210px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;border:1.5px dashed #c9b77f;border-radius:13px;background:linear-gradient(145deg,#fffdf8,#f5eddb);color:#8e741f;overflow:hidden}
-.before-after-label{position:absolute;top:10px;left:10px;border-radius:6px;padding:5px 8px;background:#263f58;color:white;font-size:9px;font-weight:800;letter-spacing:1.4px}
+.before-after-label{position:absolute;top:10px;left:10px;z-index:2;border-radius:6px;padding:5px 8px;background:#263f58;color:white;font-size:9px;font-weight:800;letter-spacing:1.4px}
 .before-after-label.after-label{background:#b08a22;color:#fff}
 .before-after-plus{width:40px;height:40px;display:grid;place-items:center;border:1px solid #d9c98d;border-radius:50%;background:#fffdf8;font-size:26px;color:#a18428}
 .before-after-hint{font-size:10px;font-weight:700;color:#837b69;text-align:center;padding:0 5px}
@@ -14,5 +19,5 @@
 .before-after-card-copy p{margin:0;color:#746f67;font-size:12px;line-height:1.7}
 .before-after-disclaimer{max-width:860px;margin:24px auto 0;display:flex;align-items:flex-start;justify-content:center;gap:9px;text-align:center;color:#746f67;font-size:11px;line-height:1.7}
 .before-after-disclaimer svg{flex:none;color:#9b7410;margin-top:1px}
-@media(max-width:900px){.before-after-grid{grid-template-columns:1fr 1fr}.before-after-placeholder{min-height:190px}}
+@media(max-width:900px){.before-after-grid{grid-template-columns:1fr 1fr}.before-after-placeholder{min-height:190px}.before-after-photo{min-height:190px}.before-after-single .before-after-photo{height:340px}}
 @media(max-width:600px){.before-after-section{padding:54px 0}.before-after-grid{grid-template-columns:1fr;gap:15px}.before-after-images{gap:7px;padding:9px}.before-after-placeholder{min-height:190px}.before-after-card-copy{padding:17px}.before-after-card-copy h3{font-size:20px}.before-after-disclaimer{font-size:10px;text-align:left}}

@@ -1,11 +1,56 @@
 import { createFileRoute } from "@tanstack/react-router";
 import compartilhamentoMaria from "@/assets/compartilhamento-maria.png.asset.json";
+import ulceraCalcanhar from "@/assets/ulcera-calcanhar.jpg.asset.json";
+import ulceraPlantar from "@/assets/ulcera-plantar.png.asset.json";
+import escarasGluteas from "@/assets/escaras-gluteas.jpg.asset.json";
+import escarasGluteasEvolucao from "@/assets/escaras-gluteas-evolucao.jpg.asset.json";
+import alertaLesaoPodica from "@/assets/alerta-lesao-podica.jpg.asset.json";
+import cicatrizacaoComparativo from "@/assets/cicatrizacao-comparativo.jpg.asset.json";
 import "../before-after.css";
 import { useState } from "react";
 import {
   Activity, ArrowRight, Bandage, Check, ChevronDown, CircleCheck, HeartPulse,
   MessageCircle, Microscope, ShieldCheck, Sparkles, Stethoscope, Waves, Zap,
 } from "lucide-react";
+
+type BeforeAfterCase = {
+  title: string;
+  description: string;
+  before: { url: string } | null;
+  after: { url: string } | null;
+  single: { url: string } | null;
+};
+
+const beforeAfterCases: BeforeAfterCase[] = [
+  {
+    title: "Úlcera no pé em acompanhamento",
+    description: "Acompanhamento de úlcera profunda na região do calcanhar: da presença de tecido necrótico até a redução da lesão com tecido de granulação.",
+    before: ulceraCalcanhar,
+    after: ulceraPlantar,
+    single: null,
+  },
+  {
+    title: "Lesões por pressão na região glútea",
+    description: "Evolução de lesões por pressão em ambas as nádegas: das cavidades profundas com secreção até o leito preenchido por tecido de granulação.",
+    before: escarasGluteas,
+    after: escarasGluteasEvolucao,
+    single: null,
+  },
+  {
+    title: "Cicatrização de lesão plantar",
+    description: "Comparativo de lesão no dedo do pé: da úlcera aberta e profunda à lesão fechada e epitelizada.",
+    before: null,
+    after: null,
+    single: cicatrizacaoComparativo,
+  },
+  {
+    title: "Pequenas lesões pedem atenção",
+    description: "Sinais de alerta no pé: uma pequena lesão pode evoluir para complicações graves quando não é acompanhada.",
+    before: null,
+    after: null,
+    single: alertaLesaoPodica,
+  },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -122,27 +167,29 @@ function Index() {
           <div className="section-heading center">
             <span className="eyebrow">EVOLUÇÃO DO CUIDADO</span>
             <h2>Antes e depois: cada etapa merece <em>atenção.</em></h2>
-            <p>Veja registros de acompanhamento que poderão ser adicionados aqui. Cada caso é único e os resultados variam conforme as condições individuais e o plano de cuidado.</p>
+            <p>Registros de acompanhamento publicados com autorização da pessoa atendida. Cada caso é único e os resultados variam conforme as condições individuais e o plano de cuidado.</p>
           </div>
           <div className="before-after-grid">
-            {[
-              { title: "Acompanhamento de feridas", description: "Espaço para registrar a evolução do cuidado ao longo do tempo." },
-              { title: "Cuidados no pós-operatório", description: "Imagens para mostrar etapas do acompanhamento, quando autorizado." },
-              { title: "Outros casos acompanhados", description: "Adicione aqui outros registros relevantes e autorizados." },
-            ].map((item) => (
+            {beforeAfterCases.map((item) => (
               <article className="before-after-card" key={item.title}>
-                <div className="before-after-images">
-                  <div className="before-after-placeholder">
-                    <span className="before-after-label">ANTES</span>
-                    <div className="before-after-plus" aria-hidden="true">+</div>
-                    <span className="before-after-hint">Adicionar imagem</span>
+                {item.single ? (
+                  <div className="before-after-single">
+                    <div className="before-after-photo">
+                      <img src={item.single.url} alt={`Registro de acompanhamento: ${item.title}`} loading="lazy" />
+                    </div>
                   </div>
-                  <div className="before-after-placeholder">
-                    <span className="before-after-label after-label">DEPOIS</span>
-                    <div className="before-after-plus" aria-hidden="true">+</div>
-                    <span className="before-after-hint">Adicionar imagem</span>
+                ) : (
+                  <div className="before-after-images">
+                    <div className="before-after-photo">
+                      <img src={item.before!.url} alt={`Antes do tratamento: ${item.title}`} loading="lazy" />
+                      <span className="before-after-label">ANTES</span>
+                    </div>
+                    <div className="before-after-photo">
+                      <img src={item.after!.url} alt={`Depois do tratamento: ${item.title}`} loading="lazy" />
+                      <span className="before-after-label after-label">DEPOIS</span>
+                    </div>
                   </div>
-                </div>
+                )}
                 <div className="before-after-card-copy">
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>

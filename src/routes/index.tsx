@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import compartilhamentoMaria from "@/assets/compartilhamento-maria.png.asset.json";
+import "../before-after.css";
 import { useState } from "react";
 import {
   Activity, ArrowRight, Bandage, Check, ChevronDown, CircleCheck, HeartPulse,

@@ -116,6 +116,46 @@ function Index() {
 
 
 
+      <section className="section before-after-section" id="antes-depois">
+        <div className="container">
+          <div className="section-heading center">
+            <span className="eyebrow">EVOLUÇÃO DO CUIDADO</span>
+            <h2>Antes e depois: cada etapa merece <em>atenção.</em></h2>
+            <p>Veja registros de acompanhamento que poderão ser adicionados aqui. Cada caso é único e os resultados variam conforme as condições individuais e o plano de cuidado.</p>
+          </div>
+          <div className="before-after-grid">
+            {[
+              { title: "Acompanhamento de feridas", description: "Espaço para registrar a evolução do cuidado ao longo do tempo." },
+              { title: "Cuidados no pós-operatório", description: "Imagens para mostrar etapas do acompanhamento, quando autorizado." },
+              { title: "Outros casos acompanhados", description: "Adicione aqui outros registros relevantes e autorizados." },
+            ].map((item) => (
+              <article className="before-after-card" key={item.title}>
+                <div className="before-after-images">
+                  <div className="before-after-placeholder">
+                    <span className="before-after-label">ANTES</span>
+                    <div className="before-after-plus" aria-hidden="true">+</div>
+                    <span className="before-after-hint">Adicionar imagem</span>
+                  </div>
+                  <div className="before-after-placeholder">
+                    <span className="before-after-label after-label">DEPOIS</span>
+                    <div className="before-after-plus" aria-hidden="true">+</div>
+                    <span className="before-after-hint">Adicionar imagem</span>
+                  </div>
+                </div>
+                <div className="before-after-card-copy">
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+          <p className="before-after-disclaimer"><ShieldCheck size={16}/> As imagens devem ser publicadas somente com autorização expressa da pessoa atendida, preservando sua privacidade. Os registros têm caráter informativo e não garantem resultados semelhantes.</p>
+          <div className="section-action center">
+            <button className="btn btn-primary" onClick={() => goWhatsapp("conhecer o acompanhamento e tirar dúvidas")}><MessageCircle size={18}/> Tirar dúvidas sobre o acompanhamento</button>
+          </div>
+        </div>
+      </section>
+
       <section className="section maria-reviews-section" id="avaliacoes"><div className="container"><div className="section-heading center"><span className="eyebrow">RELATOS DE EXPERIÊNCIA</span><h2>O cuidado também se constrói com <em>confiança.</em></h2><p>Conheça relatos sobre a experiência de atendimento, a atenção recebida e a importância de ter orientações claras durante o cuidado. Cada história é única, e a confiança se constrói com escuta, respeito e acompanhamento individualizado.</p></div><div className="maria-reviews-window"><div className="maria-reviews-track">{[1,2,3,1,2,3].map((n,i)=><article className="maria-review-card" key={i}><div className="review-stars" aria-label="Cinco estrelas">★★★★★</div><p>{n===1?"“Fui recebida com atenção e respeito. As orientações foram explicadas de forma clara, o que me ajudou a compreender melhor os cuidados necessários para a minha situação.”":n===2?"“Consegui conversar sobre minhas dúvidas com tranquilidade e entender melhor cada etapa do cuidado. Foi importante receber informações claras e atenção individualizada.”":"“Durante o atendimento, senti que minhas dúvidas foram ouvidas com atenção. Recebi explicações cuidadosas sobre os próximos passos e sobre a importância de acompanhar a evolução.”"}</p><div className="maria-review-author"><span className="maria-review-avatar" aria-hidden="true"></span><span>{n===1?"Juliana Silva":n===2?"Patrícia Oliveira":"Ana Paula"}</span></div></article>)}</div></div></div></section>
 
 

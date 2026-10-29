@@ -74,7 +74,7 @@ function Index() {
 
       <div className="info-marquee" aria-label="Áreas de atendimento"><div className="marquee-track">{[1,2].map(n=><div className="marquee-group" key={n}><span>✦ FERIDAS AGUDAS E CRÔNICAS</span><span>✦ PÉ DIABÉTICO</span><span>✦ CURATIVOS ESPECIALIZADOS</span><span>✦ LESÕES POR PRESSÃO</span><span>✦ ÚLCERAS VASCULARES</span><span>✦ ATENDIMENTO DOMICILIAR</span><span>✦ CUIDADO INDIVIDUALIZADO</span></div>)}</div></div>
 
-      <section className="section intro-section" id="sobre"><div className="container intro-grid"><div className="intro-illustration maria-profile-photo"><img src="/prazer-sou-maria/TAI09386.jpg.jpeg" alt="Fátima, profissional da Clínica Naamã" /></div><div className="intro-copy"><span className="eyebrow">PRAZER, SOU FÁTIMA</span><h2>Cuidado especializado, com atenção à pessoa por <em>inteiro.</em></h2><p>Na Clínica Naamã, cada atendimento começa com escuta e avaliação cuidadosa. O plano de cuidado considera as características da ferida, o histórico de saúde e as necessidades individuais, com orientações claras para a pessoa e sua família.</p><p>Nosso compromisso é oferecer um cuidado acolhedor, responsável e individualizado, com atenção à segurança e à dignidade de cada pessoa.</p><button className="btn btn-primary" onClick={() => goWhatsapp("conhecer o atendimento de enfermagem")}><MessageCircle size={18}/> conhecer o atendimento</button></div></div></section>
+      <section className="section intro-section" id="sobre"><div className="container intro-grid"><div className="intro-illustration maria-profile-photo photo-placeholder" role="img" aria-label="Espaço reservado para foto de Fátima"><span>FOTO</span><small>Imagem de Fátima</small></div><div className="intro-copy"><span className="eyebrow">PRAZER, SOU FÁTIMA</span><h2>Cuidado especializado, com atenção à pessoa por <em>inteiro.</em></h2><p>Na Clínica Naamã, cada atendimento começa com escuta e avaliação cuidadosa. O plano de cuidado considera as características da ferida, o histórico de saúde e as necessidades individuais, com orientações claras para a pessoa e sua família.</p><p>Nosso compromisso é oferecer um cuidado acolhedor, responsável e individualizado, com atenção à segurança e à dignidade de cada pessoa.</p><button className="btn btn-primary" onClick={() => goWhatsapp("conhecer o atendimento de enfermagem")}><MessageCircle size={18}/> conhecer o atendimento</button></div></div></section>
 
       <section className="section pain-section"><div className="container narrow center"><span className="eyebrow">QUANDO PROCURAR APOIO</span><h2>Feridas persistentes e alterações nos pés merecem <em>atenção especializada.</em></h2><p>Feridas que não cicatrizam, lesões nos pés de pessoas com diabetes e alterações na pele precisam de atenção. A avaliação profissional ajuda a orientar o cuidado e identificar quando é necessário encaminhamento ou atuação conjunta com outros profissionais.</p><div className="check-list centered-list"><div><Check size={17}/><span>Você ou alguém da família precisa de cuidado para uma ferida aguda ou crônica.</span></div><div><Check size={17}/><span>Você tem diabetes e percebeu uma lesão, fissura ou alteração nos pés.</span></div><div><Check size={17}/><span>A ferida persiste, apresenta mudanças ou precisa de curativos especializados.</span></div></div><button className="btn btn-primary" onClick={() => goWhatsapp("tirar dúvidas sobre o cuidado de uma ferida")}><MessageCircle size={18}/> Quero tirar minhas dúvidas</button></div></section>
 
@@ -85,6 +85,27 @@ function Index() {
 
 
       <section className="section how-section" id="como-funciona"><div className="container"><div className="section-heading center"><span className="eyebrow">COMO FUNCIONA</span><h2>Um caminho de cuidado em <em>quatro etapas.</em></h2><p>Da primeira conversa ao acompanhamento, cada etapa é conduzida com atenção, clareza e respeito.</p></div><div className="steps-grid">{[["01","Primeiro contato","Você explica brevemente o que está acontecendo e tira suas primeiras dúvidas."],["02","Avaliação","São consideradas a ferida, seu histórico e os fatores relevantes para o cuidado."],["03","Plano individual","As possibilidades de cuidado e orientações são explicadas com clareza."],["04","Acompanhamento","O cuidado é revisto conforme a evolução e a necessidade de cada caso."]].map(([n,t,d])=><article className="step-card" key={n}><span className="step-number">{n}</span><div><h3>{t}</h3><p>{d}</p></div></article>)}</div><div className="section-action center"><button className="btn btn-primary" onClick={() => goWhatsapp("iniciar uma conversa sobre atendimento")}><MessageCircle size={18}/> Iniciar uma conversa</button></div></div></section>
+
+<section className="section video-testimonials-section" id="depoimentos-em-video">
+        <div className="container">
+          <div className="section-heading center">
+            <span className="eyebrow">HISTÓRIAS DE CUIDADO</span>
+            <h2>Depoimentos em vídeo, com histórias de <em>acolhimento.</em></h2>
+            <p>Este espaço está preparado para receber vídeos de pacientes que desejem compartilhar sua experiência, sempre com autorização expressa.</p>
+          </div>
+          <div className="video-testimonials-grid">
+            {[
+              ["Experiência de cuidado","Vídeo de depoimento a adicionar"],
+              ["Acompanhamento de feridas","Vídeo de depoimento a adicionar"],
+              ["Cuidado no dia a dia","Vídeo de depoimento a adicionar"]
+            ].map(([title,caption])=><article className="video-testimonial-card" key={title}>
+              <div className="video-testimonial-placeholder"><span className="video-play" aria-hidden="true">▶</span><span className="video-placeholder-label">VÍDEO</span></div>
+              <div className="video-testimonial-copy"><h3>{title}</h3><p>{caption}</p></div>
+            </article>)}
+          </div>
+          <p className="video-testimonials-note">Os vídeos serão inseridos após o envio dos arquivos e a confirmação de autorização de uso de imagem e depoimento. Não há vídeos fictícios nesta seção.</p>
+        </div>
+      </section>
 
 <section className="section before-after-section" id="antes-depois">
         <div className="container">

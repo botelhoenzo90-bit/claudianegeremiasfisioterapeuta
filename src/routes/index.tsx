@@ -49,7 +49,7 @@ function Index() {
     <main className="jt-site maria-site">
       <header className="site-header maria-header-hidden">
         <div className="container header-inner">
-          <a className="brand maria-brand" href="#inicio" aria-label="Clínica Naamã, cuidado especializado">
+          <a className="brand maria-brand" href="#inicio" aria-label="Claudiane Geremias, cuidado especializado">
             <span className="brand-mark"><HeartPulse size={22}/></span>
             <span><strong>CLAUDIANE GEREMIAS</strong><small>FISIOTERAPIA • CREFITO 199192-F</small></span>
           </a>
@@ -76,7 +76,7 @@ function Index() {
         </div>
       </section>
 
-      <div className="info-marquee" aria-label="Áreas de atendimento"><div className="marquee-track">{[1,2].map(n=><div className="marquee-group" key={n}><span>✦ FERIDAS AGUDAS E CRÔNICAS</span><span>✦ PÉ DIABÉTICO</span><span>✦ CURATIVOS ESPECIALIZADOS</span><span>✦ LESÕES POR PRESSÃO</span><span>✦ ÚLCERAS VASCULARES</span><span>✦ ATENDIMENTO DOMICILIAR</span><span>✦ CUIDADO INDIVIDUALIZADO</span></div>)}</div></div>
+      <div className="info-marquee" aria-label="Áreas de atendimento"><div className="marquee-track">{[1,2].map(n=><div className="marquee-group" key={n}><span>✦ DORES NA COLUNA</span><span>✦ POSTURA E MOBILIDADE</span><span>✦ QUIROPRAXIA</span><span>✦ FASCITE PLANTAR</span><span>✦ FIBROMIALGIA</span><span>✦ OZONIOTERAPIA</span><span>✦ CUIDADO INDIVIDUALIZADO</span></div>)}</div></div>
 
       <section className="section intro-section" id="sobre"><div className="container intro-grid"><div className="intro-illustration maria-profile-photo photo-placeholder" role="img" aria-label="Espaço reservado para foto de Claudiane Geremias"><span>CG</span><small>Claudiane Geremias • Fisioterapeuta</small></div><div className="intro-copy"><span className="eyebrow">PRAZER, SOU CLAUDIANE</span><h2>Seu corpo merece atenção, movimento e <em>cuidado individualizado.</em></h2><p>Sou Claudiane Geremias, fisioterapeuta, CREFITO 199192-F. Meu trabalho é compreender o que você sente, avaliar suas necessidades e construir um plano de cuidado alinhado aos seus objetivos.</p><p>Atendimento acolhedor e responsável, com foco em função, mobilidade e qualidade de vida — respeitando o ritmo e as particularidades de cada pessoa.</p><button className="btn btn-primary" onClick={() => goWhatsapp("conhecer o atendimento de enfermagem")}><MessageCircle size={18}/> conhecer o atendimento</button></div></div></section>
 

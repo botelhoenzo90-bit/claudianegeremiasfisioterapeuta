@@ -129,26 +129,30 @@ function Index() {
             <p>Registros de acompanhamento de feridas publicados com autorização da pessoa atendida. Cada caso é único e os resultados variam conforme as condições individuais e o plano de cuidado.</p>
           </div>
           <div className="before-after-grid">
-            {beforeAfterCases.map((item) => (
+            {beforeAfterCases.map((item) => item.single ? (
+              <article className="before-after-card before-after-card-single" key={item.title}>
+                <div className="before-after-single-row">
+                  <div className="before-after-photo before-after-full" style={item.aspect ? { aspectRatio: item.aspect } : undefined}>
+                    <img src={item.single} alt={`Registro de acompanhamento: ${item.title}`} loading="lazy" />
+                  </div>
+                  <div className="before-after-card-copy">
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                  </div>
+                </div>
+              </article>
+            ) : (
               <article className="before-after-card" key={item.title}>
-                {item.single ? (
-                  <div className="before-after-single">
-                    <div className="before-after-photo before-after-full" style={item.aspect ? { aspectRatio: item.aspect } : undefined}>
-                      <img src={item.single} alt={`Registro de acompanhamento: ${item.title}`} loading="lazy" />
-                    </div>
+                <div className="before-after-images">
+                  <div className="before-after-photo">
+                    <span className="before-after-label">ANTES</span>
+                    <img src={item.before} alt={`${item.title} — antes`} loading="lazy" />
                   </div>
-                ) : (
-                  <div className="before-after-images">
-                    <div className="before-after-photo">
-                      <span className="before-after-label">ANTES</span>
-                      <img src={item.before} alt={`${item.title} — antes`} loading="lazy" />
-                    </div>
-                    <div className="before-after-photo">
-                      <span className="before-after-label after-label">DEPOIS</span>
-                      <img src={item.after} alt={`${item.title} — depois`} loading="lazy" />
-                    </div>
+                  <div className="before-after-photo">
+                    <span className="before-after-label after-label">DEPOIS</span>
+                    <img src={item.after} alt={`${item.title} — depois`} loading="lazy" />
                   </div>
-                )}
+                </div>
                 <div className="before-after-card-copy">
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>

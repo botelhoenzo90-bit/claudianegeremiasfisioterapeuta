@@ -75,7 +75,7 @@ function Index() {
         <div className="container hero-grid">
           <div className="hero-copy center-hero">
             <div className="physio-brand-lockup hero-logo-only"><img className="physio-brand-logo" src={logoNova.url} alt="Logomarca Claudiane Gerimias Fisioterapeuta" /></div>
-            <h1 className="hero-title-fix">Mais movimento, menos limitações<br/><em>cuidado para você viver melhor.</em></h1>
+            <h1 className="hero-title-fix">Mais movimento, menos limitações e<br/><em>cuidado para você viver melhor.</em></h1>
             <p className="hero-lead">Fisioterapia com atenção individualizada para dores na coluna, postura, mobilidade e bem-estar. Um cuidado que considera sua rotina, seus objetivos e as necessidades do seu corpo.</p>
             <div className="hero-actions">
               <button className="btn btn-primary" onClick={() => goWhatsapp("conversar sobre meu caso")}><MessageCircle size={18}/> Agendar uma avaliação</button>

@@ -497,3 +497,45 @@ body,.jt-site{color:#0b4168;background:#fff}
 .info-marquee{background:linear-gradient(90deg,#0b4168,#168f98,#0b4168);border-top:1px solid #bce8e8;border-bottom:1px solid #168f98}
 .marquee-group span{color:#fff}
 @media(max-width:760px){.before-after-grid{grid-template-columns:1fr;gap:16px}.before-after-placeholder{min-height:150px}.before-after-card-copy{padding:17px}.maria-review-card{flex-basis:285px;min-height:235px;padding:22px}.before-after-section,.maria-reviews-section{padding:48px 0}}
+
+
+/* Acabamento Clínica Naamã: início claro, bege acolhedor e azul-marinho pontual */
+:root{--cream:#f5eee4;--cream2:#fffdf9;--gold:#168f98;--gold-dark:#0b4168;--gold-soft:#d8eeee;--ink:#25384a;--muted:#6f6a63;--line:#e7ddd0;--white:#fffdf9;--dark:#0b4168}
+.hero,.maria-hero{background:linear-gradient(135deg,#fffdf9 0%,#f5eee4 66%,#e8f3f1 100%)!important;color:#25384a}
+.hero-glow{background:radial-gradient(circle,rgba(22,143,152,.13),rgba(245,238,228,.12) 44%,transparent 70%)!important}
+.hero h1{color:#0b4168!important}
+.hero h1 em,.section h2 em{color:#168f98!important}
+.hero-lead{color:#6f6a63!important}
+.hero-trust{color:#5f6c72!important}
+.hero-trust svg{color:#168f98!important}
+.hero .btn-outline{background:#fffdf9;border-color:#168f98;color:#0b4168}
+.info-marquee{background:linear-gradient(90deg,#0b4168,#168f98,#0b4168)!important}
+.intro-section{background:#fffdf9!important}
+.pain-section{background:linear-gradient(135deg,#0b4168,#164e70)!important;color:#fff}
+.pain-section .centered-list div{border-color:rgba(216,238,238,.25)!important}
+.procedures-section{background:#f5eee4!important}
+.how-section{background:linear-gradient(135deg,#f5eee4,#fffdf9)!important}
+.how-section h2,.how-section h2 em,.how-section .step-card h3{color:#0b4168!important}
+.how-section .section-heading p{color:#6f6a63!important}
+.how-section .step-card{background:#fffdf9!important;border-color:#e7ddd0!important}
+.how-section .step-card p{color:#6f6a63!important}
+.how-section .step-number{background:#d8eeee!important;color:#0b4168!important;border-color:#b5dede!important}
+.benefits-section{background:#fffdf9!important}
+.faq-section{background:linear-gradient(135deg,#f5eee4,#fffdf9)!important}
+.maria-location-section{background:#fffdf9!important}
+.maria-reviews-section{background:linear-gradient(135deg,#f5eee4,#fffdf9)!important}
+.maria-reviews-section .section-heading h2{color:#0b4168!important}
+.maria-reviews-section .section-heading p{color:#6f6a63!important}
+.maria-reviews-window{overflow:hidden;width:100%;margin-top:28px;mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.maria-reviews-track{display:flex;gap:18px;width:max-content;animation:mariaReviewsSlide 42s linear infinite!important;will-change:transform}
+.maria-reviews-window:hover .maria-reviews-track{animation-play-state:running!important}
+.maria-review-card{flex:0 0 330px;min-height:270px;padding:24px;background:#fffdf9;border:1px solid #e7ddd0;border-radius:22px;box-shadow:0 12px 28px rgba(11,65,104,.07);display:flex;flex-direction:column;text-align:left}
+.maria-review-card .review-stars{font-size:19px;letter-spacing:3px;color:#168f98!important;margin-bottom:14px}
+.maria-review-card p{flex:1;color:#465562!important;font-size:14px!important;line-height:1.75;margin:0 0 18px}
+.maria-review-author{display:flex;align-items:center;gap:11px;padding-top:14px;border-top:1px solid #e7ddd0;color:#0b4168;font-size:13px;font-weight:700}
+.maria-review-author>span{display:flex;flex-direction:column;gap:3px}
+.maria-review-author small{font-size:10px;font-weight:500;color:#8a8177}
+.maria-review-avatar{display:block;flex:none;width:44px;height:44px;border-radius:50%;object-fit:cover;border:2px solid #d8eeee}
+.maria-reviews-note{font-size:12px!important;line-height:1.7;color:#7b746b!important;text-align:center;margin:20px auto 0;max-width:740px}
+@media(max-width:760px){.maria-review-card{flex-basis:285px;min-height:265px;padding:21px}.maria-review-avatar{width:40px;height:40px}}
+@media(prefers-reduced-motion:reduce){.maria-reviews-track{animation:none!important}}

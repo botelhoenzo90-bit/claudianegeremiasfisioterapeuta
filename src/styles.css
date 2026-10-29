@@ -909,3 +909,13 @@ body,.jt-site{background:#fffaf0!important;color:#203b2a}
  .jt-site .how-section{padding-top:48px!important;padding-bottom:48px!important}
  .jt-site .how-section:before{width:260px;height:260px;right:-170px;top:-130px}
 }
+
+/* Logomarca Claudiane Geremias */
+.brand-logo{width:46px;height:46px;object-fit:contain;border-radius:12px;background:#ffffff;border:1px solid rgba(196,154,58,.45);box-shadow:0 4px 12px rgba(20,83,45,.10)}
+.physio-brand-logo{width:96px;height:96px;object-fit:contain;border-radius:20px;background:#ffffff;border:2px solid #c49a3a;box-shadow:0 10px 26px rgba(20,83,45,.16)}
+.footer-logo{width:96px;height:96px;object-fit:contain;border-radius:20px;background:#ffffff;border:2px solid #c49a3a;margin:0 auto 16px;display:block;box-shadow:0 10px 26px rgba(0,0,0,.18)}
+@media(max-width:760px){
+ .brand-logo{width:40px;height:40px}
+ .physio-brand-logo{width:76px;height:76px}
+ .footer-logo{width:82px;height:82px}
+}

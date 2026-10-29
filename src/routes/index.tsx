@@ -3,7 +3,15 @@ import { useState } from "react";
 import {
   Activity, ArrowRight, Bandage, Check, ChevronDown, CircleCheck, HeartPulse, MessageCircle, ShieldCheck, Stethoscope,
 } from "lucide-react";
-import shareNaama from "@/assets/compartilhamento-naama.jpg.asset.json";
+import logoClaudiane from "@/assets/logo-claudiane.png.asset.json";
+import imgDoresColuna from "@/assets/dores-na-coluna.jpg.asset.json";
+import imgPostura from "@/assets/postura-alinhamento.jpg.asset.json";
+import imgMobilidade from "@/assets/mobilidade-movimento.jpg.asset.json";
+import imgQuiropraxia from "@/assets/quiropraxia.jpg.asset.json";
+import imgFascite from "@/assets/fascite-plantar.jpg.asset.json";
+import imgFibromialgia from "@/assets/fibromialgia.jpg.asset.json";
+import imgOzonioterapia from "@/assets/ozonioterapia.jpg.asset.json";
+import imgClinica from "@/assets/clinica-espaco.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -13,9 +21,9 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Claudiane Geremias | Fisioterapia em Londrina" },
       { property: "og:description", content: "Cuidado individualizado para dores, postura, mobilidade e bem-estar." },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: `https://clinicanaama.lovable.app${shareNaama.url}` },
+      { property: "og:image", content: `https://clinicanaama.lovable.app${logoClaudiane.url}` },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: `https://clinicanaama.lovable.app${shareNaama.url}` },
+      { name: "twitter:image", content: `https://clinicanaama.lovable.app${logoClaudiane.url}` },
       { name: "theme-color", content: "#14532d" },
     ],
   }),
@@ -24,13 +32,13 @@ export const Route = createFileRoute("/")({
 
 const WHATSAPP = "https://wa.me/554391418724";
 const services = [
-  { title: "Dores na coluna", image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=900&q=85", text: "Abordagem individualizada para desconfortos na região cervical, torácica e lombar, buscando melhorar a função e a qualidade de vida.", icon: Activity },
-  { title: "Postura e alinhamento muscular", image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=85", text: "Orientações e exercícios terapêuticos para consciência corporal, equilíbrio muscular e hábitos posturais mais saudáveis.", icon: ShieldCheck },
-  { title: "Mobilidade e movimento", image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=900&q=85", text: "Recursos de fisioterapia para trabalhar flexibilidade, amplitude de movimento e confiança nas atividades do dia a dia.", icon: HeartPulse },
-  { title: "Quiropraxia", image: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=85", text: "Avaliação e técnicas manuais selecionadas conforme as necessidades, o histórico e a segurança de cada pessoa.", icon: Activity },
-  { title: "Fascite plantar", image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=85", text: "Cuidado voltado à dor na sola do pé, com avaliação funcional e estratégias para apoiar o movimento e as atividades diárias.", icon: Check },
-  { title: "Fibromialgia e dor persistente", image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=900&q=85", text: "Acompanhamento adaptado aos limites e objetivos individuais, com foco em movimento gradual, funcionalidade e bem-estar.", icon: HeartPulse },
-  { title: "Ozonioterapia", image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=85", text: "Converse com a profissional sobre indicação, evidências, benefícios esperados, riscos e alternativas para o seu caso.", icon: ShieldCheck },
+  { title: "Dores na coluna", image: imgDoresColuna.url, text: "Abordagem individualizada para desconfortos na região cervical, torácica e lombar, buscando melhorar a função e a qualidade de vida.", icon: Activity },
+  { title: "Postura e alinhamento muscular", image: imgPostura.url, text: "Orientações e exercícios terapêuticos para consciência corporal, equilíbrio muscular e hábitos posturais mais saudáveis.", icon: ShieldCheck },
+  { title: "Mobilidade e movimento", image: imgMobilidade.url, text: "Recursos de fisioterapia para trabalhar flexibilidade, amplitude de movimento e confiança nas atividades do dia a dia.", icon: HeartPulse },
+  { title: "Quiropraxia", image: imgQuiropraxia.url, text: "Avaliação e técnicas manuais selecionadas conforme as necessidades, o histórico e a segurança de cada pessoa.", icon: Activity },
+  { title: "Fascite plantar", image: imgFascite.url, text: "Cuidado voltado à dor na sola do pé, com avaliação funcional e estratégias para apoiar o movimento e as atividades diárias.", icon: Check },
+  { title: "Fibromialgia e dor persistente", image: imgFibromialgia.url, text: "Acompanhamento adaptado aos limites e objetivos individuais, com foco em movimento gradual, funcionalidade e bem-estar.", icon: HeartPulse },
+  { title: "Ozonioterapia", image: imgOzonioterapia.url, text: "Converse com a profissional sobre indicação, evidências, benefícios esperados, riscos e alternativas para o seu caso.", icon: ShieldCheck },
 ];
 const faqs = [
   ["Quais condições são atendidas?", "O atendimento é voltado a dores na coluna, postura, mobilidade, fascite plantar, fibromialgia, alinhamento muscular e outras necessidades avaliadas individualmente."],
@@ -50,7 +58,7 @@ function Index() {
       <header className="site-header maria-header-hidden">
         <div className="container header-inner">
           <a className="brand maria-brand" href="#inicio" aria-label="Claudiane Geremias, cuidado especializado">
-            <span className="brand-mark"><HeartPulse size={22}/></span>
+            <img className="brand-logo" src={logoClaudiane.url} alt="Logomarca Claudiane Geremias Fisioterapeuta" />
             <span><strong>CLAUDIANE GEREMIAS</strong><small>FISIOTERAPIA • CREFITO 199192-F</small></span>
           </a>
           <nav className="nav maria-nav" aria-label="Navegação principal">
@@ -64,7 +72,7 @@ function Index() {
         <div className="hero-glow"/>
         <div className="container hero-grid">
           <div className="hero-copy center-hero">
-            <div className="physio-brand-lockup"><span>CG</span><div><strong>Claudiane Geremias</strong><small>FISIOTERAPEUTA • CREFITO 199192-F</small></div></div>
+            <div className="physio-brand-lockup"><img className="physio-brand-logo" src={logoClaudiane.url} alt="Logomarca Claudiane Geremias Fisioterapeuta" /><div><strong>Claudiane Geremias</strong><small>FISIOTERAPEUTA • CREFITO 199192-F</small></div></div>
             <h1>Mais movimento, menos limitações e <em>cuidado para você viver melhor.</em></h1>
             <p className="hero-lead">Fisioterapia com atenção individualizada para dores na coluna, postura, mobilidade e bem-estar. Um cuidado que considera sua rotina, seus objetivos e as necessidades do seu corpo.</p>
             <div className="hero-actions">
@@ -99,7 +107,7 @@ function Index() {
             <p>Entre em contato para conhecer o espaço, tirar dúvidas e confirmar os horários disponíveis.</p>
             <button className="btn btn-primary" onClick={() => goWhatsapp("conhecer a clínica e agendar uma avaliação")}><MessageCircle size={18}/> Agendar uma visita ou avaliação</button>
           </div>
-          <div className="clinic-space-photo"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=85" alt="Ambiente de clínica de saúde acolhedor" loading="lazy"/><span>Imagem ilustrativa de ambiente clínico</span></div>
+          <div className="clinic-space-photo"><img src={imgClinica.url} alt="Sala de atendimento da clínica com macas e equipamentos de fisioterapia" loading="lazy"/><span>Espaço de atendimento da clínica</span></div>
         </div>
       </section>
 
@@ -143,7 +151,7 @@ function Index() {
 
       <section className="section final-cta maria-final"><div className="final-glow"/><div className="container narrow center"><span className="eyebrow">VAMOS CONVERSAR?</span><h2>Vamos conversar sobre seus objetivos?</h2><p>Entre em contato para saber mais sobre a avaliação e o atendimento de fisioterapia em Londrina.</p><button className="btn btn-primary" onClick={() => goWhatsapp("conversar sobre atendimento")}><MessageCircle size={18}/> Falar com a equipe pelo WhatsApp</button></div></section>
 
-      <footer className="footer maria-footer"><div className="container footer-grid"><div className="footer-brand"><div className="footer-name-mark">CG</div><p>Claudiane Geremias • Fisioterapeuta<br/>CREFITO 199192-F</p></div><div><h4>Navegação</h4><a href="#sobre">Sobre a clínica</a><a href="#tratamentos">Áreas de atuação</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Perguntas frequentes</a></div><div><h4>Contato</h4><a href={WHATSAPP} target="_blank" rel="noreferrer"><MessageCircle size={14}/> +55 (43) 9141-8724</a><span><ShieldCheck size={14}/> Cuidado responsável e individualizado</span></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Claudiane Geremias.</span><span>Fisioterapia • Quiropraxia • Mobilidade</span></div></footer>
+      <footer className="footer maria-footer"><div className="container footer-grid"><div className="footer-brand"><img className="footer-logo" src={logoClaudiane.url} alt="Logomarca Claudiane Geremias Fisioterapeuta" /><p>Claudiane Geremias • Fisioterapeuta<br/>CREFITO 199192-F</p></div><div><h4>Navegação</h4><a href="#sobre">Sobre a clínica</a><a href="#tratamentos">Áreas de atuação</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Perguntas frequentes</a></div><div><h4>Contato</h4><a href={WHATSAPP} target="_blank" rel="noreferrer"><MessageCircle size={14}/> +55 (43) 9141-8724</a><span><ShieldCheck size={14}/> Cuidado responsável e individualizado</span></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Claudiane Geremias.</span><span>Fisioterapia • Quiropraxia • Mobilidade</span></div></footer>
 
       <a className="floating-wa maria-floating-wa" href={WHATSAPP} target="_blank" rel="noreferrer" aria-label="Falar com a equipe pelo WhatsApp"><img src="/whatsapp-flutuante/image.png" alt="" /><span>WhatsApp</span></a>
     </main>

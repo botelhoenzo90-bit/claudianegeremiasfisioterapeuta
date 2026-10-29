@@ -850,3 +850,20 @@ body,.jt-site{background:#fffaf0!important;color:#203b2a}
  .jt-site .clinic-space-copy .eyebrow{justify-content:center}
  .jt-site .clinic-space-photo,.jt-site .clinic-space-photo img{min-height:280px}
 }
+
+
+/* Alternância de fundos: verde profundo para dar mais presença e equilíbrio à página */
+.jt-site .benefits-section{background:linear-gradient(135deg,#104523 0%,#14532d 58%,#1b6b36 100%)!important;color:#fffaf0!important;position:relative;overflow:hidden}
+.jt-site .benefits-section:before{content:"";position:absolute;width:380px;height:380px;right:-140px;top:-190px;border:1px solid rgba(240,228,197,.22);border-radius:50%;box-shadow:0 0 0 35px rgba(240,228,197,.035),0 0 0 70px rgba(240,228,197,.025);pointer-events:none}
+.jt-site .benefits-section .container{position:relative}
+.jt-site .benefits-section .section-heading h2,.jt-site .benefits-section .section-heading h2 em{color:#fffaf0!important}
+.jt-site .benefits-section .section-heading p{color:#e5eddf!important}
+.jt-site .benefits-section .eyebrow{color:#f0d99b!important}
+.jt-site .benefits-section .benefit-grid article{background:#fffaf0!important;border:1px solid rgba(240,228,197,.75)!important;box-shadow:0 14px 32px rgba(0,0,0,.12)!important}
+.jt-site .benefits-section .benefit-grid article>span,.jt-site .benefits-section .benefit-grid article svg{color:#a77d22!important}
+.jt-site .benefits-section .benefit-grid h3{color:#14532d!important}
+.jt-site .benefits-section .benefit-grid p{color:#586658!important}
+.jt-site .maria-location-section{background:linear-gradient(135deg,#e3eddf 0%,#f5efe2 100%)!important;border-top:1px solid #e6dcc7;border-bottom:1px solid #e6dcc7}
+.jt-site .maria-location-section .address,.jt-site .maria-location-section .location-info>div{background:#fffaf0!important}
+.jt-site .maria-location-section .eyebrow{color:#8a6a1f!important}
+@media(max-width:760px){.jt-site .benefits-section{padding-top:48px!important;padding-bottom:48px!important}.jt-site .benefits-section:before{width:260px;height:260px;right:-170px;top:-130px}}

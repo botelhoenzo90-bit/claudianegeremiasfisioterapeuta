@@ -61,7 +61,6 @@ function Index() {
         <div className="hero-glow"/>
         <div className="container hero-grid">
           <div className="hero-copy center-hero">
-            <div className="hero-profile-intro"><span className="hero-profile-name">CLÍNICA NAAMÃ</span><span className="hero-profile-role">CUIDADO ESPECIALIZADO • ATENDIMENTO DOMICILIAR</span></div>
             <h1>Feridas e pé diabético exigem <em>cuidado especializado.</em></h1>
             <p className="hero-lead">A Clínica Naamã oferece cuidado especializado para feridas e pé diabético, com avaliação individual, curativos e atenção às necessidades de cada pessoa — inclusive no conforto da sua casa.</p>
             <div className="hero-actions">
@@ -69,7 +68,6 @@ function Index() {
               <a className="btn btn-outline" href="#tratamentos">Conhecer os atendimentos <ArrowRight size={17}/></a>
             </div>
             <div className="hero-trust"><span><Check size={15}/> Avaliação individual</span><span><Check size={15}/> Atendimento humanizado</span><span><Check size={15}/> Cuidado especializado</span></div>
-            <div className="hero-bottom-eyebrow">CLÍNICA NAAMÃ <span>•</span> CUIDADO QUE TRANSFORMA</div>
           </div>
         </div>
       </section>
@@ -132,19 +130,26 @@ function Index() {
         <div className="container">
           <div className="section-heading center">
             <span className="eyebrow">AVALIAÇÕES</span>
-            <h2>A confiança começa com <em>acolhimento.</em></h2>
-            <p>Este espaço será atualizado com avaliações reais de pessoas atendidas, após confirmação e autorização para publicação.</p>
+            <h2>Um cuidado que começa com <em>acolhimento.</em></h2>
+            <p>Veja exemplos de como esta seção de avaliações poderá ficar no site. Os relatos abaixo são demonstrativos.</p>
           </div>
           <div className="maria-reviews-window">
             <div className="maria-reviews-track">
-              {[1,2,3,1,2,3].map((n,i)=><article className="maria-review-card" key={i}>
-                
-                <p>{n===1?"O depoimento real da pessoa atendida será incluído aqui após autorização.":n===2?"Este espaço está reservado para uma avaliação confirmada e autorizada.":"A avaliação será adicionada quando a clínica enviar o conteúdo aprovado."}</p>
-                <div className="maria-review-author"><span className="maria-review-avatar" aria-hidden="true"></span><span>Avaliação a adicionar</span></div>
+              {[
+                {name:"Mariana S.",image:"https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=160&h=160&q=80",text:"Fui recebida com muita atenção e tive minhas dúvidas esclarecidas com calma. O cuidado individual faz toda a diferença."},
+                {name:"Carlos R.",image:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&h=160&q=80",text:"Gostei da atenção aos detalhes e das orientações sobre os cuidados em casa. Atendimento acolhedor e profissional."},
+                {name:"Patrícia M.",image:"https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=160&h=160&q=80",text:"A conversa foi clara e respeitosa. É importante sentir que suas preocupações são ouvidas e levadas a sério."},
+                {name:"Mariana S.",image:"https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=160&h=160&q=80",text:"Fui recebida com muita atenção e tive minhas dúvidas esclarecidas com calma. O cuidado individual faz toda a diferença."},
+                {name:"Carlos R.",image:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&h=160&q=80",text:"Gostei da atenção aos detalhes e das orientações sobre os cuidados em casa. Atendimento acolhedor e profissional."},
+                {name:"Patrícia M.",image:"https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=160&h=160&q=80",text:"A conversa foi clara e respeitosa. É importante sentir que suas preocupações são ouvidas e levadas a sério."}
+              ].map((review,i)=><article className="maria-review-card" key={i}>
+                <div className="review-stars" aria-label="5 estrelas">★★★★★</div>
+                <p>“{review.text}”</p>
+                <div className="maria-review-author"><img className="maria-review-avatar" src={review.image} alt="" loading="lazy"/><span>{review.name}<small>Relato demonstrativo</small></span></div>
               </article>)}
             </div>
           </div>
-          <p className="maria-reviews-note">Os depoimentos serão publicados somente com autorização. Não são exibidas avaliações fictícias.</p>
+          <p className="maria-reviews-note">Aviso: os nomes, as imagens e os textos são fictícios e servem apenas como demonstração do layout. Substitua por avaliações reais e autorizadas antes de publicar o site.</p>
         </div>
       </section>
 

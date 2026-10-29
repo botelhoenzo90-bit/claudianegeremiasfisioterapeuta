@@ -88,7 +88,33 @@ function Index() {
 
       <section className="section how-section" id="como-funciona"><div className="container"><div className="section-heading center"><span className="eyebrow">COMO FUNCIONA</span><h2>Um caminho de cuidado em <em>quatro etapas.</em></h2><p>Da primeira conversa ao acompanhamento, cada etapa é conduzida com atenção, clareza e respeito.</p></div><div className="steps-grid">{[["01","Primeiro contato","Você explica brevemente o que está acontecendo e tira suas primeiras dúvidas."],["02","Avaliação","São consideradas a ferida, seu histórico e os fatores relevantes para o cuidado."],["03","Plano individual","As possibilidades de cuidado e orientações são explicadas com clareza."],["04","Acompanhamento","O cuidado é revisto conforme a evolução e a necessidade de cada caso."]].map(([n,t,d])=><article className="step-card" key={n}><span className="step-number">{n}</span><div><h3>{t}</h3><p>{d}</p></div></article>)}</div><div className="section-action center"><button className="btn btn-primary" onClick={() => goWhatsapp("iniciar uma conversa sobre atendimento")}><MessageCircle size={18}/> Iniciar uma conversa</button></div></div></section>
 
-<section className="section benefits-section"><div className="container"><div className="section-heading center"><span className="eyebrow">NOSSO COMPROMISSO</span><h2>Informação clara, acolhimento e <em>responsabilidade.</em></h2></div><div className="benefit-grid maria-benefits"><article><span>01</span><HeartPulse/><h3>Olhar individualizado</h3><p>Cada pessoa e cada ferida têm características próprias que precisam ser consideradas.</p></article><article><span>02</span><ShieldCheck/><h3>Segurança em primeiro lugar</h3><p>As condutas consideram avaliação, critérios profissionais e necessidades clínicas.</p></article><article><span>03</span><Stethoscope/><h3>Orientação responsável</h3><p>Você recebe informações claras sobre cuidados, possibilidades e próximos passos.</p></article><article><span>04</span><CircleCheck/><h3>Cuidado em conjunto</h3><p>Quando necessário, o acompanhamento considera a atuação integrada com outros profissionais.</p></article></div></div></section>
+<section className="section intro-section" id="acompanhamento">
+        <div className="container">
+          <div className="section-heading center">
+            <span className="eyebrow">ACOMPANHAMENTO</span>
+            <h2>Cada etapa do cuidado merece <em>atenção.</em></h2>
+            <p>Esta área ficará reservada para imagens autorizadas de acompanhamento das feridas, que serão adicionadas posteriormente. Cada caso é único e não há garantia de resultados específicos.</p>
+          </div>
+          <div className="steps-grid">
+            {[["01","Registros de acompanhamento","As novas imagens serão adicionadas após o envio dos arquivos."],["02","Cuidado individualizado","As orientações são definidas conforme a avaliação e as necessidades de cada pessoa."],["03","Privacidade e respeito","Imagens de pacientes só devem ser publicadas com autorização expressa."]].map(([n,t,d])=><article className="step-card" key={n}><span className="step-number">{n}</span><div><h3>{t}</h3><p>{d}</p></div></article>)}
+          </div>
+        </div>
+      </section>
+
+      <section className="section intro-section" id="avaliacoes">
+        <div className="container">
+          <div className="section-heading center">
+            <span className="eyebrow">AVALIAÇÕES</span>
+            <h2>A confiança começa com <em>acolhimento.</em></h2>
+            <p>Esta área está preparada para receber avaliações reais de pessoas atendidas, após confirmação e autorização para publicação.</p>
+          </div>
+          <div className="steps-grid">
+            {[["01","Relatos reais","Depoimento a ser incluído após validação."],["02","Experiências de atendimento","Conteúdo a ser adicionado pela clínica."],["03","Respeito à privacidade","Publicaremos apenas relatos autorizados."]].map(([n,t,d])=><article className="step-card" key={n}><span className="step-number">{n}</span><div><h3>{t}</h3><p>{d}</p></div></article>)}
+          </div>
+        </div>
+      </section>
+
+      <section className="section benefits-section"><div className="container"><div className="section-heading center"><span className="eyebrow">NOSSO COMPROMISSO</span><h2>Informação clara, acolhimento e <em>responsabilidade.</em></h2></div><div className="benefit-grid maria-benefits"><article><span>01</span><HeartPulse/><h3>Olhar individualizado</h3><p>Cada pessoa e cada ferida têm características próprias que precisam ser consideradas.</p></article><article><span>02</span><ShieldCheck/><h3>Segurança em primeiro lugar</h3><p>As condutas consideram avaliação, critérios profissionais e necessidades clínicas.</p></article><article><span>03</span><Stethoscope/><h3>Orientação responsável</h3><p>Você recebe informações claras sobre cuidados, possibilidades e próximos passos.</p></article><article><span>04</span><CircleCheck/><h3>Cuidado em conjunto</h3><p>Quando necessário, o acompanhamento considera a atuação integrada com outros profissionais.</p></article></div></div></section>
 
       <section className="section maria-location-section" id="localizacao"><div className="container maria-location-grid"><div><span className="eyebrow">LOCALIZAÇÃO</span><h2>Vamos encontrar o melhor caminho para o seu <em>atendimento.</em></h2><p>Entre em contato para confirmar o endereço do consultório, a disponibilidade e as informações de atendimento.</p><button className="btn btn-primary" onClick={() => goWhatsapp("consultar endereço e disponibilidade de atendimento")}><MessageCircle size={18}/> Consultar localização pelo WhatsApp</button><p className="maria-map-note">Mapa provisório de Teresina–PI. O endereço correto será adicionado quando for confirmado.</p></div><div className="maria-map-frame"><iframe title="Mapa provisório de Teresina, Piauí" src="https://maps.google.com/maps?q=Teresina%2C%20Piau%C3%AD%2C%20Brasil&t=&z=12&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen /></div></div></section>
 

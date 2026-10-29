@@ -933,3 +933,7 @@ body,.jt-site{background:#fffaf0!important;color:#203b2a}
 .hero-logo-only .physio-brand-logo{width:min(230px,62vw)!important}
 .maria-footer .footer-brand .footer-logo{width:150px!important;height:auto!important;aspect-ratio:auto!important;max-height:none!important;padding:10px!important}
 .hero h1.hero-title-fix{font-size:clamp(32px,4.6vw,58px)!important;line-height:1.12!important;letter-spacing:-1px!important;max-width:900px;margin-left:auto;margin-right:auto;text-wrap:balance}
+
+
+/* Remover a observação de avaliações ilustrativas da seção de avaliações */
+.jt-site .maria-reviews-note{display:none!important}

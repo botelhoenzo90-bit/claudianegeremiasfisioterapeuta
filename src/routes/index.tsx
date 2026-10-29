@@ -136,7 +136,6 @@ function Index() {
               </article>)}
             </div>
           </div>
-          <p className="reviews-illustrative-note">*Avaliações ilustrativas, criadas apenas para demonstração.</p>
         </div>
         <div className="section-action center"><button className="btn btn-primary" onClick={() => goWhatsapp("agendar uma avaliação de fisioterapia")}><MessageCircle size={18}/> Agendar minha avaliação</button></div>
       </section>

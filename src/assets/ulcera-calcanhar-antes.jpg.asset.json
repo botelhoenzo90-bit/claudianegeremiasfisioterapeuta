@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "a69231d3-dd13-4f20-8b6a-a31801a4c28c",
-  "project_id": "338b1634-a00c-4131-8537-8effdb7efade",
-  "url": "/__l5e/assets-v1/a69231d3-dd13-4f20-8b6a-a31801a4c28c/ulcera-calcanhar-antes.jpg",
-  "r2_key": "a/v1/338b1634-a00c-4131-8537-8effdb7efade/a69231d3-dd13-4f20-8b6a-a31801a4c28c/ulcera-calcanhar-antes.jpg",
-  "original_filename": "ulcera-calcanhar-antes.jpg",
-  "size": 83259,
   "content_type": "image/jpeg",
-  "created_at": "2026-10-29T13:19:28Z"
+  "created_at": "2026-10-29T13:19:28Z",
+  "original_filename": "ulcera-calcanhar-antes.jpg",
+  "project_id": "c8b6f119-280d-46eb-8a59-fc182c87228d",
+  "r2_key": "a/v1/c8b6f119-280d-46eb-8a59-fc182c87228d/a69231d3-dd13-4f20-8b6a-a31801a4c28c/ulcera-calcanhar-antes.jpg",
+  "size": 83259,
+  "url": "/__l5e/assets-v1/a69231d3-dd13-4f20-8b6a-a31801a4c28c/ulcera-calcanhar-antes.jpg",
+  "version": 1
 }

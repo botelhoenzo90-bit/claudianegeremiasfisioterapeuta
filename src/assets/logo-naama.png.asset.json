@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "9ef37b58-ff39-4006-b9ff-0a3d6dbdbd87",
-  "project_id": "338b1634-a00c-4131-8537-8effdb7efade",
-  "url": "/__l5e/assets-v1/9ef37b58-ff39-4006-b9ff-0a3d6dbdbd87/logo-naama.png",
-  "r2_key": "a/v1/338b1634-a00c-4131-8537-8effdb7efade/9ef37b58-ff39-4006-b9ff-0a3d6dbdbd87/logo-naama.png",
-  "original_filename": "logo-naama.png",
-  "size": 785131,
   "content_type": "image/png",
-  "created_at": "2026-10-29T13:26:55Z"
+  "created_at": "2026-10-29T13:26:55Z",
+  "original_filename": "logo-naama.png",
+  "project_id": "c8b6f119-280d-46eb-8a59-fc182c87228d",
+  "r2_key": "a/v1/c8b6f119-280d-46eb-8a59-fc182c87228d/9ef37b58-ff39-4006-b9ff-0a3d6dbdbd87/logo-naama.png",
+  "size": 785131,
+  "url": "/__l5e/assets-v1/9ef37b58-ff39-4006-b9ff-0a3d6dbdbd87/logo-naama.png",
+  "version": 1
 }

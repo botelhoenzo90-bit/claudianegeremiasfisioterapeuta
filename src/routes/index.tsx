@@ -6,6 +6,7 @@ import {
 import logoClaudiane from "@/assets/logo-claudiane.png.asset.json";
 import logoSemFundo from "@/assets/logo-claudiane-sem-fundo.png.asset.json";
 import logoNova from "@/assets/logo-claudiane-nova.png.asset.json";
+import compartilhamentoClaudiane from "@/assets/compartilhamento-claudiane.jpg.asset.json";
 import imgDoresColuna from "@/assets/dores-na-coluna.jpg.asset.json";
 import imgPostura from "@/assets/postura-alinhamento.jpg.asset.json";
 import imgMobilidade from "@/assets/mobilidade-movimento.jpg.asset.json";
@@ -23,9 +24,11 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Claudiane Geremias | Fisioterapia em Londrina" },
       { property: "og:description", content: "Cuidado individualizado para dores, postura, mobilidade e bem-estar." },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: `https://clinicanaama.lovable.app${logoClaudiane.url}` },
+      { property: "og:image", content: `https://claudianegeremiasfisioterapeuta.lovable.app${compartilhamentoClaudiane.url}` },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: `https://clinicanaama.lovable.app${logoClaudiane.url}` },
+      { name: "twitter:image", content: `https://claudianegeremiasfisioterapeuta.lovable.app${compartilhamentoClaudiane.url}` },
       { name: "theme-color", content: "#14532d" },
     ],
   }),

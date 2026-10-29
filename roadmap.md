@@ -12,3 +12,4 @@
 - [x] Centralizar os tópicos da seção quando procurar apoio e quadrar a logomarca do rodapé
 
 - [x] Trocar fotos da area de atuacao, foto da clinica e aplicar a logomarca (topo, rodape, favicon, compartilhamento)
+- [x] Trocar favicon e imagem de compartilhamento pela logomarca atual (domínio correto do site)

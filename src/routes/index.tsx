@@ -3,6 +3,12 @@ import { useState } from "react";
 import {
   Activity, ArrowRight, Bandage, Check, ChevronDown, CircleCheck, HeartPulse, MessageCircle, ShieldCheck, Stethoscope,
 } from "lucide-react";
+import cotoAmputacaoRegistro from "@/assets/coto-amputacao-registro.jpg.asset.json";
+import cotoAmputacaoAntesDepois from "@/assets/coto-amputacao-antes-depois.jpg.asset.json";
+import ulceraCotoAntes from "@/assets/ulcera-coto-antes.jpg.asset.json";
+import ulceraCotoDepois from "@/assets/ulcera-coto-depois.jpg.asset.json";
+import ulceraCalcanharAntes from "@/assets/ulcera-calcanhar-antes.jpg.asset.json";
+import ulceraCalcanharDepois from "@/assets/ulcera-calcanhar-depois.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -36,6 +42,14 @@ const faqs = [
   ["Como funciona a primeira avaliação?", "O primeiro passo é conversar sobre a situação e as necessidades de cuidado. A profissional avalia a ferida e explica as possibilidades de acompanhamento e os próximos passos."],
   ["O que fazer quando uma ferida não cicatriza?", "Uma ferida persistente, alterações de cor, secreção, mau cheiro, aumento da dor ou sinais de infecção precisam de avaliação profissional. Em situações de urgência, procure um serviço de saúde."],
   ["Como posso agendar?", "Clique em qualquer botão de WhatsApp desta página para conversar com a equipe da Clínica Naamã e consultar informações sobre atendimento e disponibilidade."],
+];
+
+type BeforeAfterCase = { title: string; description: string; slot: "pair-a" | "pair-b" | "tall" | "feature"; before?: string; after?: string; single?: string; aspect?: string; panels?: boolean };
+const beforeAfterCases: BeforeAfterCase[] = [
+  { slot: "pair-a", title: "Úlcera em calcanhar", description: "Lesão aberta na região do calcanhar, com leito de granulação, acompanhada até o fechamento da ferida e a formação de tecido de cicatrização.", before: ulceraCalcanharAntes.url, after: ulceraCalcanharDepois.url },
+  { slot: "pair-b", title: "Ferida profunda em coto de amputação", description: "Ferida com tecido desvitalizado e bordas espessas que, com desbridamento e curativos especializados, evoluiu para um leito regular de tecido de granulação.", before: ulceraCotoAntes.url, after: ulceraCotoDepois.url },
+  { slot: "tall", title: "Acompanhamento de ferida em coto de amputação", description: "Registro publicado com autorização: à esquerda, a ferida aberta; à direita, a mesma área com a lesão praticamente fechada.", single: cotoAmputacaoRegistro.url, aspect: "900/1600", panels: true },
+  { slot: "feature", title: "Cicatrização de ferida em coto de amputação", description: "Registro publicado com autorização: à esquerda, a ferida com tecido desvitalizado; à direita, a mesma área em fase de cicatrização.", single: cotoAmputacaoAntesDepois.url, aspect: "828/739" },
 ];
 
 function Index() {
@@ -112,31 +126,40 @@ function Index() {
           <div className="section-heading center">
             <span className="eyebrow">ACOMPANHAMENTO</span>
             <h2>Antes e depois: cada etapa merece <em>atenção.</em></h2>
-            <p>Espaço reservado para registros de acompanhamento de feridas, que serão adicionados após o envio das novas imagens. Cada caso é único e os resultados variam conforme as condições individuais e o plano de cuidado.</p>
+            <p>Registros de acompanhamento de feridas publicados com autorização da pessoa atendida. Cada caso é único e os resultados variam conforme as condições individuais e o plano de cuidado.</p>
           </div>
           <div className="before-after-grid">
-            {[
-              { title: "Acompanhamento de feridas", description: "Espaço para registrar a evolução do cuidado ao longo do tempo." },
-              { title: "Cuidados com o pé diabético", description: "Imagens para mostrar etapas do acompanhamento, quando autorizadas." },
-              { title: "Outros casos acompanhados", description: "Adicione aqui outros registros relevantes e autorizados." },
-            ].map((item) => (
-              <article className="before-after-card" key={item.title}>
-                <div className="before-after-images">
-                  <div className="before-after-placeholder">
-                    <span className="before-after-label">ANTES</span>
-                    <div className="before-after-plus" aria-hidden="true">+</div>
-                    <span className="before-after-hint">Adicionar imagem</span>
+            {beforeAfterCases.map((item) => (
+              <article className={`before-after-card ba-${item.slot}`} key={item.title}>
+                {item.single ? (
+                  <div className="before-after-stack">
+                    <div className="before-after-photo before-after-full" style={item.aspect ? { aspectRatio: item.aspect } : undefined}>
+                      <img src={item.single} alt={`Registro de acompanhamento: ${item.title}`} loading="lazy" />
+                      {item.panels && <><span className="before-after-label">ANTES</span><span className="before-after-label after-label before-after-label-right">DEPOIS</span></>}
+                    </div>
+                    <div className="before-after-card-copy">
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                    </div>
                   </div>
-                  <div className="before-after-placeholder">
-                    <span className="before-after-label after-label">DEPOIS</span>
-                    <div className="before-after-plus" aria-hidden="true">+</div>
-                    <span className="before-after-hint">Adicionar imagem</span>
-                  </div>
-                </div>
-                <div className="before-after-card-copy">
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                </div>
+                ) : (
+                  <>
+                    <div className="before-after-images">
+                      <div className="before-after-photo">
+                        <span className="before-after-label">ANTES</span>
+                        <img src={item.before} alt={`${item.title} — antes`} loading="lazy" />
+                      </div>
+                      <div className="before-after-photo">
+                        <span className="before-after-label after-label">DEPOIS</span>
+                        <img src={item.after} alt={`${item.title} — depois`} loading="lazy" />
+                      </div>
+                    </div>
+                    <div className="before-after-card-copy">
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                    </div>
+                  </>
+                )}
               </article>
             ))}
           </div>

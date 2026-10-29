@@ -8,3 +8,4 @@
 - [x] Publicar a confirmação e verificar o site no Google
 - [x] Enviar o mapa de páginas ao Google
 - [x] Adicionar as seis fotos clínicas na seção antes e depois
+- [x] Colocar as seis novas fotos na seção antes e depois

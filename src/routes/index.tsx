@@ -1,108 +1,59 @@
 import { createFileRoute } from "@tanstack/react-router";
-import compartilhamentoMaria from "@/assets/compartilhamento-maria.png.asset.json";
-import ulceraCalcanhar from "@/assets/ulcera-calcanhar.jpg.asset.json";
-import ulceraPlantar from "@/assets/ulcera-plantar.png.asset.json";
-import escarasGluteas from "@/assets/escaras-gluteas.jpg.asset.json";
-import escarasGluteasEvolucao from "@/assets/escaras-gluteas-evolucao.jpg.asset.json";
-import alertaLesaoPodica from "@/assets/alerta-lesao-podica.jpg.asset.json";
-import cicatrizacaoComparativo from "@/assets/cicatrizacao-comparativo.jpg.asset.json";
-import "../before-after.css";
 import { useState } from "react";
 import {
-  Activity, ArrowRight, Bandage, Check, ChevronDown, CircleCheck, HeartPulse,
-  MessageCircle, Microscope, ShieldCheck, Sparkles, Stethoscope, Waves, Zap,
+  Activity, ArrowRight, Bandage, Check, ChevronDown, CircleCheck, HeartPulse, MessageCircle, ShieldCheck, Stethoscope,
 } from "lucide-react";
-
-type BeforeAfterCase = {
-  title: string;
-  description: string;
-  before: { url: string } | null;
-  after: { url: string } | null;
-  single: { url: string } | null;
-};
-
-const beforeAfterCases: BeforeAfterCase[] = [
-  {
-    title: "Úlcera no pé em acompanhamento",
-    description: "Acompanhamento de úlcera profunda na região do calcanhar: da presença de tecido necrótico até a redução da lesão com tecido de granulação.",
-    before: ulceraCalcanhar,
-    after: ulceraPlantar,
-    single: null,
-  },
-  {
-    title: "Lesões por pressão na região glútea",
-    description: "Evolução de lesões por pressão em ambas as nádegas: das cavidades profundas com secreção até o leito preenchido por tecido de granulação.",
-    before: escarasGluteas,
-    after: escarasGluteasEvolucao,
-    single: null,
-  },
-  {
-    title: "Cicatrização de lesão plantar",
-    description: "Comparativo de lesão no dedo do pé: da úlcera aberta e profunda à lesão fechada e epitelizada.",
-    before: null,
-    after: null,
-    single: cicatrizacaoComparativo,
-  },
-  {
-    title: "Pequenas lesões pedem atenção",
-    description: "Sinais de alerta no pé: uma pequena lesão pode evoluir para complicações graves quando não é acompanhada.",
-    before: null,
-    after: null,
-    single: alertaLesaoPodica,
-  },
-];
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Maria de Jesus | Enfermagem Dermatológica e Tratamento de Feridas" },
-      { name: "description", content: "Atendimento em enfermagem dermatológica com foco no cuidado de feridas, pós-operatório, lesões por pressão, laserterapia, ozonioterapia, PRP e PRF." },
-      { property: "og:title", content: "Maria de Jesus | Enfermagem Dermatológica" },
-      { property: "og:description", content: "Cuidado especializado e individualizado no tratamento de feridas." },
+      { title: "Clínica Naamã | Cuidado Especializado com Feridas e Pé Diabético" },
+      { name: "description", content: "Clínica Naamã: cuidado especializado com feridas, pé diabético e curativos, com opção de atendimento domiciliar." },
+      { property: "og:title", content: "Clínica Naamã | Feridas e Pé Diabético" },
+      { property: "og:description", content: "Cuidado especializado, acolhedor e individualizado para feridas e pé diabético." },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: `https://mariaenfermeiradermatologica.lovable.app${compartilhamentoMaria.url}` },
+      { property: "og:image", content: `https://clinicanaama.lovable.app/image.png` },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: `https://mariaenfermeiradermatologica.lovable.app${compartilhamentoMaria.url}` },
+      { name: "twitter:image", content: `https://clinicanaama.lovable.app/image.png` },
       { name: "theme-color", content: "#142b45" },
     ],
   }),
   component: Index,
 });
 
-const WHATSAPP = "https://wa.me/556696434578";
+const WHATSAPP = "https://wa.me/5512988298061";
 const services = [
-  { title: "Feridas agudas e crônicas", image: "/Cuidado%20Cl%C3%ADnico%20de%20Ferida%20no%20Calcanhar.png", text: "Avaliação e cuidado individualizado de feridas, considerando as características de cada lesão e as necessidades de cada pessoa.", icon: Bandage },
-  { title: "Cuidados no pós-operatório", image: "/Cuidado%20Cl%C3%ADnico%20com%20Curativo%20no%20Joelho.png", text: "Acompanhamento e orientações de enfermagem para apoiar o cuidado da ferida cirúrgica durante a recuperação.", icon: HeartPulse },
-  { title: "Lesões por pressão", image: "/Tratamento%20Cuidadoso%20de%20Ferida%20no%20P%C3%A9.png", text: "Cuidados especializados para lesões por pressão, com atenção à pele, ao conforto e à prevenção de novas lesões.", icon: ShieldCheck },
-  { title: "Úlceras venosas e arteriais", image: "/Ilustra%C3%A7%C3%A3o%20M%C3%A9dica%20de%20%C3%9Alcera%20na%20Perna.png", text: "Avaliação de enfermagem e plano de cuidado individualizado para úlceras de origem vascular.", icon: Activity },
-  { title: "Laserterapia", image: "/Terapia%20a%20Laser%20no%20Joelho.png", text: "Recurso terapêutico que pode ser considerado conforme a avaliação, a indicação e os objetivos do tratamento.", icon: Zap },
-  { title: "Ozonioterapia", image: "/Terapia%20com%20oz%C3%B4nio%20na%20perna.png", text: "Abordagem complementar avaliada caso a caso, considerando indicação, segurança e evidências disponíveis.", icon: Waves },
-  { title: "PRP e PRF", image: "/Procedimento%20de%20PRP%20em%20cl%C3%ADnica%20est%C3%A9tica.png", text: "Terapias regenerativas com plasma rico em plaquetas ou fibrina, quando houver indicação e condições adequadas.", icon: Microscope },
+  { title: "Feridas agudas e crônicas", image: "/Cuidado%20Cl%C3%ADnico%20de%20Ferida%20no%20Calcanhar.png", text: "Avaliação e cuidado individualizado para feridas recentes ou de longa duração, com atenção às características de cada lesão.", icon: Bandage },
+  { title: "Pé diabético", image: "/Tratamento%20Cuidadoso%20de%20Ferida%20no%20P%C3%A9.png", text: "Acompanhamento especializado para lesões nos pés de pessoas com diabetes, com foco na avaliação, proteção e prevenção de complicações.", icon: Activity },
+  { title: "Curativos especializados", image: "/Cuidado%20Cl%C3%ADnico%20com%20Curativo%20no%20Joelho.png", text: "Curativos selecionados conforme a avaliação da ferida, a condição da pele e as necessidades de cada pessoa.", icon: ShieldCheck },
+  { title: "Lesões por pressão", image: "/Ilustra%C3%A7%C3%A3o%20M%C3%A9dica%20de%20%C3%9Alcera%20na%20Perna.png", text: "Cuidados para lesões por pressão, conforto, proteção da pele e orientações para ajudar a reduzir novos danos.", icon: HeartPulse },
+  { title: "Úlceras venosas e arteriais", image: "/Ilustra%C3%A7%C3%A3o%20M%C3%A9dica%20de%20%C3%9Alcera%20na%20Perna.png", text: "Avaliação e plano de cuidado individualizado para úlceras vasculares, considerando a necessidade de acompanhamento integrado.", icon: Activity },
+  { title: "Atendimento domiciliar", image: "/Cuidado%20Cl%C3%ADnico%20de%20Ferida%20no%20Calcanhar.png", text: "Cuidado especializado no conforto de casa, com atenção individual, orientação e respeito à rotina da pessoa atendida.", icon: HeartPulse },
 ];
 const faqs = [
-  ["Quais tipos de feridas são atendidos?", "O atendimento é voltado a feridas agudas e crônicas, feridas no pós-operatório, lesões por pressão e úlceras venosas e arteriais. A conduta é definida após avaliação individual."],
-  ["Como funciona a primeira consulta?", "O primeiro passo é conversar sobre o histórico e as necessidades de cuidado. A enfermeira avalia a situação e explica as possibilidades de acompanhamento e os próximos passos."],
-  ["Laserterapia, ozonioterapia, PRP e PRF são indicados para todos?", "Não. A indicação depende de avaliação individual, condições clínicas, segurança, evidências disponíveis e regulamentação profissional aplicável. Nem todo recurso é adequado para todos os casos."],
-  ["O atendimento substitui uma consulta médica?", "O atendimento de enfermagem tem seu próprio papel no cuidado e não substitui avaliação médica quando ela é necessária. Em sinais de urgência, procure um serviço de saúde."],
-  ["Como posso agendar?", "Clique em qualquer botão de WhatsApp nesta página para conversar com Maria e consultar informações sobre atendimento e disponibilidade."],
+  ["Quais tipos de feridas são atendidos?", "A Clínica Naamã oferece cuidado especializado para feridas agudas e crônicas, pé diabético, lesões por pressão e úlceras venosas e arteriais. A conduta é definida após avaliação individual."],
+  ["O atendimento pode ser feito em casa?", "Entre em contato pelo WhatsApp para confirmar a disponibilidade de atendimento domiciliar, a região atendida e os detalhes da avaliação."],
+  ["Como funciona a primeira avaliação?", "O primeiro passo é conversar sobre a situação e as necessidades de cuidado. A profissional avalia a ferida e explica as possibilidades de acompanhamento e os próximos passos."],
+  ["O que fazer quando uma ferida não cicatriza?", "Uma ferida persistente, alterações de cor, secreção, mau cheiro, aumento da dor ou sinais de infecção precisam de avaliação profissional. Em situações de urgência, procure um serviço de saúde."],
+  ["Como posso agendar?", "Clique em qualquer botão de WhatsApp desta página para conversar com a equipe da Clínica Naamã e consultar informações sobre atendimento e disponibilidade."],
 ];
 
 function Index() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
-  const goWhatsapp = (label: string) => window.open(`${WHATSAPP}?text=${encodeURIComponent(`Olá, Maria! Vim pelo seu site e gostaria de ${label.toLowerCase()}.`)}`, "_blank", "noopener,noreferrer");
+  const goWhatsapp = (label: string) => window.open(`${WHATSAPP}?text=${encodeURIComponent(`Olá! Vim pelo site da Clínica Naamã e gostaria de ${label.toLowerCase()}.`)}`, "_blank", "noopener,noreferrer");
 
   return (
     <main className="jt-site maria-site">
       <header className="site-header maria-header-hidden">
         <div className="container header-inner">
-          <a className="brand maria-brand" href="#inicio" aria-label="Maria de Jesus, enfermagem dermatológica">
+          <a className="brand maria-brand" href="#inicio" aria-label="Clínica Naamã, cuidado especializado">
             <span className="brand-mark"><HeartPulse size={22}/></span>
-            <span><strong>MARIA DE JESUS</strong><small>ENFERMAGEM DERMATOLÓGICA</small></span>
+            <span><strong>CLÍNICA NAAMÃ</strong><small>CUIDADO ESPECIALIZADO QUE TRANSFORMA</small></span>
           </a>
           <nav className="nav maria-nav" aria-label="Navegação principal">
             <a href="#sobre">Sobre</a><a href="#tratamentos">Tratamentos</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Dúvidas</a>
           </nav>
-          <button className="header-cta" onClick={() => goWhatsapp("agendar um atendimento")}><MessageCircle size={16}/> Falar com Maria</button>
+          <button className="header-cta" onClick={() => goWhatsapp("agendar um atendimento")}><MessageCircle size={16}/> Falar com a equipe</button>
         </div>
       </header>
 
@@ -110,101 +61,36 @@ function Index() {
         <div className="hero-glow"/>
         <div className="container hero-grid">
           <div className="hero-copy center-hero">
-            <div className="hero-profile-intro"><span className="hero-profile-name">Maria de Jesus de Souza Costa</span><span className="hero-profile-role">ENFERMEIRA DERMATOLÓGICA</span></div>
-            <h1>Tratamento de feridas com <em>conhecimento e cuidado.</em></h1>
-            <p className="hero-lead">Sou Maria de Jesus de Souza Costa, enfermeira dermatológica. Meu trabalho é oferecer cuidado individualizado no tratamento de feridas e no acompanhamento da recuperação, com atenção à sua história e às suas necessidades.</p>
+            <div className="hero-profile-intro"><span className="hero-profile-name">CLÍNICA NAAMÃ</span><span className="hero-profile-role">CUIDADO ESPECIALIZADO • ATENDIMENTO DOMICILIAR</span></div>
+            <h1>Feridas e pé diabético exigem <em>cuidado especializado.</em></h1>
+            <p className="hero-lead">A Clínica Naamã oferece cuidado especializado para feridas e pé diabético, com avaliação individual, curativos e atenção às necessidades de cada pessoa — inclusive no conforto da sua casa.</p>
             <div className="hero-actions">
-              <button className="btn btn-primary" onClick={() => goWhatsapp("conversar sobre meu caso")}><MessageCircle size={18}/> Conversar com a enfermeira</button>
-              <a className="btn btn-outline" href="#tratamentos">Conhecer os cuidados <ArrowRight size={17}/></a>
+              <button className="btn btn-primary" onClick={() => goWhatsapp("conversar sobre meu caso")}><MessageCircle size={18}/> Agendar uma avaliação</button>
+              <a className="btn btn-outline" href="#tratamentos">Conhecer os atendimentos <ArrowRight size={17}/></a>
             </div>
-            <div className="hero-trust"><span><Check size={15}/> Avaliação individual</span><span><Check size={15}/> Cuidado humanizado</span><span><Check size={15}/> Orientação profissional</span></div>
-            <div className="hero-bottom-eyebrow">CUIDADO ESPECIALIZADO <span>•</span> ATENÇÃO INDIVIDUAL</div>
+            <div className="hero-trust"><span><Check size={15}/> Avaliação individual</span><span><Check size={15}/> Atendimento humanizado</span><span><Check size={15}/> Cuidado especializado</span></div>
+            <div className="hero-bottom-eyebrow">CLÍNICA NAAMÃ <span>•</span> CUIDADO QUE TRANSFORMA</div>
           </div>
         </div>
       </section>
 
-      <div className="info-marquee" aria-label="Áreas de atendimento"><div className="marquee-track">{[1,2].map(n=><div className="marquee-group" key={n}><span>✦ FERIDAS AGUDAS E CRÔNICAS</span><span>✦ PÓS-OPERATÓRIO</span><span>✦ LESÕES POR PRESSÃO</span><span>✦ ÚLCERAS VASCULARES</span><span>✦ LASERTERAPIA</span><span>✦ PRP E PRF</span><span>✦ CUIDADO INDIVIDUALIZADO</span></div>)}</div></div>
+      <div className="info-marquee" aria-label="Áreas de atendimento"><div className="marquee-track">{[1,2].map(n=><div className="marquee-group" key={n}><span>✦ FERIDAS AGUDAS E CRÔNICAS</span><span>✦ PÉ DIABÉTICO</span><span>✦ CURATIVOS ESPECIALIZADOS</span><span>✦ LESÕES POR PRESSÃO</span><span>✦ ÚLCERAS VASCULARES</span><span>✦ ATENDIMENTO DOMICILIAR</span><span>✦ CUIDADO INDIVIDUALIZADO</span></div>)}</div></div>
 
-      <section className="section intro-section" id="sobre"><div className="container intro-grid"><div className="intro-illustration maria-profile-photo"><img src="/prazer-sou-maria/TAI09386.jpg.jpeg" alt="Maria de Jesus de Souza Costa, enfermeira dermatológica" /></div><div className="intro-copy"><span className="eyebrow">PRAZER, SOU MARIA</span><h2>Um cuidado que olha para a ferida — e para <em>você por inteiro.</em></h2><p>Sou Maria de Jesus de Souza Costa, enfermeira dermatológica, e trabalho com consultório de enfermagem e tratamento de feridas. Cada pessoa tem uma história e cada ferida exige atenção própria. Por isso, o cuidado começa com escuta, avaliação e orientação clara sobre as possibilidades de acompanhamento.</p><p>Meu compromisso é conduzir cada atendimento com respeito, responsabilidade profissional e foco na segurança.</p><button className="btn btn-primary" onClick={() => goWhatsapp("conhecer o atendimento de enfermagem")}><MessageCircle size={18}/> Falar sobre atendimento</button></div></div></section>
+      <section className="section intro-section" id="sobre"><div className="container intro-grid"><div className="intro-illustration maria-profile-photo"><img src="/prazer-sou-maria/TAI09386.jpg.jpeg" alt="Clínica Naamã de Souza Costa, enfermeira dermatológica" /></div><div className="intro-copy"><span className="eyebrow">CONHEÇA A CLÍNICA NAAMÃ</span><h2>Cuidado especializado, com atenção à pessoa por <em>inteiro.</em></h2><p>Na Clínica Naamã, cada atendimento começa com escuta e avaliação cuidadosa. O plano de cuidado considera as características da ferida, o histórico de saúde e as necessidades individuais, com orientações claras para a pessoa e sua família.</p><p>Nosso compromisso é oferecer um cuidado acolhedor, responsável e individualizado, com atenção à segurança e à dignidade de cada pessoa.</p><button className="btn btn-primary" onClick={() => goWhatsapp("conhecer o atendimento de enfermagem")}><MessageCircle size={18}/> conhecer o atendimento</button></div></div></section>
 
-      <section className="section pain-section"><div className="container narrow center"><span className="eyebrow">QUANDO PROCURAR APOIO</span><h2>Uma ferida merece atenção e um plano de cuidado <em>individualizado.</em></h2><p>Feridas que demoram a cicatrizar, lesões após uma cirurgia ou alterações na pele podem exigir acompanhamento profissional. A avaliação ajuda a entender as necessidades de cuidado e quando é importante trabalhar em conjunto com outros profissionais de saúde.</p><div className="check-list centered-list"><div><Check size={17}/><span>Você precisa de orientação para cuidar de uma ferida aguda ou crônica.</span></div><div><Check size={17}/><span>Está no período pós-operatório e precisa de acompanhamento da ferida.</span></div><div><Check size={17}/><span>Convive com lesões por pressão ou úlceras venosas e arteriais.</span></div></div><button className="btn btn-primary" onClick={() => goWhatsapp("tirar dúvidas sobre o cuidado de uma ferida")}><MessageCircle size={18}/> Quero tirar minhas dúvidas</button></div></section>
+      <section className="section pain-section"><div className="container narrow center"><span className="eyebrow">QUANDO PROCURAR APOIO</span><h2>Feridas persistentes e alterações nos pés merecem <em>atenção especializada.</em></h2><p>Feridas que não cicatrizam, lesões nos pés de pessoas com diabetes e alterações na pele precisam de atenção. A avaliação profissional ajuda a orientar o cuidado e identificar quando é necessário encaminhamento ou atuação conjunta com outros profissionais.</p><div className="check-list centered-list"><div><Check size={17}/><span>Você ou alguém da família precisa de cuidado para uma ferida aguda ou crônica.</span></div><div><Check size={17}/><span>Você tem diabetes e percebeu uma lesão, fissura ou alteração nos pés.</span></div><div><Check size={17}/><span>A ferida persiste, apresenta mudanças ou precisa de curativos especializados.</span></div></div><button className="btn btn-primary" onClick={() => goWhatsapp("tirar dúvidas sobre o cuidado de uma ferida")}><MessageCircle size={18}/> Quero tirar minhas dúvidas</button></div></section>
 
-      <section className="section procedures-section" id="tratamentos"><div className="container"><div className="section-heading center"><span className="eyebrow">ÁREAS DE ATUAÇÃO</span><h2>Cuidados e recursos para diferentes necessidades.</h2><p>Conheça as principais áreas de atuação. A indicação de cada cuidado ou tecnologia depende de avaliação individual, critérios de segurança e necessidade clínica.</p></div><div className="procedure-window"><div className="procedure-track">{[...services,...services].map(({title,text,image,icon:Icon},i)=><article className="procedure-card maria-service-card" key={`${title}-${i}`}><img className="procedure-photo" src={image} alt={title} loading={i<services.length?"eager":"lazy"}/><div className="procedure-content"><div className="procedure-icon"><Icon size={21}/></div><h3>{title}</h3><p>{text}</p></div></article>)}</div></div><div className="section-action center"><button className="btn btn-primary" onClick={() => goWhatsapp("saber qual atendimento pode ser adequado para mim")}><MessageCircle size={18}/> Consultar sobre meu caso</button></div></div></section>
-
-
+      <section className="section procedures-section" id="tratamentos"><div className="container"><div className="section-heading center"><span className="eyebrow">CUIDADOS DA CLÍNICA NAAMÃ</span><h2>Atenção especializada para cuidar de feridas com responsabilidade.</h2><p>Conheça os cuidados oferecidos pela Clínica Naamã. A conduta é definida de forma individual, conforme a avaliação e as necessidades de cada pessoa.</p></div><div className="procedure-window"><div className="procedure-track">{[...services,...services].map(({title,text,image,icon:Icon},i)=><article className="procedure-card maria-service-card" key={`${title}-${i}`}><img className="procedure-photo" src={image} alt={title} loading={i<services.length?"eager":"lazy"}/><div className="procedure-content"><div className="procedure-icon"><Icon size={21}/></div><h3>{title}</h3><p>{text}</p></div></article>)}</div></div><div className="section-action center"><button className="btn btn-primary" onClick={() => goWhatsapp("saber qual atendimento pode ser adequado para mim")}><MessageCircle size={18}/> Consultar sobre meu caso</button></div></div></section>
 
 
 
-      <section className="section how-section" id="como-funciona"><div className="container"><div className="section-heading center"><span className="eyebrow">COMO FUNCIONA</span><h2>Um caminho de cuidado em <em>quatro etapas.</em></h2><p>O acompanhamento começa com uma conversa e segue conforme as necessidades identificadas na avaliação.</p></div><div className="steps-grid">{[["01","Primeiro contato","Você explica brevemente o que está acontecendo e tira suas primeiras dúvidas."],["02","Avaliação","São consideradas a ferida, seu histórico e os fatores relevantes para o cuidado."],["03","Plano individual","As possibilidades de cuidado e orientações são explicadas com clareza."],["04","Acompanhamento","O cuidado é revisto conforme a evolução e a necessidade de cada caso."]].map(([n,t,d])=><article className="step-card" key={n}><span className="step-number">{n}</span><div><h3>{t}</h3><p>{d}</p></div></article>)}</div><div className="section-action center"><button className="btn btn-primary" onClick={() => goWhatsapp("iniciar uma conversa sobre atendimento")}><MessageCircle size={18}/> Iniciar uma conversa</button></div></div></section>
-
-      <section className="section limine-section maria-approach"><div className="container limine-grid"><div className="limine-copy"><span className="eyebrow">RECURSOS TERAPÊUTICOS</span><h2>Tecnologias consideradas com critério e <em>responsabilidade.</em></h2><div className="approach-panel"><div><span><Zap size={22}/></span><strong>Laserterapia</strong><p>Recurso que pode fazer parte do plano de cuidado quando houver indicação apropriada.</p></div><div><span><Waves size={22}/></span><strong>Ozonioterapia</strong><p>Avaliada com atenção às condições individuais, à segurança e às evidências disponíveis.</p></div><div><span><Microscope size={22}/></span><strong>PRP e PRF</strong><p>Terapias regenerativas que exigem avaliação criteriosa e indicação profissional adequada.</p></div></div><p>Esses recursos não são indicados indistintamente para todas as feridas. A escolha é individual, e nenhuma técnica garante resultados específicos. Quando necessário, o cuidado é articulado com outros profissionais de saúde.</p><button className="btn btn-primary" onClick={() => goWhatsapp("saber mais sobre os recursos terapêuticos")}><MessageCircle size={18}/> Saber mais sobre os recursos</button></div></div></section>
 
 
-      <section className="section prf-feature-section" id="terapia-prf">
-        <div className="container prf-feature-grid">
-          <div className="prf-feature-photo">
-            <img src="/terapia-prf/image.png" alt="Imagem da terapia PRF e abordagem regenerativa" loading="lazy" />
-            <span className="prf-photo-caption">RECURSOS REGENERATIVOS • AVALIAÇÃO INDIVIDUAL</span>
-          </div>
-          <div className="prf-feature-copy">
-            <span className="eyebrow">CONHEÇA A TERAPIA PRF</span>
-            <h2>PRF: uma abordagem autóloga estudada no cuidado <em>regenerativo.</em></h2>
-            <p>O PRF (fibrina rica em plaquetas) é obtido a partir de uma pequena amostra do próprio sangue da pessoa, processada para formar uma matriz de fibrina que concentra plaquetas e componentes biológicos. Seu uso vem sendo estudado em diferentes contextos clínicos, inclusive em algumas abordagens de reparação tecidual.</p>
-            <div className="prf-benefit-list">
-              <div><span><Check size={17}/></span><p><strong>Feito a partir do próprio sangue</strong> — o PRF é preparado com uma amostra da própria pessoa, formando uma matriz de fibrina rica em plaquetas e outros componentes biológicos.</p></div>
-              <div><span><Check size={17}/></span><p><strong>Liberação gradual de fatores biológicos</strong> — a estrutura de fibrina pode ajudar a disponibilizar progressivamente componentes presentes no material, um dos aspectos estudados nas terapias regenerativas.</p></div>
-              <div><span><Check size={17}/></span><p><strong>Potencial apoio à reparação tecidual</strong> — em situações específicas, o PRF pode ser avaliado como recurso complementar no cuidado, de acordo com a necessidade clínica e a indicação profissional.</p></div>
-            </div>
-            <button className="btn btn-primary" onClick={() => goWhatsapp("saber se a terapia PRF pode ser considerada no meu caso")}><MessageCircle size={18}/> Conversar sobre PRF</button>
-          </div>
-        </div>
-      </section>
+      <section className="section how-section" id="como-funciona"><div className="container"><div className="section-heading center"><span className="eyebrow">COMO FUNCIONA</span><h2>Um caminho de cuidado em <em>quatro etapas.</em></h2><p>Da primeira conversa ao acompanhamento, cada etapa é conduzida com atenção, clareza e respeito.</p></div><div className="steps-grid">{[["01","Primeiro contato","Você explica brevemente o que está acontecendo e tira suas primeiras dúvidas."],["02","Avaliação","São consideradas a ferida, seu histórico e os fatores relevantes para o cuidado."],["03","Plano individual","As possibilidades de cuidado e orientações são explicadas com clareza."],["04","Acompanhamento","O cuidado é revisto conforme a evolução e a necessidade de cada caso."]].map(([n,t,d])=><article className="step-card" key={n}><span className="step-number">{n}</span><div><h3>{t}</h3><p>{d}</p></div></article>)}</div><div className="section-action center"><button className="btn btn-primary" onClick={() => goWhatsapp("iniciar uma conversa sobre atendimento")}><MessageCircle size={18}/> Iniciar uma conversa</button></div></div></section>
 
+      <section className="section limine-section maria-approach"><div className="container limine-grid"><div className="limine-copy">
 
-
-      <section className="section before-after-section" id="antes-depois">
-        <div className="container">
-          <div className="section-heading center">
-            <span className="eyebrow">EVOLUÇÃO DO CUIDADO</span>
-            <h2>Antes e depois: cada etapa merece <em>atenção.</em></h2>
-            <p>Registros de acompanhamento publicados com autorização da pessoa atendida. Cada caso é único e os resultados variam conforme as condições individuais e o plano de cuidado.</p>
-          </div>
-          <div className="before-after-grid">
-            {beforeAfterCases.map((item) => (
-              <article className="before-after-card" key={item.title}>
-                {item.single ? (
-                  <div className="before-after-single">
-                    <div className="before-after-photo">
-                      <img src={item.single.url} alt={`Registro de acompanhamento: ${item.title}`} loading="lazy" />
-                    </div>
-                  </div>
-                ) : (
-                  <div className="before-after-images">
-                    <div className="before-after-photo">
-                      <img src={item.before!.url} alt={`Antes do tratamento: ${item.title}`} loading="lazy" />
-                      <span className="before-after-label">ANTES</span>
-                    </div>
-                    <div className="before-after-photo">
-                      <img src={item.after!.url} alt={`Depois do tratamento: ${item.title}`} loading="lazy" />
-                      <span className="before-after-label after-label">DEPOIS</span>
-                    </div>
-                  </div>
-                )}
-                <div className="before-after-card-copy">
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-          <p className="before-after-disclaimer"><ShieldCheck size={16}/> As imagens devem ser publicadas somente com autorização expressa da pessoa atendida, preservando sua privacidade. Os registros têm caráter informativo e não garantem resultados semelhantes.</p>
-          <div className="section-action center">
-            <button className="btn btn-primary" onClick={() => goWhatsapp("conhecer o acompanhamento e tirar dúvidas")}><MessageCircle size={18}/> Tirar dúvidas sobre o acompanhamento</button>
-          </div>
-        </div>
-      </section>
-
-      <section className="section maria-reviews-section" id="avaliacoes"><div className="container"><div className="section-heading center"><span className="eyebrow">RELATOS DE EXPERIÊNCIA</span><h2>O cuidado também se constrói com <em>confiança.</em></h2><p>Conheça relatos sobre a experiência de atendimento, a atenção recebida e a importância de ter orientações claras durante o cuidado. Cada história é única, e a confiança se constrói com escuta, respeito e acompanhamento individualizado.</p></div><div className="maria-reviews-window"><div className="maria-reviews-track">{[1,2,3,1,2,3].map((n,i)=><article className="maria-review-card" key={i}><div className="review-stars" aria-label="Cinco estrelas">★★★★★</div><p>{n===1?"“Fui recebida com atenção e respeito. As orientações foram explicadas de forma clara, o que me ajudou a compreender melhor os cuidados necessários para a minha situação.”":n===2?"“Consegui conversar sobre minhas dúvidas com tranquilidade e entender melhor cada etapa do cuidado. Foi importante receber informações claras e atenção individualizada.”":"“Durante o atendimento, senti que minhas dúvidas foram ouvidas com atenção. Recebi explicações cuidadosas sobre os próximos passos e sobre a importância de acompanhar a evolução.”"}</p><div className="maria-review-author"><span className="maria-review-avatar" aria-hidden="true"></span><span>{n===1?"Juliana Silva":n===2?"Patrícia Oliveira":"Ana Paula"}</span></div></article>)}</div></div></div></section>
+      <section className="section maria-reviews-section" id="avaliacoes"><div className="container"><div className="section-heading center"><span className="eyebrow">CUIDADO QUE ACOLHE</span><h2>Cada atendimento começa com <em>escuta e respeito.</em></h2><p>Na Clínica Naamã, valorizamos uma comunicação clara, acolhimento e atenção individual em cada etapa do cuidado.</p></div><div className="maria-reviews-window"><div className="maria-reviews-track">{[1,2,3,1,2,3].map((n,i)=><article className="maria-review-card" key={i}><div className="review-stars" aria-label="Cinco estrelas">★★★★★</div><p>{n===1?"“Fui recebida com atenção e respeito. As orientações foram explicadas de forma clara, o que me ajudou a compreender melhor os cuidados necessários para a minha situação.”":n===2?"“Consegui conversar sobre minhas dúvidas com tranquilidade e entender melhor cada etapa do cuidado. Foi importante receber informações claras e atenção individualizada.”":"“Durante o atendimento, senti que minhas dúvidas foram ouvidas com atenção. Recebi explicações cuidadosas sobre os próximos passos e sobre a importância de acompanhar a evolução.”"}</p><div className="maria-review-author"><span className="maria-review-avatar" aria-hidden="true"></span><span>{n===1?"Pessoa atendida":n===2?"Pessoa atendida":"Pessoa atendida"}</span></div></article>)}</div></div></div></section>
 
 
 
@@ -215,11 +101,11 @@ function Index() {
 
       <section className="section faq-section" id="duvidas"><div className="container faq-layout"><div className="faq-intro"><span className="eyebrow">PERGUNTAS FREQUENTES</span><h2>Suas dúvidas também <em>fazem parte do cuidado.</em></h2><p>Se não encontrar sua pergunta aqui, fale diretamente comigo pelo WhatsApp.</p><button className="btn btn-primary" onClick={() => goWhatsapp("tirar uma dúvida")}><MessageCircle size={18}/> Tirar uma dúvida</button></div><div className="faq-list">{faqs.map(([q,a],i)=><div className={openFaq===i?"faq-item active":"faq-item"} key={q}><button onClick={() => setOpenFaq(openFaq===i?null:i)} aria-expanded={openFaq===i}><span>{q}</span><ChevronDown size={18}/></button>{openFaq===i&&<div className="faq-answer"><p>{a}</p></div>}</div>)}</div></div></section>
 
-      <section className="section final-cta maria-final"><div className="final-glow"/><div className="container narrow center"><span className="eyebrow">VAMOS CONVERSAR?</span><h2>O próximo passo começa com uma conversa.</h2><p>Entre em contato para compartilhar sua necessidade e receber informações sobre o atendimento de enfermagem dermatológica.</p><button className="btn btn-primary" onClick={() => goWhatsapp("conversar sobre atendimento")}><MessageCircle size={18}/> Falar com Maria pelo WhatsApp</button></div></section>
+      <section className="section final-cta maria-final"><div className="final-glow"/><div className="container narrow center"><span className="eyebrow">VAMOS CONVERSAR?</span><h2>O próximo passo começa com uma conversa.</h2><p>Entre em contato para compartilhar sua necessidade e receber informações sobre o atendimento de enfermagem dermatológica.</p><button className="btn btn-primary" onClick={() => goWhatsapp("conversar sobre atendimento")}><MessageCircle size={18}/> Falar com a equipe pelo WhatsApp</button></div></section>
 
-      <footer className="footer maria-footer"><div className="container footer-grid"><div className="footer-brand"><p>Atendimento em enfermagem dermatológica com foco no cuidado de feridas, orientação e acompanhamento individualizado.</p></div><div><h4>Navegação</h4><a href="#sobre">Sobre Maria</a><a href="#tratamentos">Áreas de atuação</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Perguntas frequentes</a></div><div><h4>Contato</h4><a href={WHATSAPP} target="_blank" rel="noreferrer"><MessageCircle size={14}/> +55 (66) 96434-4578</a><span><ShieldCheck size={14}/> Cuidado responsável e individualizado</span></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Maria de Jesus de Souza Costa.</span><span>Enfermagem dermatológica • Tratamento de feridas</span></div></footer>
+      <footer className="footer maria-footer"><div className="container footer-grid"><div className="footer-brand"><p>Cuidado especializado para feridas, pé diabético e curativos, com atenção individualizada.</p></div><div><h4>Navegação</h4><a href="#sobre">Sobre a clínica</a><a href="#tratamentos">Áreas de atuação</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Perguntas frequentes</a></div><div><h4>Contato</h4><a href={WHATSAPP} target="_blank" rel="noreferrer"><MessageCircle size={14}/> +55 (12) 98829-8061</a><span><ShieldCheck size={14}/> Cuidado responsável e individualizado</span></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Clínica Naamã.</span><span>Feridas • Pé diabético • Curativos especializados</span></div></footer>
 
-      <a className="floating-wa maria-floating-wa" href={WHATSAPP} target="_blank" rel="noreferrer" aria-label="Falar com Maria pelo WhatsApp"><img src="/whatsapp-flutuante/image.png" alt="" /><span>WhatsApp</span></a>
+      <a className="floating-wa maria-floating-wa" href={WHATSAPP} target="_blank" rel="noreferrer" aria-label="Falar com a equipe pelo WhatsApp"><img src="/whatsapp-flutuante/image.png" alt="" /><span>WhatsApp</span></a>
     </main>
   );
 }

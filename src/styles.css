@@ -867,3 +867,45 @@ body,.jt-site{background:#fffaf0!important;color:#203b2a}
 .jt-site .maria-location-section .address,.jt-site .maria-location-section .location-info>div{background:#fffaf0!important}
 .jt-site .maria-location-section .eyebrow{color:#8a6a1f!important}
 @media(max-width:760px){.jt-site .benefits-section{padding-top:48px!important;padding-bottom:48px!important}.jt-site .benefits-section:before{width:260px;height:260px;right:-170px;top:-130px}}
+
+
+/* Ajuste solicitado: localização bege e seção Como Funciona em verde profundo */
+.jt-site .maria-location-section{
+  background:linear-gradient(135deg,#f5efe2 0%,#fffaf0 100%)!important;
+  border-top:1px solid #e6dcc7!important;
+  border-bottom:1px solid #e6dcc7!important;
+}
+.jt-site .maria-location-section .address,
+.jt-site .maria-location-section .location-info>div{
+  background:#fffaf0!important;
+  border-color:#e6dcc7!important;
+}
+.jt-site .how-section{
+  background:linear-gradient(135deg,#104523 0%,#14532d 58%,#1b6b36 100%)!important;
+  color:#fffaf0!important;
+  position:relative;
+  overflow:hidden;
+}
+.jt-site .how-section:before{
+  content:"";position:absolute;width:380px;height:380px;right:-140px;top:-190px;
+  border:1px solid rgba(240,228,197,.22);border-radius:50%;
+  box-shadow:0 0 0 35px rgba(240,228,197,.035),0 0 0 70px rgba(240,228,197,.025);pointer-events:none;
+}
+.jt-site .how-section .container{position:relative}
+.jt-site .how-section .section-heading h2,
+.jt-site .how-section .section-heading h2 em{color:#fffaf0!important}
+.jt-site .how-section .section-heading p{color:#e5eddf!important}
+.jt-site .how-section .eyebrow{color:#f0d99b!important}
+.jt-site .how-section .steps-grid .step-card{
+  background:#fffaf0!important;border:1px solid rgba(240,228,197,.75)!important;
+  box-shadow:0 14px 32px rgba(0,0,0,.12)!important;
+}
+.jt-site .how-section .step-card h3{color:#14532d!important}
+.jt-site .how-section .step-card p{color:#586658!important}
+.jt-site .how-section .step-number{
+  background:#f0e4c5!important;border:1px solid #c49a3a!important;color:#14532d!important;
+}
+@media(max-width:760px){
+ .jt-site .how-section{padding-top:48px!important;padding-bottom:48px!important}
+ .jt-site .how-section:before{width:260px;height:260px;right:-170px;top:-130px}
+}

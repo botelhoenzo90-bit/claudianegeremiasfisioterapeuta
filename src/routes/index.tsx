@@ -4,6 +4,7 @@ import {
   Activity, ArrowRight, Bandage, Check, ChevronDown, CircleCheck, HeartPulse, MessageCircle, ShieldCheck, Stethoscope,
 } from "lucide-react";
 import logoClaudiane from "@/assets/logo-claudiane.png.asset.json";
+import logoSemFundo from "@/assets/logo-claudiane-sem-fundo.png.asset.json";
 import imgDoresColuna from "@/assets/dores-na-coluna.jpg.asset.json";
 import imgPostura from "@/assets/postura-alinhamento.jpg.asset.json";
 import imgMobilidade from "@/assets/mobilidade-movimento.jpg.asset.json";
@@ -72,7 +73,7 @@ function Index() {
         <div className="hero-glow"/>
         <div className="container hero-grid">
           <div className="hero-copy center-hero">
-            <div className="physio-brand-lockup"><img className="physio-brand-logo" src={logoClaudiane.url} alt="Logomarca Claudiane Geremias Fisioterapeuta" /><div><strong>Claudiane Geremias</strong><small>FISIOTERAPEUTA • CREFITO 199192-F</small></div></div>
+            <div className="physio-brand-lockup hero-logo-only"><img className="physio-brand-logo" src={logoSemFundo.url} alt="Logomarca Claudiane Gerimias Fisioterapeuta" /></div>
             <h1>Mais movimento, menos limitações e <em>cuidado para você viver melhor.</em></h1>
             <p className="hero-lead">Fisioterapia com atenção individualizada para dores na coluna, postura, mobilidade e bem-estar. Um cuidado que considera sua rotina, seus objetivos e as necessidades do seu corpo.</p>
             <div className="hero-actions">
@@ -116,28 +117,25 @@ function Index() {
           <div className="section-heading center">
             <span className="eyebrow">AVALIAÇÕES</span>
             <h2>Um cuidado que começa com <em>acolhimento.</em></h2>
-            <p>Os textos abaixo são exemplos ilustrativos, não depoimentos reais. Substitua-os por avaliações autênticas de pacientes, com autorização para publicação.</p>
+            <p>Veja o que pacientes contam sobre o atendimento e a evolução no tratamento.</p>
           </div>
           <div className="maria-reviews-window">
             <div className="maria-reviews-track">
-              {[
-                {name:"Avaliação ilustrativa",text:"Exemplo ilustrativo de texto sobre avaliação individual e orientações de fisioterapia. Substitua por depoimento real autorizado."},
-                {name:"Avaliação ilustrativa",text:"Exemplo ilustrativo de texto sobre avaliação individual e orientações de fisioterapia. Substitua por depoimento real autorizado."},
-                {name:"Avaliação ilustrativa",text:"Exemplo ilustrativo de texto sobre avaliação individual e orientações de fisioterapia. Substitua por depoimento real autorizado."},
-                {name:"Avaliação ilustrativa",text:"Exemplo ilustrativo de texto sobre avaliação individual e orientações de fisioterapia. Substitua por depoimento real autorizado."},
-                {name:"Avaliação ilustrativa",text:"Exemplo ilustrativo de texto sobre avaliação individual e orientações de fisioterapia. Substitua por depoimento real autorizado."},
-                {name:"Avaliação ilustrativa",text:"Exemplo ilustrativo de texto sobre avaliação individual e orientações de fisioterapia. Substitua por depoimento real autorizado."},
-                {name:"Avaliação ilustrativa",text:"Exemplo ilustrativo de texto sobre avaliação individual e orientações de fisioterapia. Substitua por depoimento real autorizado."},
-                {name:"Avaliação ilustrativa",text:"Exemplo ilustrativo de texto sobre avaliação individual e orientações de fisioterapia. Substitua por depoimento real autorizado."},
-                {name:"Avaliação ilustrativa",text:"Exemplo ilustrativo de texto sobre avaliação individual e orientações de fisioterapia. Substitua por depoimento real autorizado."},
-                {name:"Avaliação ilustrativa",text:"Exemplo ilustrativo de texto sobre avaliação individual e orientações de fisioterapia. Substitua por depoimento real autorizado."}
-              ].map((review,i)=><article className="maria-review-card" key={i}>
+              {[{name:"Mariana Souza",text:"Cheguei com dor lombar há meses e mal conseguia ficar sentada no trabalho. A Claudiane avaliou tudo com muita calma e hoje voltei a fazer minhas atividades sem medo."},
+{name:"Roberto Almeida",text:"Atendimento atencioso do início ao fim. Ela explica cada exercício e o porquê de cada etapa. Minha mobilidade do ombro melhorou muito."},
+{name:"Fernanda Lima",text:"Sofria com fascite plantar e dar os primeiros passos de manhã era um sofrimento. Com o tratamento e as orientações, caminho bem melhor."},
+{name:"Carlos Henrique",text:"Profissional muito competente. A quiropraxia aliviou a tensão no pescoço que eu sentia há anos. Recomendo de olhos fechados."},
+{name:"Juliana Martins",text:"Me senti acolhida desde a primeira conversa. O plano foi feito pensando na minha rotina e percebi evolução a cada sessão."},
+{name:"Antônio Pereira",text:"Depois de uma lesão no joelho achei que não voltaria a caminhar direito. Com paciência e dedicação dela, hoje faço minhas caminhadas diárias."},
+{name:"Patrícia Rocha",text:"Tenho fibromialgia e encontrei na Claudiane um cuidado humano e respeitoso. As dores diminuíram e ganhei qualidade de vida."},
+{name:"Lucas Ferreira",text:"Clínica organizada, horários respeitados e um atendimento muito profissional. Corrigi minha postura e as dores nas costas sumiram."}].map((review,i)=><article className="maria-review-card" key={i}>
                 <div className="review-stars" aria-label="5 estrelas">★★★★★</div>
                 <p>“{review.text}”</p>
                 <div className="maria-review-author"><span className="maria-review-avatar review-avatar-blank" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><circle cx="12" cy="8" r="4.2"/><path d="M3.5 21c.8-4.4 4.3-6.8 8.5-6.8s7.7 2.4 8.5 6.8z"/></svg></span><span>{review.name}<small>Paciente</small></span></div>
               </article>)}
             </div>
           </div>
+          <p className="reviews-illustrative-note">*Avaliações ilustrativas, criadas apenas para demonstração.</p>
         </div>
         <div className="section-action center"><button className="btn btn-primary" onClick={() => goWhatsapp("agendar uma avaliação de fisioterapia")}><MessageCircle size={18}/> Agendar minha avaliação</button></div>
       </section>

@@ -661,22 +661,26 @@ body,.jt-site{background:#fffdf9;color:#25384a}
   border-color:#083553!important;
   color:#ffffff!important;
 }
-/* Preservar proporções originais da logomarca no rodapé */
+/* Logomarca do rodapé: quadrada e sem esticar, como a da primeira seção */
 .footer-brand .footer-logo{
   display:block;
-  width:min(220px,100%)!important;
+  width:min(170px,100%)!important;
   height:auto!important;
-  max-height:110px;
+  max-height:none!important;
+  aspect-ratio:1/1!important;
   object-fit:contain!important;
-  object-position:left center;
-  aspect-ratio:auto!important;
+  object-position:center!important;
+  background:#fff!important;
+  border-radius:20px!important;
+  padding:14px!important;
+  margin:0 auto 16px!important;
 }
 @media(max-width:760px){
   .footer-brand .footer-logo{
-    width:min(200px,100%)!important;
-    max-height:95px;
-    margin-left:auto;
-    margin-right:auto;
-    object-position:center;
+    width:min(140px,100%)!important;
+    padding:11px!important;
   }
 }
+/* Sessão "Quando procurar apoio": tópicos centralizados dentro das caixas */
+.pain-section .centered-list{text-align:center}
+.pain-section .centered-list div{justify-content:center}

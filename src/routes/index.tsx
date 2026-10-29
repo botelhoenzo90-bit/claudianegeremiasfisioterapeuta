@@ -88,29 +88,63 @@ function Index() {
 
       <section className="section how-section" id="como-funciona"><div className="container"><div className="section-heading center"><span className="eyebrow">COMO FUNCIONA</span><h2>Um caminho de cuidado em <em>quatro etapas.</em></h2><p>Da primeira conversa ao acompanhamento, cada etapa é conduzida com atenção, clareza e respeito.</p></div><div className="steps-grid">{[["01","Primeiro contato","Você explica brevemente o que está acontecendo e tira suas primeiras dúvidas."],["02","Avaliação","São consideradas a ferida, seu histórico e os fatores relevantes para o cuidado."],["03","Plano individual","As possibilidades de cuidado e orientações são explicadas com clareza."],["04","Acompanhamento","O cuidado é revisto conforme a evolução e a necessidade de cada caso."]].map(([n,t,d])=><article className="step-card" key={n}><span className="step-number">{n}</span><div><h3>{t}</h3><p>{d}</p></div></article>)}</div><div className="section-action center"><button className="btn btn-primary" onClick={() => goWhatsapp("iniciar uma conversa sobre atendimento")}><MessageCircle size={18}/> Iniciar uma conversa</button></div></div></section>
 
-<section className="section intro-section" id="acompanhamento">
+<section className="section before-after-section" id="antes-depois">
         <div className="container">
           <div className="section-heading center">
             <span className="eyebrow">ACOMPANHAMENTO</span>
-            <h2>Cada etapa do cuidado merece <em>atenção.</em></h2>
-            <p>Esta área ficará reservada para imagens autorizadas de acompanhamento das feridas, que serão adicionadas posteriormente. Cada caso é único e não há garantia de resultados específicos.</p>
+            <h2>Antes e depois: cada etapa merece <em>atenção.</em></h2>
+            <p>Espaço reservado para registros de acompanhamento de feridas, que serão adicionados após o envio das novas imagens. Cada caso é único e os resultados variam conforme as condições individuais e o plano de cuidado.</p>
           </div>
-          <div className="steps-grid">
-            {[["01","Registros de acompanhamento","As novas imagens serão adicionadas após o envio dos arquivos."],["02","Cuidado individualizado","As orientações são definidas conforme a avaliação e as necessidades de cada pessoa."],["03","Privacidade e respeito","Imagens de pacientes só devem ser publicadas com autorização expressa."]].map(([n,t,d])=><article className="step-card" key={n}><span className="step-number">{n}</span><div><h3>{t}</h3><p>{d}</p></div></article>)}
+          <div className="before-after-grid">
+            {[
+              { title: "Acompanhamento de feridas", description: "Espaço para registrar a evolução do cuidado ao longo do tempo." },
+              { title: "Cuidados com o pé diabético", description: "Imagens para mostrar etapas do acompanhamento, quando autorizadas." },
+              { title: "Outros casos acompanhados", description: "Adicione aqui outros registros relevantes e autorizados." },
+            ].map((item) => (
+              <article className="before-after-card" key={item.title}>
+                <div className="before-after-images">
+                  <div className="before-after-placeholder">
+                    <span className="before-after-label">ANTES</span>
+                    <div className="before-after-plus" aria-hidden="true">+</div>
+                    <span className="before-after-hint">Adicionar imagem</span>
+                  </div>
+                  <div className="before-after-placeholder">
+                    <span className="before-after-label after-label">DEPOIS</span>
+                    <div className="before-after-plus" aria-hidden="true">+</div>
+                    <span className="before-after-hint">Adicionar imagem</span>
+                  </div>
+                </div>
+                <div className="before-after-card-copy">
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+          <p className="before-after-disclaimer"><ShieldCheck size={16}/> As imagens devem ser publicadas somente com autorização expressa da pessoa atendida, preservando sua privacidade. Os registros têm caráter informativo e não garantem resultados semelhantes.</p>
+          <div className="section-action center">
+            <button className="btn btn-primary" onClick={() => goWhatsapp("conhecer o acompanhamento e tirar dúvidas")}><MessageCircle size={18}/> Tirar dúvidas sobre o acompanhamento</button>
           </div>
         </div>
       </section>
 
-      <section className="section intro-section" id="avaliacoes">
+      <section className="section maria-reviews-section" id="avaliacoes">
         <div className="container">
           <div className="section-heading center">
             <span className="eyebrow">AVALIAÇÕES</span>
             <h2>A confiança começa com <em>acolhimento.</em></h2>
-            <p>Esta área está preparada para receber avaliações reais de pessoas atendidas, após confirmação e autorização para publicação.</p>
+            <p>Este espaço será atualizado com avaliações reais de pessoas atendidas, após confirmação e autorização para publicação.</p>
           </div>
-          <div className="steps-grid">
-            {[["01","Relatos reais","Depoimento a ser incluído após validação."],["02","Experiências de atendimento","Conteúdo a ser adicionado pela clínica."],["03","Respeito à privacidade","Publicaremos apenas relatos autorizados."]].map(([n,t,d])=><article className="step-card" key={n}><span className="step-number">{n}</span><div><h3>{t}</h3><p>{d}</p></div></article>)}
+          <div className="maria-reviews-window">
+            <div className="maria-reviews-track">
+              {[1,2,3,1,2,3].map((n,i)=><article className="maria-review-card" key={i}>
+                <div className="review-stars" aria-hidden="true">★★★★★</div>
+                <p>{n===1?"O depoimento real da pessoa atendida será incluído aqui após autorização.":n===2?"Este espaço está reservado para uma avaliação confirmada e autorizada.":"A avaliação será adicionada quando a clínica enviar o conteúdo aprovado."}</p>
+                <div className="maria-review-author"><span className="maria-review-avatar" aria-hidden="true"></span><span>Avaliação a adicionar</span></div>
+              </article>)}
+            </div>
           </div>
+          <p className="maria-reviews-note">Os depoimentos serão publicados somente com autorização. Não são exibidas avaliações fictícias.</p>
         </div>
       </section>
 

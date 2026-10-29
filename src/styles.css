@@ -804,3 +804,18 @@ body,.jt-site{background:#fffaf0!important;color:#203b2a}
 .maria-footer .footer-bottom{border-color:rgba(240,228,197,.25)!important}
 .maria-site .maria-reviews-note,.maria-site .before-after-disclaimer,.maria-site .video-testimonials-note{color:#686b5e!important}
 @media(max-width:760px){.physio-brand-lockup>span{width:54px;height:54px}.physio-brand-lockup strong{font-size:17px}.physio-brand-lockup small{font-size:9px}}
+
+
+/* Ajustes finais solicitados: cartões de tratamentos sem fotos e sem tons azuis */
+.jt-site .procedure-photo{display:none!important}
+.jt-site .procedure-card,.jt-site .maria-service-card{background:#fffaf0!important;border:1px solid #e6dcc7!important;box-shadow:0 12px 28px rgba(20,83,45,.08)!important}
+.jt-site .procedure-icon{display:grid;place-items:center;background:#f0e4c5!important;color:#14532d!important;border:1px solid #d8c38c!important;border-radius:14px!important}
+.jt-site .procedure-icon svg,.jt-site .benefit-grid article svg,.jt-site .benefit-grid article>span{color:#b28a2e!important}
+.jt-site .procedure-content{background:#fffaf0!important}
+.jt-site .how-section{background:linear-gradient(135deg,#f5efe2 0%,#fffaf0 70%,#e3eddf 100%)!important;color:#203b2a!important}
+.jt-site .how-section .section-heading h2,.jt-site .how-section .section-heading h2 em,.jt-site .how-section .step-card h3{color:#14532d!important}
+.jt-site .how-section .section-heading p,.jt-site .how-section .step-card p{color:#586658!important}
+.jt-site .how-section .step-card{background:#fffaf0!important;border:1px solid #e6dcc7!important;box-shadow:0 10px 25px rgba(20,83,45,.06)!important}
+.jt-site .how-section .step-number{background:#f0e4c5!important;border:1px solid #c49a3a!important;color:#14532d!important}
+.jt-site .pain-section .eyebrow{color:#8a6a1f!important}
+.jt-site .pain-section .check-list svg{color:#14532d!important;background:#f0e4c5!important}

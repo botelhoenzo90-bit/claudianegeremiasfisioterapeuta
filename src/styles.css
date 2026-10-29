@@ -684,3 +684,45 @@ body,.jt-site{background:#fffdf9;color:#25384a}
 /* Sessão "Quando procurar apoio": tópicos centralizados dentro das caixas */
 .pain-section .centered-list{text-align:center}
 .pain-section .centered-list div{justify-content:center}
+
+
+/* Acessibilidade tipográfica: aumentar textos pequenos sem alterar a identidade visual */
+.maria-site p,
+.maria-site .hero-lead,
+.maria-site .copy-block>p,
+.maria-site .intro-copy p,
+.maria-site .section-heading p,
+.maria-site .step-card p,
+.maria-site .benefit-grid p,
+.maria-site .faq-answer p,
+.maria-site .location-copy p,
+.maria-site .video-testimonial-copy p,
+.maria-site .before-after-card-copy p,
+.maria-site .maria-service-card p{
+  font-size:16px!important;
+  line-height:1.75!important;
+}
+.maria-site .eyebrow{font-size:13px!important;line-height:1.5!important;letter-spacing:1.2px!important}
+.maria-site .hero-trust{font-size:14px!important;line-height:1.6!important}
+.maria-site .about-points span{font-size:14px!important;line-height:1.5!important}
+.maria-site .maria-service-card h3{font-size:20px!important;line-height:1.4!important}
+.maria-site .step-card h3,.maria-site .benefit-grid h3{font-size:19px!important;line-height:1.45!important}
+.maria-site .maria-review-card p{font-size:15px!important;line-height:1.75!important}
+.maria-site .maria-review-author{font-size:14px!important}
+.maria-site .maria-review-author small{font-size:12px!important;line-height:1.5!important}
+.maria-site .maria-reviews-note,.maria-site .before-after-disclaimer,.maria-site .video-testimonials-note{font-size:13px!important;line-height:1.75!important}
+.maria-site .before-after-label{font-size:12px!important;line-height:1.5!important}
+.maria-site .before-after-hint,.maria-site .maria-map-note{font-size:13px!important;line-height:1.65!important}
+.maria-site .video-placeholder-label{font-size:13px!important}
+.maria-site .video-testimonial-copy h3{font-size:19px!important;line-height:1.4!important}
+.maria-site .footer-grid a,.maria-site .footer-grid span,.maria-site .footer-brand p,.maria-site .footer-bottom{font-size:14px!important;line-height:1.75!important}
+.maria-site .faq-item button{font-size:17px!important;line-height:1.5!important}
+.maria-site .illustration-tag{font-size:13px!important;line-height:1.45!important;white-space:normal;text-align:center}
+.maria-site .review-footer strong{font-size:13px!important}
+.maria-site .review-footer span{font-size:12px!important}
+@media(max-width:760px){
+ .maria-site .hero-lead,.maria-site .copy-block>p,.maria-site .intro-copy p,.maria-site .section-heading p,.maria-site .step-card p,.maria-site .benefit-grid p,.maria-site .faq-answer p,.maria-site .location-copy p,.maria-site .video-testimonial-copy p,.maria-site .before-after-card-copy p,.maria-site .maria-service-card p{font-size:15px!important;line-height:1.75!important}
+ .maria-site .eyebrow{font-size:12px!important;letter-spacing:1px!important}
+ .maria-site .maria-service-card h3{font-size:19px!important}
+ .maria-site .footer-grid a,.maria-site .footer-grid span,.maria-site .footer-brand p,.maria-site .footer-bottom{font-size:14px!important}
+}

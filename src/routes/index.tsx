@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
       { property: "og:image", content: `https://clinicanaama.lovable.app/image.png` },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: `https://clinicanaama.lovable.app/image.png` },
-      { name: "theme-color", content: "#142b45" },
+      { name: "theme-color", content: "#0b4168" },
     ],
   }),
   component: Index,
@@ -138,7 +138,7 @@ function Index() {
           <div className="maria-reviews-window">
             <div className="maria-reviews-track">
               {[1,2,3,1,2,3].map((n,i)=><article className="maria-review-card" key={i}>
-                <div className="review-stars" aria-hidden="true">★★★★★</div>
+                
                 <p>{n===1?"O depoimento real da pessoa atendida será incluído aqui após autorização.":n===2?"Este espaço está reservado para uma avaliação confirmada e autorizada.":"A avaliação será adicionada quando a clínica enviar o conteúdo aprovado."}</p>
                 <div className="maria-review-author"><span className="maria-review-avatar" aria-hidden="true"></span><span>Avaliação a adicionar</span></div>
               </article>)}
@@ -153,9 +153,9 @@ function Index() {
       <section className="section maria-location-section" id="localizacao"><div className="container maria-location-grid"><div><span className="eyebrow">LOCALIZAÇÃO</span><h2>Vamos encontrar o melhor caminho para o seu <em>atendimento.</em></h2><p>Entre em contato para confirmar o endereço do consultório, a disponibilidade e as informações de atendimento.</p><button className="btn btn-primary" onClick={() => goWhatsapp("consultar endereço e disponibilidade de atendimento")}><MessageCircle size={18}/> Consultar localização pelo WhatsApp</button><p className="maria-map-note">Mapa provisório de Teresina–PI. O endereço correto será adicionado quando for confirmado.</p></div><div className="maria-map-frame"><iframe title="Mapa provisório de Teresina, Piauí" src="https://maps.google.com/maps?q=Teresina%2C%20Piau%C3%AD%2C%20Brasil&t=&z=12&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen /></div></div></section>
 
 
-      <section className="section faq-section" id="duvidas"><div className="container faq-layout"><div className="faq-intro"><span className="eyebrow">PERGUNTAS FREQUENTES</span><h2>Suas dúvidas também <em>fazem parte do cuidado.</em></h2><p>Se não encontrar sua pergunta aqui, fale diretamente comigo pelo WhatsApp.</p><button className="btn btn-primary" onClick={() => goWhatsapp("tirar uma dúvida")}><MessageCircle size={18}/> Tirar uma dúvida</button></div><div className="faq-list">{faqs.map(([q,a],i)=><div className={openFaq===i?"faq-item active":"faq-item"} key={q}><button onClick={() => setOpenFaq(openFaq===i?null:i)} aria-expanded={openFaq===i}><span>{q}</span><ChevronDown size={18}/></button>{openFaq===i&&<div className="faq-answer"><p>{a}</p></div>}</div>)}</div></div></section>
+      <section className="section faq-section" id="duvidas"><div className="container faq-layout"><div className="faq-intro"><span className="eyebrow">PERGUNTAS FREQUENTES</span><h2>Suas dúvidas também <em>fazem parte do cuidado.</em></h2><p>Se não encontrar sua pergunta aqui, fale com a equipe da Clínica Naamã pelo WhatsApp.</p><button className="btn btn-primary" onClick={() => goWhatsapp("tirar uma dúvida")}><MessageCircle size={18}/> Tirar uma dúvida</button></div><div className="faq-list">{faqs.map(([q,a],i)=><div className={openFaq===i?"faq-item active":"faq-item"} key={q}><button onClick={() => setOpenFaq(openFaq===i?null:i)} aria-expanded={openFaq===i}><span>{q}</span><ChevronDown size={18}/></button>{openFaq===i&&<div className="faq-answer"><p>{a}</p></div>}</div>)}</div></div></section>
 
-      <section className="section final-cta maria-final"><div className="final-glow"/><div className="container narrow center"><span className="eyebrow">VAMOS CONVERSAR?</span><h2>O próximo passo começa com uma conversa.</h2><p>Entre em contato para compartilhar sua necessidade e receber informações sobre o atendimento de enfermagem dermatológica.</p><button className="btn btn-primary" onClick={() => goWhatsapp("conversar sobre atendimento")}><MessageCircle size={18}/> Falar com a equipe pelo WhatsApp</button></div></section>
+      <section className="section final-cta maria-final"><div className="final-glow"/><div className="container narrow center"><span className="eyebrow">VAMOS CONVERSAR?</span><h2>O próximo passo começa com uma conversa.</h2><p>Entre em contato para compartilhar sua necessidade e receber informações sobre o cuidado especializado com feridas e pé diabético.</p><button className="btn btn-primary" onClick={() => goWhatsapp("conversar sobre atendimento")}><MessageCircle size={18}/> Falar com a equipe pelo WhatsApp</button></div></section>
 
       <footer className="footer maria-footer"><div className="container footer-grid"><div className="footer-brand"><p>Cuidado especializado para feridas, pé diabético e curativos, com atenção individualizada.</p></div><div><h4>Navegação</h4><a href="#sobre">Sobre a clínica</a><a href="#tratamentos">Áreas de atuação</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Perguntas frequentes</a></div><div><h4>Contato</h4><a href={WHATSAPP} target="_blank" rel="noreferrer"><MessageCircle size={14}/> +55 (12) 98829-8061</a><span><ShieldCheck size={14}/> Cuidado responsável e individualizado</span></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Clínica Naamã.</span><span>Feridas • Pé diabético • Curativos especializados</span></div></footer>
 

@@ -633,3 +633,17 @@ body,.jt-site{background:#fffdf9;color:#25384a}
   .maria-service-card h3{font-size:18px!important}
   .maria-service-card p{font-size:12px!important;line-height:1.65!important}
 }
+
+/* Ajustes: logo, contraste, avaliações */
+.hero-brand-logo{display:block;width:min(260px,62vw);height:auto;margin:0 auto 18px}
+.footer-logo{display:block;width:170px;height:auto;margin:0 auto 14px;background:#fff;border-radius:16px;padding:10px}
+.jt-site .maria-final .eyebrow,.jt-site .maria-final h2,.jt-site .maria-final p{color:#fff !important}
+.jt-site .maria-final{background:linear-gradient(135deg,#0b4168,#087f91) !important}
+.jt-site .info-marquee,.jt-site .info-marquee span{color:#fff !important;text-shadow:0 1px 2px rgba(0,0,0,.35)}
+.jt-site .benefits-section article span,.jt-site .benefits-section article svg{color:#087f91 !important;opacity:1 !important}
+.jt-site .benefits-section article span{font-weight:800}
+.jt-site .how-section{background:linear-gradient(135deg,#e3f3f4,#dcecf6) !important}
+.maria-reviews-full{width:100%}
+.maria-reviews-full .section-heading{width:min(1160px,calc(100% - 42px));margin:0 auto 35px}
+.jt-site .maria-reviews-window{width:100%;max-width:none;margin:0;border-radius:0}
+.review-avatar-blank{display:grid !important;place-items:center;width:44px;height:44px;border-radius:50%;background:#d8eeee;color:#5f8a96;flex:none}

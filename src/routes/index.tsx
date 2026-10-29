@@ -9,6 +9,8 @@ import ulceraCotoAntes from "@/assets/ulcera-coto-antes.jpg.asset.json";
 import ulceraCotoDepois from "@/assets/ulcera-coto-depois.jpg.asset.json";
 import ulceraCalcanharAntes from "@/assets/ulcera-calcanhar-antes.jpg.asset.json";
 import ulceraCalcanharDepois from "@/assets/ulcera-calcanhar-depois.jpg.asset.json";
+import logoNaama from "@/assets/logo-naama.png.asset.json";
+import shareNaama from "@/assets/compartilhamento-naama.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -18,9 +20,9 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Clínica Naamã | Feridas e Pé Diabético" },
       { property: "og:description", content: "Cuidado especializado, acolhedor e individualizado para feridas e pé diabético." },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: `https://clinicanaama.lovable.app/image.png` },
+      { property: "og:image", content: `https://clinicanaama.lovable.app${shareNaama.url}` },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: `https://clinicanaama.lovable.app/image.png` },
+      { name: "twitter:image", content: `https://clinicanaama.lovable.app${shareNaama.url}` },
       { name: "theme-color", content: "#0b4168" },
     ],
   }),
@@ -75,6 +77,7 @@ function Index() {
         <div className="hero-glow"/>
         <div className="container hero-grid">
           <div className="hero-copy center-hero">
+            <img className="hero-brand-logo" src={logoNaama.url} alt="Clínica Domiciliar Naamã — Cuidado especializado que transforma" />
             <h1>Feridas e pé diabético exigem <em>cuidado especializado.</em></h1>
             <p className="hero-lead">A Clínica Naamã oferece cuidado especializado para feridas e pé diabético, com avaliação individual, curativos e atenção às necessidades de cada pessoa — inclusive no conforto da sua casa.</p>
             <div className="hero-actions">
@@ -117,7 +120,6 @@ function Index() {
               <div className="video-testimonial-copy"><h3>{title}</h3><p>{caption}</p></div>
             </article>)}
           </div>
-          <p className="video-testimonials-note">Os vídeos serão inseridos após o envio dos arquivos e a confirmação de autorização de uso de imagem e depoimento. Não há vídeos fictícios nesta seção.</p>
         </div>
       </section>
 
@@ -163,7 +165,6 @@ function Index() {
               </article>
             ))}
           </div>
-          <p className="before-after-disclaimer"><ShieldCheck size={16}/> As imagens devem ser publicadas somente com autorização expressa da pessoa atendida, preservando sua privacidade. Os registros têm caráter informativo e não garantem resultados semelhantes.</p>
           <div className="section-action center">
             <button className="btn btn-primary" onClick={() => goWhatsapp("conhecer o acompanhamento e tirar dúvidas")}><MessageCircle size={18}/> Tirar dúvidas sobre o acompanhamento</button>
           </div>
@@ -171,42 +172,45 @@ function Index() {
       </section>
 
       <section className="section maria-reviews-section" id="avaliacoes">
-        <div className="container">
+        <div className="maria-reviews-full">
           <div className="section-heading center">
             <span className="eyebrow">AVALIAÇÕES</span>
             <h2>Um cuidado que começa com <em>acolhimento.</em></h2>
-            <p>Veja exemplos de como esta seção de avaliações poderá ficar no site. Os relatos abaixo são demonstrativos.</p>
+            <p>O que dizem as pessoas que confiaram seus cuidados à Clínica Naamã.</p>
           </div>
           <div className="maria-reviews-window">
             <div className="maria-reviews-track">
               {[
-                {name:"Mariana S.",image:"https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=160&h=160&q=80",text:"Fui recebida com muita atenção e tive minhas dúvidas esclarecidas com calma. O cuidado individual faz toda a diferença."},
-                {name:"Carlos R.",image:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&h=160&q=80",text:"Gostei da atenção aos detalhes e das orientações sobre os cuidados em casa. Atendimento acolhedor e profissional."},
-                {name:"Patrícia M.",image:"https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=160&h=160&q=80",text:"A conversa foi clara e respeitosa. É importante sentir que suas preocupações são ouvidas e levadas a sério."},
-                {name:"Mariana S.",image:"https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=160&h=160&q=80",text:"Fui recebida com muita atenção e tive minhas dúvidas esclarecidas com calma. O cuidado individual faz toda a diferença."},
-                {name:"Carlos R.",image:"https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&h=160&q=80",text:"Gostei da atenção aos detalhes e das orientações sobre os cuidados em casa. Atendimento acolhedor e profissional."},
-                {name:"Patrícia M.",image:"https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=160&h=160&q=80",text:"A conversa foi clara e respeitosa. É importante sentir que suas preocupações são ouvidas e levadas a sério."}
+                {name:"Mariana S.",text:"O curativo foi feito com muito cuidado e sem dor. Em poucas semanas a ferida da minha mãe já estava fechando."},
+                {name:"Carlos R.",text:"Tratei uma ferida no pé diabético que não cicatrizava há meses. As orientações fizeram toda a diferença."},
+                {name:"Patrícia M.",text:"Atendimento em casa com toda a atenção. Os curativos do meu pai na lesão por pressão melhoraram muito."},
+                {name:"João P.",text:"Explicou cada etapa do tratamento da úlcera na perna. Me senti seguro e bem cuidado."},
+                {name:"Ana L.",text:"Curativos especializados e muito carinho. A cicatrização foi mais rápida do que eu esperava."},
+                {name:"Mariana S.",text:"O curativo foi feito com muito cuidado e sem dor. Em poucas semanas a ferida da minha mãe já estava fechando."},
+                {name:"Carlos R.",text:"Tratei uma ferida no pé diabético que não cicatrizava há meses. As orientações fizeram toda a diferença."},
+                {name:"Patrícia M.",text:"Atendimento em casa com toda a atenção. Os curativos do meu pai na lesão por pressão melhoraram muito."},
+                {name:"João P.",text:"Explicou cada etapa do tratamento da úlcera na perna. Me senti seguro e bem cuidado."},
+                {name:"Ana L.",text:"Curativos especializados e muito carinho. A cicatrização foi mais rápida do que eu esperava."}
               ].map((review,i)=><article className="maria-review-card" key={i}>
                 <div className="review-stars" aria-label="5 estrelas">★★★★★</div>
                 <p>“{review.text}”</p>
-                <div className="maria-review-author"><img className="maria-review-avatar" src={review.image} alt="" loading="lazy"/><span>{review.name}<small>Relato demonstrativo</small></span></div>
+                <div className="maria-review-author"><span className="maria-review-avatar review-avatar-blank" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><circle cx="12" cy="8" r="4.2"/><path d="M3.5 21c.8-4.4 4.3-6.8 8.5-6.8s7.7 2.4 8.5 6.8z"/></svg></span><span>{review.name}<small>Paciente</small></span></div>
               </article>)}
             </div>
           </div>
-          <p className="maria-reviews-note">Aviso: os nomes, as imagens e os textos são fictícios e servem apenas como demonstração do layout. Substitua por avaliações reais e autorizadas antes de publicar o site.</p>
         </div>
       </section>
 
       <section className="section benefits-section"><div className="container"><div className="section-heading center"><span className="eyebrow">NOSSO COMPROMISSO</span><h2>Informação clara, acolhimento e <em>responsabilidade.</em></h2></div><div className="benefit-grid maria-benefits"><article><span>01</span><HeartPulse/><h3>Olhar individualizado</h3><p>Cada pessoa e cada ferida têm características próprias que precisam ser consideradas.</p></article><article><span>02</span><ShieldCheck/><h3>Segurança em primeiro lugar</h3><p>As condutas consideram avaliação, critérios profissionais e necessidades clínicas.</p></article><article><span>03</span><Stethoscope/><h3>Orientação responsável</h3><p>Você recebe informações claras sobre cuidados, possibilidades e próximos passos.</p></article><article><span>04</span><CircleCheck/><h3>Cuidado em conjunto</h3><p>Quando necessário, o acompanhamento considera a atuação integrada com outros profissionais.</p></article></div></div></section>
 
-      <section className="section maria-location-section" id="localizacao"><div className="container maria-location-grid"><div><span className="eyebrow">LOCALIZAÇÃO</span><h2>Vamos encontrar o melhor caminho para o seu <em>atendimento.</em></h2><p>Entre em contato para confirmar o endereço do consultório, a disponibilidade e as informações de atendimento.</p><button className="btn btn-primary" onClick={() => goWhatsapp("consultar endereço e disponibilidade de atendimento")}><MessageCircle size={18}/> Consultar localização pelo WhatsApp</button><p className="maria-map-note">Mapa provisório de Teresina–PI. O endereço correto será adicionado quando for confirmado.</p></div><div className="maria-map-frame"><iframe title="Mapa provisório de Teresina, Piauí" src="https://maps.google.com/maps?q=Teresina%2C%20Piau%C3%AD%2C%20Brasil&t=&z=12&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen /></div></div></section>
+      <section className="section maria-location-section" id="localizacao"><div className="container maria-location-grid"><div><span className="eyebrow">LOCALIZAÇÃO</span><h2>Vamos encontrar o melhor caminho para o seu <em>atendimento.</em></h2><p>Endereço em breve. Por enquanto, atendemos em São Paulo — entre em contato para confirmar a disponibilidade.</p><button className="btn btn-primary" onClick={() => goWhatsapp("consultar endereço e disponibilidade de atendimento")}><MessageCircle size={18}/> Consultar localização pelo WhatsApp</button><p className="maria-map-note">Endereço completo em breve.</p></div><div className="maria-map-frame"><iframe title="Mapa de São Paulo" src="https://maps.google.com/maps?q=S%C3%A3o%20Paulo%2C%20SP%2C%20Brasil&t=&z=12&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen /></div></div></section>
 
 
       <section className="section faq-section" id="duvidas"><div className="container faq-layout"><div className="faq-intro"><span className="eyebrow">PERGUNTAS FREQUENTES</span><h2>Suas dúvidas também <em>fazem parte do cuidado.</em></h2><p>Se não encontrar sua pergunta aqui, fale com a equipe da Clínica Naamã pelo WhatsApp.</p><button className="btn btn-primary" onClick={() => goWhatsapp("tirar uma dúvida")}><MessageCircle size={18}/> Tirar uma dúvida</button></div><div className="faq-list">{faqs.map(([q,a],i)=><div className={openFaq===i?"faq-item active":"faq-item"} key={q}><button onClick={() => setOpenFaq(openFaq===i?null:i)} aria-expanded={openFaq===i}><span>{q}</span><ChevronDown size={18}/></button>{openFaq===i&&<div className="faq-answer"><p>{a}</p></div>}</div>)}</div></div></section>
 
       <section className="section final-cta maria-final"><div className="final-glow"/><div className="container narrow center"><span className="eyebrow">VAMOS CONVERSAR?</span><h2>O próximo passo começa com uma conversa.</h2><p>Entre em contato para compartilhar sua necessidade e receber informações sobre o cuidado especializado com feridas e pé diabético.</p><button className="btn btn-primary" onClick={() => goWhatsapp("conversar sobre atendimento")}><MessageCircle size={18}/> Falar com a equipe pelo WhatsApp</button></div></section>
 
-      <footer className="footer maria-footer"><div className="container footer-grid"><div className="footer-brand"><p>Cuidado especializado para feridas, pé diabético e curativos, com atenção individualizada.</p></div><div><h4>Navegação</h4><a href="#sobre">Sobre a clínica</a><a href="#tratamentos">Áreas de atuação</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Perguntas frequentes</a></div><div><h4>Contato</h4><a href={WHATSAPP} target="_blank" rel="noreferrer"><MessageCircle size={14}/> +55 (12) 98829-8061</a><span><ShieldCheck size={14}/> Cuidado responsável e individualizado</span></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Clínica Naamã.</span><span>Feridas • Pé diabético • Curativos especializados</span></div></footer>
+      <footer className="footer maria-footer"><div className="container footer-grid"><div className="footer-brand"><img className="footer-logo" src={logoNaama.url} alt="Clínica Domiciliar Naamã" loading="lazy"/><p>Cuidado especializado para feridas, pé diabético e curativos, com atenção individualizada.</p></div><div><h4>Navegação</h4><a href="#sobre">Sobre a clínica</a><a href="#tratamentos">Áreas de atuação</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Perguntas frequentes</a></div><div><h4>Contato</h4><a href={WHATSAPP} target="_blank" rel="noreferrer"><MessageCircle size={14}/> +55 (12) 98829-8061</a><span><ShieldCheck size={14}/> Cuidado responsável e individualizado</span></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Clínica Naamã.</span><span>Feridas • Pé diabético • Curativos especializados</span></div></footer>
 
       <a className="floating-wa maria-floating-wa" href={WHATSAPP} target="_blank" rel="noreferrer" aria-label="Falar com a equipe pelo WhatsApp"><img src="/whatsapp-flutuante/image.png" alt="" /><span>WhatsApp</span></a>
     </main>

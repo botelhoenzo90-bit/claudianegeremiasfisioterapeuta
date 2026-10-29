@@ -726,3 +726,21 @@ body,.jt-site{background:#fffdf9;color:#25384a}
  .maria-site .maria-service-card h3{font-size:19px!important}
  .maria-site .footer-grid a,.maria-site .footer-grid span,.maria-site .footer-brand p,.maria-site .footer-bottom{font-size:14px!important}
 }
+
+/* Aumentar a leitura dos três avisos sobre feridas e cuidados */
+.maria-site .pain-section .check-list div,
+.maria-site .pain-section .centered-list div,
+.maria-site .pain-section .centered-list div span{
+  font-size:17px!important;
+  line-height:1.75!important;
+}
+.maria-site .pain-section .check-list{gap:13px}
+.maria-site .pain-section .centered-list div{padding:13px 16px}
+@media(max-width:760px){
+  .maria-site .pain-section .check-list div,
+  .maria-site .pain-section .centered-list div,
+  .maria-site .pain-section .centered-list div span{
+    font-size:16px!important;
+    line-height:1.75!important;
+  }
+}

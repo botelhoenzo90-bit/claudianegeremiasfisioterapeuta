@@ -80,9 +80,9 @@ function Index() {
 
       <section className="section intro-section" id="sobre"><div className="container intro-grid"><div className="intro-illustration maria-profile-photo photo-placeholder" role="img" aria-label="Espaço reservado para foto de Claudiane Geremias"><span>CG</span><small>Claudiane Geremias • Fisioterapeuta</small></div><div className="intro-copy"><span className="eyebrow">PRAZER, SOU CLAUDIANE</span><h2>Seu corpo merece atenção, movimento e <em>cuidado individualizado.</em></h2><p>Sou Claudiane Geremias, fisioterapeuta, CREFITO 199192-F. Meu trabalho é compreender o que você sente, avaliar suas necessidades e construir um plano de cuidado alinhado aos seus objetivos.</p><p>Atendimento acolhedor e responsável, com foco em função, mobilidade e qualidade de vida — respeitando o ritmo e as particularidades de cada pessoa.</p><button className="btn btn-primary" onClick={() => goWhatsapp("conhecer o atendimento de fisioterapia")}><MessageCircle size={18}/> conhecer o atendimento</button></div></div></section>
 
-      <section className="section pain-section"><div className="container narrow center"><span className="eyebrow">QUANDO A DOR COMEÇA A LIMITAR VOCÊ</span><h2>Quando tarefas simples viram um desafio, <em>é hora de olhar para o seu corpo.</em></h2><p>Levantar da cama com desconforto, passar horas sentado sentindo a coluna, evitar caminhadas por causa dos pés ou deixar de fazer o que gosta por medo da dor: esses sinais merecem atenção. A avaliação fisioterapêutica ajuda a compreender o que pode estar acontecendo e quais caminhos de cuidado fazem sentido para você.</p><div className="check-list centered-list"><div><Check size={17}/><span>Acordar com rigidez ou sentir a coluna pesar ao longo do dia.</span></div><div><Check size={17}/><span>Sentir dor ao caminhar, ficar em pé ou subir escadas.</span></div><div><Check size={17}/><span>Perceber tensão muscular e limitações que atrapalham sua rotina.</span></div></div><button className="btn btn-primary" onClick={() => goWhatsapp("conversar sobre minhas dores e agendar uma avaliação")}><MessageCircle size={18}/> Vamos conversar sobre sua dor</button></div></section>
+      <section className="section pain-section"><div className="container narrow center"><span className="eyebrow">QUANDO A DOR COMEÇA A LIMITAR VOCÊ</span><h2>Quando tarefas simples viram um desafio, <em>é hora de olhar para o seu corpo.</em></h2><p>Levantar da cama com desconforto, passar horas sentado sentindo a coluna, evitar caminhadas por causa dos pés ou deixar de fazer o que gosta por medo da dor: esses sinais merecem atenção. A avaliação fisioterapêutica ajuda a compreender o que pode estar acontecendo e quais caminhos de cuidado fazem sentido para você.</p><div className="pain-cards"><article className="pain-card"><span className="pain-card-icon"><Activity size={22}/></span><div><h3>Desconforto na coluna</h3><p>Rigidez ao acordar, tensão no pescoço ou dor lombar depois de passar muito tempo sentado.</p></div></article><article className="pain-card"><span className="pain-card-icon"><HeartPulse size={22}/></span><div><h3>Dificuldade para se movimentar</h3><p>Sentir o corpo travado, perder mobilidade ou ter dificuldade para realizar tarefas do dia a dia.</p></div></article><article className="pain-card"><span className="pain-card-icon"><Activity size={22}/></span><div><h3>Dor nos pés ao caminhar</h3><p>Incômodo na sola do pé ao ficar em pé, dar os primeiros passos ou subir escadas.</p></div></article><article className="pain-card"><span className="pain-card-icon"><ShieldCheck size={22}/></span><div><h3>Tensão muscular e dor persistente</h3><p>Desconfortos que interferem no sono, no trabalho, nas atividades e na sua qualidade de vida.</p></div></article></div><button className="btn btn-primary" onClick={() => goWhatsapp("conversar sobre minhas dores e agendar uma avaliação")}><MessageCircle size={18}/> Vamos conversar sobre sua dor</button></div></section>
 
-      <section className="section procedures-section" id="tratamentos"><div className="container"><div className="section-heading center"><span className="eyebrow">ÁREAS DE ATUAÇÃO</span><h2>Abordagens para apoiar seu movimento e sua qualidade de vida.</h2><p>Conheça as áreas de atuação. As técnicas e os recursos são definidos após avaliação, considerando suas necessidades, objetivos e segurança.</p></div><div className="procedure-window"><div className="procedure-track">{[...services,...services].map(({title,text,icon:Icon},i)=><article className="procedure-card maria-service-card" key={`${title}-${i}`}><div className="procedure-content"><div className="procedure-icon"><Icon size={21}/></div><h3>{title}</h3><p>{text}</p></div></article>)}</div></div><div className="section-action center"><button className="btn btn-primary" onClick={() => goWhatsapp("saber qual atendimento pode ser adequado para mim")}><MessageCircle size={18}/> Consultar sobre meu caso</button></div></div></section>
+      <section className="section procedures-section" id="tratamentos"><div className="container"><div className="section-heading center"><span className="eyebrow">ÁREAS DE ATUAÇÃO</span><h2>Abordagens para apoiar seu movimento e sua qualidade de vida.</h2><p>Conheça as áreas de atuação. As técnicas e os recursos são definidos após avaliação, considerando suas necessidades, objetivos e segurança.</p></div><div className="procedure-window"><div className="procedure-track">{[...services,...services].map(({title,text,icon:Icon,image},i)=><article className="procedure-card maria-service-card" key={`${title}-${i}`}><img className="procedure-photo" src={image} alt={title} loading="lazy"/><div className="procedure-content"><div className="procedure-icon"><Icon size={21}/></div><h3>{title}</h3><p>{text}</p></div></article>)}</div></div><div className="section-action center"><button className="btn btn-primary" onClick={() => goWhatsapp("saber qual atendimento pode ser adequado para mim")}><MessageCircle size={18}/> Consultar sobre meu caso</button></div></div></section>
 
 
 
@@ -90,23 +90,16 @@ function Index() {
 
       <section className="section how-section" id="como-funciona"><div className="container"><div className="section-heading center"><span className="eyebrow">COMO FUNCIONA</span><h2>Seu cuidado começa com uma avaliação <em>individual.</em></h2><p>Um processo claro, construído com você e adaptado aos seus objetivos.</p></div><div className="steps-grid">{[["01","Primeiro contato","Você conta o que sente, há quanto tempo e quais atividades estão sendo afetadas."],["02","Avaliação individual","A profissional conversa com você e avalia sintomas, movimento, histórico e objetivos."],["03","Plano de cuidado","As opções de abordagem são explicadas de forma clara e adequadas às suas necessidades."],["04","Acompanhamento","A evolução é observada e o plano pode ser ajustado conforme sua resposta ao cuidado."]].map(([n,t,d])=><article className="step-card" key={n}><span className="step-number">{n}</span><div><h3>{t}</h3><p>{d}</p></div></article>)}</div><div className="section-action center"><button className="btn btn-primary" onClick={() => goWhatsapp("iniciar uma conversa sobre atendimento")}><MessageCircle size={18}/> Iniciar uma conversa</button></div></div></section>
 
-<section className="section video-testimonials-section" id="depoimentos-em-video">
-        <div className="container">
-          <div className="section-heading center">
-            <span className="eyebrow">CONHEÇA O ATENDIMENTO</span>
-            <h2>Informação e orientação para cuidar melhor do <em>seu movimento.</em></h2>
-            <p>Este espaço pode receber vídeos explicativos sobre fisioterapia, postura, mobilidade e as abordagens utilizadas no atendimento.</p>
+<section className="section video-testimonials-section clinic-space-section" id="conheca-clinica">
+        <div className="container clinic-space-grid">
+          <div className="clinic-space-copy">
+            <span className="eyebrow">CONHEÇA A CLÍNICA</span>
+            <h2>Um espaço pensado para acolher você e cuidar do seu <em>movimento.</em></h2>
+            <p>O atendimento com Claudiane Geremias começa com escuta e avaliação individual. Cada etapa é conduzida com atenção às suas necessidades, ao seu conforto e aos seus objetivos de movimento.</p>
+            <p>Entre em contato para conhecer o espaço, tirar dúvidas e confirmar os horários disponíveis.</p>
+            <button className="btn btn-primary" onClick={() => goWhatsapp("conhecer a clínica e agendar uma avaliação")}><MessageCircle size={18}/> Agendar uma visita ou avaliação</button>
           </div>
-          <div className="video-testimonials-grid">
-            {[
-              ["Postura e coluna","Vídeo explicativo a adicionar"],
-              ["Mobilidade e movimento","Vídeo explicativo a adicionar"],
-              ["Conheça a avaliação","Vídeo de apresentação a adicionar"]
-            ].map(([title,caption])=><article className="video-testimonial-card" key={title}>
-              <div className="video-testimonial-placeholder"><span className="video-play" aria-hidden="true">▶</span><span className="video-placeholder-label">VÍDEO</span></div>
-              <div className="video-testimonial-copy"><h3>{title}</h3><p>{caption}</p></div>
-            </article>)}
-          </div>
+          <div className="clinic-space-photo"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=85" alt="Ambiente de clínica de saúde acolhedor" loading="lazy"/><span>Imagem ilustrativa de ambiente clínico</span></div>
         </div>
       </section>
 
@@ -115,21 +108,21 @@ function Index() {
           <div className="section-heading center">
             <span className="eyebrow">AVALIAÇÕES</span>
             <h2>Um cuidado que começa com <em>acolhimento.</em></h2>
-            <p>Este espaço está preparado para exibir avaliações reais de pacientes, com autorização para publicação.</p>
+            <p>Os textos abaixo são exemplos ilustrativos, não depoimentos reais. Substitua-os por avaliações autênticas de pacientes, com autorização para publicação.</p>
           </div>
           <div className="maria-reviews-window">
             <div className="maria-reviews-track">
               {[
-                {name:"Avaliação de paciente",text:"Adicione aqui uma avaliação real, autorizada pela pessoa atendida."},
-                {name:"Avaliação de paciente",text:"Adicione aqui uma avaliação real, autorizada pela pessoa atendida."},
-                {name:"Avaliação de paciente",text:"Adicione aqui uma avaliação real, autorizada pela pessoa atendida."},
-                {name:"Avaliação de paciente",text:"Adicione aqui uma avaliação real, autorizada pela pessoa atendida."},
-                {name:"Avaliação de paciente",text:"Adicione aqui uma avaliação real, autorizada pela pessoa atendida."},
-                {name:"Avaliação de paciente",text:"Adicione aqui uma avaliação real, autorizada pela pessoa atendida."},
-                {name:"Avaliação de paciente",text:"Adicione aqui uma avaliação real, autorizada pela pessoa atendida."},
-                {name:"Avaliação de paciente",text:"Adicione aqui uma avaliação real, autorizada pela pessoa atendida."},
-                {name:"Avaliação de paciente",text:"Adicione aqui uma avaliação real, autorizada pela pessoa atendida."},
-                {name:"Avaliação de paciente",text:"Adicione aqui uma avaliação real, autorizada pela pessoa atendida."}
+                {name:"Avaliação ilustrativa",text:"Exemplo ilustrativo de texto sobre avaliação individual e orientações de fisioterapia. Substitua por depoimento real autorizado."},
+                {name:"Avaliação ilustrativa",text:"Exemplo ilustrativo de texto sobre avaliação individual e orientações de fisioterapia. Substitua por depoimento real autorizado."},
+                {name:"Avaliação ilustrativa",text:"Exemplo ilustrativo de texto sobre avaliação individual e orientações de fisioterapia. Substitua por depoimento real autorizado."},
+                {name:"Avaliação ilustrativa",text:"Exemplo ilustrativo de texto sobre avaliação individual e orientações de fisioterapia. Substitua por depoimento real autorizado."},
+                {name:"Avaliação ilustrativa",text:"Exemplo ilustrativo de texto sobre avaliação individual e orientações de fisioterapia. Substitua por depoimento real autorizado."},
+                {name:"Avaliação ilustrativa",text:"Exemplo ilustrativo de texto sobre avaliação individual e orientações de fisioterapia. Substitua por depoimento real autorizado."},
+                {name:"Avaliação ilustrativa",text:"Exemplo ilustrativo de texto sobre avaliação individual e orientações de fisioterapia. Substitua por depoimento real autorizado."},
+                {name:"Avaliação ilustrativa",text:"Exemplo ilustrativo de texto sobre avaliação individual e orientações de fisioterapia. Substitua por depoimento real autorizado."},
+                {name:"Avaliação ilustrativa",text:"Exemplo ilustrativo de texto sobre avaliação individual e orientações de fisioterapia. Substitua por depoimento real autorizado."},
+                {name:"Avaliação ilustrativa",text:"Exemplo ilustrativo de texto sobre avaliação individual e orientações de fisioterapia. Substitua por depoimento real autorizado."}
               ].map((review,i)=><article className="maria-review-card" key={i}>
                 <div className="review-stars" aria-label="5 estrelas">★★★★★</div>
                 <p>“{review.text}”</p>
@@ -138,9 +131,10 @@ function Index() {
             </div>
           </div>
         </div>
+        <div className="section-action center"><button className="btn btn-primary" onClick={() => goWhatsapp("agendar uma avaliação de fisioterapia")}><MessageCircle size={18}/> Agendar minha avaliação</button></div>
       </section>
 
-      <section className="section benefits-section"><div className="container"><div className="section-heading center"><span className="eyebrow">NOSSO COMPROMISSO</span><h2>Informação clara, acolhimento e <em>responsabilidade.</em></h2></div><div className="benefit-grid maria-benefits"><article><span>01</span><HeartPulse/><h3>Olhar individualizado</h3><p>Cada pessoa e cada ferida têm características próprias que precisam ser consideradas.</p></article><article><span>02</span><ShieldCheck/><h3>Segurança em primeiro lugar</h3><p>As condutas consideram avaliação, critérios profissionais e necessidades clínicas.</p></article><article><span>03</span><Stethoscope/><h3>Orientação responsável</h3><p>Você recebe informações claras sobre cuidados, possibilidades e próximos passos.</p></article><article><span>04</span><CircleCheck/><h3>Cuidado em conjunto</h3><p>Quando necessário, o acompanhamento considera a atuação integrada com outros profissionais.</p></article></div></div></section>
+      <section className="section benefits-section"><div className="container"><div className="section-heading center"><span className="eyebrow">NOSSO COMPROMISSO</span><h2>Informação clara, acolhimento e <em>responsabilidade.</em></h2></div><div className="benefit-grid maria-benefits"><article><span>01</span><HeartPulse/><h3>Olhar individualizado</h3><p>Cada pessoa e cada ferida têm características próprias que precisam ser consideradas.</p></article><article><span>02</span><ShieldCheck/><h3>Segurança em primeiro lugar</h3><p>As condutas consideram avaliação, critérios profissionais e necessidades clínicas.</p></article><article><span>03</span><Stethoscope/><h3>Orientação responsável</h3><p>Você recebe informações claras sobre cuidados, possibilidades e próximos passos.</p></article><article><span>04</span><CircleCheck/><h3>Cuidado em conjunto</h3><p>Quando necessário, o acompanhamento considera a atuação integrada com outros profissionais.</p></article></div><div className="section-action center"><button className="btn btn-primary" onClick={() => goWhatsapp("agendar uma avaliação de fisioterapia")}><MessageCircle size={18}/> Agendar avaliação</button></div></div></section>
 
       <section className="section maria-location-section" id="localizacao"><div className="container maria-location-grid"><div><span className="eyebrow">LOCALIZAÇÃO</span><h2>Encontre a clínica em <em>Londrina.</em></h2><p>Rua Vigilato José da Cunha, Londrina – PR, CEP 86075-020.</p><button className="btn btn-primary" onClick={() => goWhatsapp("consultar endereço e disponibilidade de atendimento")}><MessageCircle size={18}/> Consultar localização pelo WhatsApp</button><p className="maria-map-note">Para confirmar horários e disponibilidade, fale pelo WhatsApp.</p></div><div className="maria-map-frame"><iframe title="Mapa da clínica em Londrina" src="https://maps.google.com/maps?q=Rua%20Vigilato%20Jos%C3%A9%20da%20Cunha%2C%20Londrina%20PR%2086075-020&t=&z=16&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen /></div></div></section>
 

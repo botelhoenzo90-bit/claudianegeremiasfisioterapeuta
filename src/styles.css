@@ -930,3 +930,6 @@ body,.jt-site{background:#fffaf0!important;color:#203b2a}
 .how-section .btn-primary,.benefits-section .btn-primary,.maria-final .btn,.maria-final .btn-primary{background:linear-gradient(135deg,#e2b53c,#c8961c)!important;color:#1f3a12!important;box-shadow:0 11px 25px rgba(0,0,0,.22)!important}
 .how-section .btn-primary:hover,.benefits-section .btn-primary:hover,.maria-final .btn:hover{background:linear-gradient(135deg,#f0c75a,#d4a32a)!important}
 .reviews-illustrative-note{text-align:center;font-size:12px;color:#7a7268;margin:18px auto 0;font-style:italic}
+.hero-logo-only .physio-brand-logo{width:min(230px,62vw)!important}
+.maria-footer .footer-brand .footer-logo{width:150px!important;height:auto!important;aspect-ratio:auto!important;max-height:none!important;padding:10px!important}
+.hero h1.hero-title-fix{font-size:clamp(32px,4.6vw,58px)!important;line-height:1.12!important;letter-spacing:-1px!important;max-width:900px;margin-left:auto;margin-right:auto;text-wrap:balance}

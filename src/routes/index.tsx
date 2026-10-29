@@ -5,6 +5,7 @@ import {
 } from "lucide-react";
 import logoClaudiane from "@/assets/logo-claudiane.png.asset.json";
 import logoSemFundo from "@/assets/logo-claudiane-sem-fundo.png.asset.json";
+import logoNova from "@/assets/logo-claudiane-nova.png.asset.json";
 import imgDoresColuna from "@/assets/dores-na-coluna.jpg.asset.json";
 import imgPostura from "@/assets/postura-alinhamento.jpg.asset.json";
 import imgMobilidade from "@/assets/mobilidade-movimento.jpg.asset.json";
@@ -73,8 +74,8 @@ function Index() {
         <div className="hero-glow"/>
         <div className="container hero-grid">
           <div className="hero-copy center-hero">
-            <div className="physio-brand-lockup hero-logo-only"><img className="physio-brand-logo" src={logoSemFundo.url} alt="Logomarca Claudiane Gerimias Fisioterapeuta" /></div>
-            <h1>Mais movimento, menos limitações e <em>cuidado para você viver melhor.</em></h1>
+            <div className="physio-brand-lockup hero-logo-only"><img className="physio-brand-logo" src={logoNova.url} alt="Logomarca Claudiane Gerimias Fisioterapeuta" /></div>
+            <h1 className="hero-title-fix">Mais movimento, menos limitações<br/><em>cuidado para você viver melhor.</em></h1>
             <p className="hero-lead">Fisioterapia com atenção individualizada para dores na coluna, postura, mobilidade e bem-estar. Um cuidado que considera sua rotina, seus objetivos e as necessidades do seu corpo.</p>
             <div className="hero-actions">
               <button className="btn btn-primary" onClick={() => goWhatsapp("conversar sobre meu caso")}><MessageCircle size={18}/> Agendar uma avaliação</button>
@@ -149,7 +150,7 @@ function Index() {
 
       <section className="section final-cta maria-final"><div className="final-glow"/><div className="container narrow center"><span className="eyebrow">VAMOS CONVERSAR?</span><h2>Vamos conversar sobre seus objetivos?</h2><p>Entre em contato para saber mais sobre a avaliação e o atendimento de fisioterapia em Londrina.</p><button className="btn btn-primary" onClick={() => goWhatsapp("conversar sobre atendimento")}><MessageCircle size={18}/> Falar com a equipe pelo WhatsApp</button></div></section>
 
-      <footer className="footer maria-footer"><div className="container footer-grid"><div className="footer-brand"><img className="footer-logo" src={logoClaudiane.url} alt="Logomarca Claudiane Geremias Fisioterapeuta" /><p>Claudiane Geremias • Fisioterapeuta<br/>CREFITO 199192-F</p></div><div><h4>Navegação</h4><a href="#sobre">Sobre a clínica</a><a href="#tratamentos">Áreas de atuação</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Perguntas frequentes</a></div><div><h4>Contato</h4><a href={WHATSAPP} target="_blank" rel="noreferrer"><MessageCircle size={14}/> +55 (43) 9141-8724</a><span><ShieldCheck size={14}/> Cuidado responsável e individualizado</span></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Claudiane Geremias.</span><span>Fisioterapia • Quiropraxia • Mobilidade</span></div></footer>
+      <footer className="footer maria-footer"><div className="container footer-grid"><div className="footer-brand"><img className="footer-logo" src={logoNova.url} alt="Logomarca Claudiane Geremias Fisioterapeuta" /><p>Claudiane Geremias • Fisioterapeuta<br/>CREFITO 199192-F</p></div><div><h4>Navegação</h4><a href="#sobre">Sobre a clínica</a><a href="#tratamentos">Áreas de atuação</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Perguntas frequentes</a></div><div><h4>Contato</h4><a href={WHATSAPP} target="_blank" rel="noreferrer"><MessageCircle size={14}/> +55 (43) 9141-8724</a><span><ShieldCheck size={14}/> Cuidado responsável e individualizado</span></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Claudiane Geremias.</span><span>Fisioterapia • Quiropraxia • Mobilidade</span></div></footer>
 
       <a className="floating-wa maria-floating-wa" href={WHATSAPP} target="_blank" rel="noreferrer" aria-label="Falar com a equipe pelo WhatsApp"><img src="/whatsapp-flutuante/image.png" alt="" /><span>WhatsApp</span></a>
     </main>

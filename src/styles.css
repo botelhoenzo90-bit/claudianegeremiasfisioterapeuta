@@ -744,3 +744,63 @@ body,.jt-site{background:#fffdf9;color:#25384a}
     line-height:1.75!important;
   }
 }
+
+
+/* Identidade visual Claudiane Geremias: verde bandeira, bege e dourado */
+:root{--cream:#f5efe2;--cream2:#fffaf0;--ink:#203b2a;--muted:#686b5e;--line:#e6dcc7;--gold:#c49a3a;--gold-dark:#8a6a1f;--gold-soft:#f0e4c5;--white:#fffaf0;--dark:#14532d}
+body,.jt-site{background:#fffaf0!important;color:#203b2a}
+.hero,.maria-hero{background:linear-gradient(135deg,#fffaf0 0%,#f5efe2 68%,#e3eddf 100%)!important;color:#203b2a}
+.hero-glow{background:radial-gradient(circle,rgba(196,154,58,.15),rgba(245,239,226,.12) 44%,transparent 70%)!important}
+.hero h1,.section h2,.intro-copy h2,.section-heading h2{color:#14532d!important}
+.hero h1 em,.section h2 em{color:#b28a2e!important}
+.hero-lead,.section-heading p,.intro-section p,.copy-block>p,.faq-intro p,.faq-answer p,.location-copy p{color:#686b5e!important}
+.eyebrow{color:#9b7724!important}
+.hero-trust{color:#46604b!important}
+.hero-trust svg{color:#b28a2e!important}
+.info-marquee{background:linear-gradient(90deg,#104523,#1b6b36,#104523)!important;border-color:#c49a3a!important}
+.intro-section,.benefits-section,.maria-location-section{background:#fffaf0!important}
+.pain-section{background:linear-gradient(135deg,#f5efe2,#fffaf0)!important;color:#203b2a!important}
+.pain-section h2,.pain-section .section-heading h2,.pain-section .eyebrow{color:#14532d!important}
+.pain-section p,.pain-section .check-list div,.pain-section .centered-list div span{color:#465747!important}
+.pain-section .check-list svg{background:#f0e4c5!important;color:#14532d!important}
+.procedures-section,.faq-section{background:#f5efe2!important}
+.how-section{background:linear-gradient(135deg,#f5efe2,#fffaf0)!important}
+.how-section h2,.how-section h2 em,.how-section .step-card h3{color:#14532d!important}
+.how-section .step-card{background:#fffaf0!important;border-color:#e6dcc7!important}
+.how-section .step-number{background:#f0e4c5!important;color:#14532d!important;border-color:#d8c38c!important}
+.video-testimonials-section{background:#fffaf0!important}
+.video-testimonial-card{border-color:#e6dcc7!important}
+.video-testimonial-placeholder{background:linear-gradient(145deg,#e3eddf,#f5efe2)!important;color:#14532d!important}
+.video-play{background:#14532d!important;color:#fffaf0!important}
+.maria-reviews-section{background:linear-gradient(135deg,#f5efe2,#fffaf0)!important}
+.maria-reviews-section .section-heading h2{color:#14532d!important}
+.maria-review-card{background:#fffaf0!important;border-color:#e6dcc7!important;box-shadow:0 12px 28px rgba(20,83,45,.08)!important}
+.maria-review-card .review-stars{color:#c49a3a!important}
+.maria-review-card p{color:#465747!important}
+.maria-review-author{color:#14532d!important;border-color:#e6dcc7!important}
+.maria-review-avatar,.review-avatar-blank{background:#e3eddf!important;border-color:#c49a3a!important;color:#14532d!important}
+.final-cta,.jt-site .maria-final{background:linear-gradient(135deg,#104523,#1b6b36)!important}
+.final-cta p{color:#f9f4e8!important}
+.header-cta,.btn-primary,.btn-dark,.btn-light{
+ background:#14532d!important;color:#fffaf0!important;border:1px solid #14532d!important;
+ box-shadow:0 10px 24px rgba(20,83,45,.18)!important
+}
+.header-cta:hover,.btn-primary:hover,.btn-dark:hover,.btn-light:hover{background:#0d3d20!important;border-color:#0d3d20!important;color:#fffaf0!important}
+.btn-outline{border-color:#c49a3a!important;color:#14532d!important;background:#fffaf0!important}
+.procedure-icon,.about-points svg{color:#b28a2e!important}
+.procedure-card,.maria-service-card{background:#fffaf0!important;border-color:#e6dcc7!important}
+.maria-service-card h3,.before-after-card-copy h3,.benefit-grid h3{color:#14532d!important}
+.maria-service-card p,.benefit-grid p{color:#586658!important}
+.photo-placeholder{border-color:#c49a3a!important;background:linear-gradient(145deg,#f5efe2,#fffaf0)!important;color:#14532d!important}
+.photo-placeholder span,.step-number{background:#f0e4c5!important;color:#14532d!important;border-color:#c49a3a!important}
+.physio-brand-lockup{display:flex;align-items:center;justify-content:center;gap:14px;margin:0 auto 22px;color:#14532d}
+.physio-brand-lockup>span,.footer-name-mark{display:grid;place-items:center;width:62px;height:62px;border:2px solid #c49a3a;border-radius:50%;background:#14532d;color:#f5e8c8;font-family:Georgia,serif;font-size:23px;font-weight:700;letter-spacing:-1px}
+.physio-brand-lockup div{display:flex;flex-direction:column;text-align:left;gap:4px}
+.physio-brand-lockup strong{font-size:20px;letter-spacing:.2px}
+.physio-brand-lockup small{font-size:10px;letter-spacing:1.1px;color:#8a6a1f;font-weight:800}
+.footer-name-mark{width:86px;height:86px;margin:0 auto 16px;border-radius:20px}
+.maria-footer{background:#103e22!important;color:#fffaf0!important}
+.maria-footer h4,.maria-footer a,.maria-footer span,.maria-footer p{color:#f8f0df!important}
+.maria-footer .footer-bottom{border-color:rgba(240,228,197,.25)!important}
+.maria-site .maria-reviews-note,.maria-site .before-after-disclaimer,.maria-site .video-testimonials-note{color:#686b5e!important}
+@media(max-width:760px){.physio-brand-lockup>span{width:54px;height:54px}.physio-brand-lockup strong{font-size:17px}.physio-brand-lockup small{font-size:9px}}

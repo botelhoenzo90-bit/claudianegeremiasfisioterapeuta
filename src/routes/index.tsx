@@ -3,6 +3,12 @@ import { useState } from "react";
 import {
   Activity, ArrowRight, Bandage, Check, ChevronDown, CircleCheck, HeartPulse, MessageCircle, ShieldCheck, Stethoscope,
 } from "lucide-react";
+import cotoAmputacaoRegistro from "@/assets/coto-amputacao-registro.jpg.asset.json";
+import cotoAmputacaoAntesDepois from "@/assets/coto-amputacao-antes-depois.jpg.asset.json";
+import ulceraCotoAntes from "@/assets/ulcera-coto-antes.jpg.asset.json";
+import ulceraCotoDepois from "@/assets/ulcera-coto-depois.jpg.asset.json";
+import ulceraCalcanharAntes from "@/assets/ulcera-calcanhar-antes.jpg.asset.json";
+import ulceraCalcanharDepois from "@/assets/ulcera-calcanhar-depois.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({

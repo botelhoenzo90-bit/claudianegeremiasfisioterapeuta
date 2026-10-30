@@ -979,3 +979,7 @@ body,.jt-site{background:#fffaf0!important;color:#203b2a}
 .device-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center}
 .device-photo{aspect-ratio:4/3;border:2px dashed #b8a36a;border-radius:24px;display:grid;place-items:center;color:#8e741f;font-weight:700;background:#fffdf8}
 @media(max-width:800px){.results-grid,.device-grid{grid-template-columns:1fr}.result-single,.result-pair{height:300px}.device-grid{gap:24px}}
+.intro-section .about-photo.maria-profile-photo{width:100%!important;max-width:440px!important;height:auto!important;aspect-ratio:3/4!important;margin:0 auto!important;background:none!important;border:0!important;border-radius:24px!important;box-shadow:0 20px 45px rgba(0,0,0,.14)!important}
+.intro-section .about-photo::before,.intro-section .about-photo::after{display:none!important}
+.intro-section .about-photo img{border-radius:24px!important;clip-path:none!important}
+.intro-copy .about-credentials{width:fit-content;margin-left:auto;margin-right:auto;text-align:left}

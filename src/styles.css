@@ -996,3 +996,4 @@ body,.jt-site{background:#fffaf0!important;color:#203b2a}
 .clinic-gallery{grid-template-columns:repeat(4,1fr)}
 .clinic-action{grid-column:1/-1;display:flex;justify-content:center;margin-top:8px}
 @media(max-width:800px){.clinic-gallery{grid-template-columns:1fr 1fr}.result-single,.result-pair{height:320px!important}.device-copy .about-credentials li{font-size:13.5px;white-space:nowrap}}
+.procedure-card .procedure-photo{aspect-ratio:1/1!important;width:100%!important;object-fit:cover!important}

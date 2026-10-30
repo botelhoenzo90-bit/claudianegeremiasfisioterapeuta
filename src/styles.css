@@ -937,3 +937,18 @@ body,.jt-site{background:#fffaf0!important;color:#203b2a}
 
 /* Remover a observação de avaliações ilustrativas da seção de avaliações */
 .jt-site .maria-reviews-note{display:none!important}
+
+
+/* Instituto Viver sem Dor — carrossel de registros de evolução */
+.before-after-section{padding:68px 0;background:linear-gradient(135deg,#f5f8f3,#fff)}
+.before-after-window{overflow:hidden;width:100%;margin-top:32px}
+.before-after-track{display:flex;gap:22px;width:max-content;animation:viver-evolucao-scroll 34s linear infinite}
+.before-after-window:hover .before-after-track{animation-play-state:paused}
+.before-after-placeholder-card{width:min(620px,82vw);overflow:hidden;flex:none;border:1px solid #dce8dd;border-radius:22px;background:#fff;box-shadow:0 12px 30px rgba(20,83,45,.08);text-align:left}
+.before-after-placeholder-pair{display:grid;grid-template-columns:1fr 1fr;gap:3px;background:#e5ece5}
+.before-after-placeholder-image{min-height:250px;display:flex;align-items:center;justify-content:center;padding:18px;background:linear-gradient(145deg,#eef4ed,#e2ebe2);color:#52705a;text-align:center;font-size:13px;font-weight:600}
+.before-after-placeholder-copy{padding:20px 22px 22px}
+.before-after-placeholder-copy h3{margin:0 0 8px;color:var(--ink);font-size:19px}
+.before-after-placeholder-copy p{margin:0;color:var(--muted);line-height:1.65}
+@keyframes viver-evolucao-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:760px){.before-after-placeholder-card{width:86vw}.before-after-placeholder-image{min-height:180px;font-size:11px}.before-after-placeholder-copy{padding:16px}.before-after-placeholder-copy h3{font-size:17px}}

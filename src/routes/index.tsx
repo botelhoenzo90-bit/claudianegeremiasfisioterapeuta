@@ -15,6 +15,15 @@ import imgFascite from "@/assets/fascite-plantar.jpg.asset.json";
 import imgFibromialgia from "@/assets/fibromialgia.jpg.asset.json";
 import imgOzonioterapia from "@/assets/ozonioterapia.jpg.asset.json";
 import imgClinica from "@/assets/clinica-espaco.jpg.asset.json";
+import tRealinhamento from "@/assets/t-realinhamento.jpg.asset.json";
+import tQuiropraxia from "@/assets/t-quiropraxia.jpg.asset.json";
+import tVascular from "@/assets/t-vascular.jpg.asset.json";
+import tPernaLeve from "@/assets/t-perna-leve.jpg.asset.json";
+import tOzonio from "@/assets/t-ozonio.jpg.asset.json";
+import tPrp from "@/assets/t-prp.jpg.asset.json";
+import tNeural from "@/assets/t-neural.jpg.asset.json";
+import tLaser from "@/assets/t-laser.jpg.asset.json";
+import imgAparelho from "@/assets/aparelho-maos.jpg.asset.json";
 import imgClaudiane from "@/assets/claudiane-perfil.jpg.asset.json";
 import imgRecepcao from "@/assets/clinica-recepcao.jpg.asset.json";
 import imgSala1 from "@/assets/clinica-sala-1.jpg.asset.json";
@@ -47,14 +56,14 @@ export const Route = createFileRoute("/")({
 
 const WHATSAPP = "https://wa.me/5543991418724";
 const services = [
-  { title: "Realinhamento muscular", image: imgPostura.url, text: "Abordagem fisioterapêutica que considera a organização corporal, a mobilidade e o equilíbrio muscular. Pode integrar o cuidado de pessoas com tensões, dores na coluna, alterações posturais e limitações de movimento.", icon: Activity },
-  { title: "Quiropraxia", image: imgQuiropraxia.url, text: "Abordagem musculoesquelética com técnicas manuais, mobilizações e ajustes articulares específicos quando indicados. A escolha considera histórico, avaliação individual e possíveis contraindicações.", icon: ShieldCheck },
-  { title: "Equilíbrio vascular", image: imgMobilidade.url, text: "Cuidado voltado à avaliação do conforto e da funcionalidade dos membros inferiores. As estratégias podem incluir orientações, exercícios e recursos fisioterapêuticos conforme a necessidade, com encaminhamento médico quando indicado.", icon: HeartPulse },
-  { title: "Projeto Perna Leve", image: imgFascite.url, text: "Atenção individualizada para pessoas com sensação de peso, cansaço ou inchaço nas pernas. O cuidado pode envolver exercícios, orientações de movimento e estratégias para favorecer o retorno venoso, após avaliação das possíveis causas.", icon: Activity },
-  { title: "Ozonioterapia", image: imgOzonioterapia.url, text: "Recurso que utiliza mistura de oxigênio e ozônio. A indicação deve respeitar as normas profissionais aplicáveis, os protocolos de segurança e a avaliação individual. Não substitui tratamentos convencionais comprovados.", icon: ShieldCheck },
-  { title: "PRP — Plasma Rico em Plaquetas", image: imgClinica.url, text: "Concentrado preparado a partir do sangue do próprio paciente, estudado em algumas condições musculoesqueléticas e de reparação tecidual. A indicação depende de diagnóstico, avaliação clínica e análise dos benefícios e limitações.", icon: HeartPulse },
-  { title: "Terapia neural", image: imgDoresColuna.url, text: "Abordagem que utiliza aplicações de anestésicos locais em regiões específicas. A indicação é criteriosa, considerando histórico, riscos e evidências disponíveis; não substitui a investigação da causa da dor.", icon: Stethoscope },
-  { title: "Laserterapia", image: imgMobilidade.url, text: "A fotobiomodulação utiliza luz em comprimentos de onda específicos como recurso complementar em determinados cuidados fisioterapêuticos. Parâmetros e indicação são definidos conforme avaliação e condição tratada.", icon: Check },
+  { title: "Realinhamento muscular", image: tRealinhamento.url, text: "Abordagem fisioterapêutica que considera a organização corporal, a mobilidade e o equilíbrio muscular. Pode integrar o cuidado de pessoas com tensões, dores na coluna, alterações posturais e limitações de movimento.", icon: Activity },
+  { title: "Quiropraxia", image: tQuiropraxia.url, text: "Abordagem musculoesquelética com técnicas manuais, mobilizações e ajustes articulares específicos quando indicados. A escolha considera histórico, avaliação individual e possíveis contraindicações.", icon: ShieldCheck },
+  { title: "Equilíbrio vascular", image: tVascular.url, text: "Cuidado voltado à avaliação do conforto e da funcionalidade dos membros inferiores. As estratégias podem incluir orientações, exercícios e recursos fisioterapêuticos conforme a necessidade, com encaminhamento médico quando indicado.", icon: HeartPulse },
+  { title: "Projeto Perna Leve", image: tPernaLeve.url, text: "Atenção individualizada para pessoas com sensação de peso, cansaço ou inchaço nas pernas. O cuidado pode envolver exercícios, orientações de movimento e estratégias para favorecer o retorno venoso, após avaliação das possíveis causas.", icon: Activity },
+  { title: "Ozonioterapia", image: tOzonio.url, text: "Recurso que utiliza mistura de oxigênio e ozônio. A indicação deve respeitar as normas profissionais aplicáveis, os protocolos de segurança e a avaliação individual. Não substitui tratamentos convencionais comprovados.", icon: ShieldCheck },
+  { title: "PRP — Plasma Rico em Plaquetas", image: tPrp.url, text: "Concentrado preparado a partir do sangue do próprio paciente, estudado em algumas condições musculoesqueléticas e de reparação tecidual. A indicação depende de diagnóstico, avaliação clínica e análise dos benefícios e limitações.", icon: HeartPulse },
+  { title: "Terapia neural", image: tNeural.url, text: "Abordagem que utiliza aplicações de anestésicos locais em regiões específicas. A indicação é criteriosa, considerando histórico, riscos e evidências disponíveis; não substitui a investigação da causa da dor.", icon: Stethoscope },
+  { title: "Laserterapia", image: tLaser.url, text: "A fotobiomodulação utiliza luz em comprimentos de onda específicos como recurso complementar em determinados cuidados fisioterapêuticos. Parâmetros e indicação são definidos conforme avaliação e condição tratada.", icon: Check },
 ];
 const faqs = [
   ["Quais tratamentos o Instituto Viver sem Dor oferece?", "As abordagens incluem Realinhamento Muscular, Quiropraxia, Equilíbrio Vascular, Projeto Perna Leve, Ozonioterapia, PRP, Terapia Neural e Laserterapia. A indicação de cada recurso depende de avaliação individual."],
@@ -116,7 +125,7 @@ function Index() {
 <article className="result-card"><div className="result-single"><img src={imgOzonioSessao.url} alt="Ferida na perna antes e depois de uma sessão de ozonioterapia" loading="lazy"/></div><div className="result-copy"><h3>Ozonioterapia: apenas uma sessão</h3><p>Feridas na perna antes (em cima) e depois (embaixo) de uma única sessão de tratamento com ozônio.</p></div></article>
 </div><div className="section-action center"><button className="btn btn-primary" onClick={() => goWhatsapp("saber se o tratamento pode me ajudar")}><MessageCircle size={18}/> Quero cuidar do meu caso</button></div></div></section>
 
-      <section className="section device-section" id="aparelho"><div className="container device-grid"><div className="device-photo" role="img" aria-label="Espaço para a foto do aparelho"><span>Foto do aparelho em breve</span></div><div className="device-copy"><span className="eyebrow">TECNOLOGIA NAS MINHAS MÃOS</span><h2>O aparelho que auxilia o <em>Realinhamento Muscular e o Equilíbrio Vascular.</em></h2><p>Este é o aparelho que é acoplado em minhas mãos durante o atendimento. Ele auxilia o Realinhamento Muscular e o Equilíbrio Vascular, potencializando o toque terapêutico.</p><ul className="about-credentials"><li><CircleCheck size={18}/> Acoplado às mãos da terapeuta</li><li><CircleCheck size={18}/> Auxilia o realinhamento muscular</li><li><CircleCheck size={18}/> Contribui para o equilíbrio vascular</li><li><CircleCheck size={18}/> Usado conforme a avaliação de cada paciente</li></ul><button className="btn btn-primary" onClick={() => goWhatsapp("saber mais sobre o realinhamento muscular")}><MessageCircle size={18}/> Saiba mais sobre o tratamento</button></div></div></section>
+      <section className="section device-section" id="aparelho"><div className="container device-grid"><div className="device-photo"><img src={imgAparelho.url} alt="Aparelho acoplado às mãos da fisioterapeuta durante o atendimento" loading="lazy"/></div><div className="device-copy"><span className="eyebrow">TECNOLOGIA NAS MINHAS MÃOS</span><h2>O aparelho que auxilia o <em>Realinhamento Muscular e o Equilíbrio Vascular.</em></h2><p>Este é o aparelho que é acoplado em minhas mãos durante o atendimento. Ele auxilia o Realinhamento Muscular e o Equilíbrio Vascular, potencializando o toque terapêutico.</p><ul className="about-credentials"><li><CircleCheck size={18}/> Acoplado às mãos da terapeuta</li><li><CircleCheck size={18}/> Auxilia o realinhamento muscular</li><li><CircleCheck size={18}/> Contribui para o equilíbrio vascular</li><li><CircleCheck size={18}/> Conforme a avaliação de cada paciente</li></ul><button className="btn btn-primary" onClick={() => goWhatsapp("saber mais sobre o realinhamento muscular")}><MessageCircle size={18}/> Saiba mais sobre o tratamento</button></div></div></section>
 
 
 
@@ -131,9 +140,9 @@ function Index() {
             <h2>Um espaço pensado para acolher você e cuidar do seu <em>movimento.</em></h2>
             <p>O atendimento com Claudiane Geremias começa com escuta e avaliação individual. Cada etapa é conduzida com atenção às suas necessidades, ao seu conforto e aos seus objetivos de movimento.</p>
             <p>Entre em contato para conhecer o espaço, tirar dúvidas e confirmar os horários disponíveis.</p>
-            <button className="btn btn-primary" onClick={() => goWhatsapp("conhecer a clínica e agendar uma avaliação")}><MessageCircle size={18}/> Agendar uma visita ou avaliação</button>
+            
           </div>
-          <div className="clinic-gallery">{[[imgRecepcao.url,"Recepção com a logomarca da clínica"],[imgSala1.url,"Sala de atendimento com maca"],[imgSala2.url,"Sala de atendimento com painéis de anatomia"],[imgSalaOzonio.url,"Sala de procedimentos e ozonioterapia"]].map(([src,alt])=><figure key={src}><img src={src} alt={alt} loading="lazy"/></figure>)}</div>
+          <div className="clinic-gallery">{[[imgRecepcao.url,"Recepção com a logomarca da clínica"],[imgSala1.url,"Sala de atendimento com maca"],[imgSala2.url,"Sala de atendimento com painéis de anatomia"],[imgSalaOzonio.url,"Sala de procedimentos e ozonioterapia"]].map(([src,alt])=><figure key={src}><img src={src} alt={alt} loading="lazy"/></figure>)}</div><div className="clinic-action"><button className="btn btn-primary" onClick={() => goWhatsapp("conhecer a clínica e agendar uma avaliação")}><MessageCircle size={18}/> Agendar uma visita ou avaliação</button></div>
         </div>
       </section>
 

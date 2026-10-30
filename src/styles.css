@@ -984,3 +984,17 @@ body,.jt-site{background:#fffaf0!important;color:#203b2a}
 .intro-section .about-photo img{border-radius:24px!important;clip-path:none!important}
 .intro-copy .about-credentials{width:fit-content;margin-left:auto;margin-right:auto;text-align:left}
 .intro-section .about-photo img{border:0!important}
+/* ajustes: tratamentos sem corte, resultados iguais, aparelho, clínica */
+.procedure-card .procedure-photo{object-fit:contain!important;background:#f4efe4!important;height:auto!important;aspect-ratio:3/2!important}
+.result-single,.result-pair{height:400px!important}
+.result-single img{object-fit:cover!important;background:none!important}
+.result-copy{flex:1}
+.device-photo{border:0!important;padding:0!important;overflow:hidden;background:none!important;box-shadow:0 20px 45px rgba(0,0,0,.14)}
+.device-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.clinic-space-grid{grid-template-columns:1fr!important}
+.clinic-space-copy{text-align:center;max-width:760px;margin:0 auto}
+.clinic-gallery{grid-template-columns:repeat(4,1fr)}
+.clinic-action{grid-column:1/-1;display:flex;justify-content:center;margin-top:8px}
+@media(max-width:800px){.clinic-gallery{grid-template-columns:1fr 1fr}.result-single,.result-pair{height:320px!important}.device-copy .about-credentials li{font-size:13.5px;white-space:nowrap}}
+.procedure-card .procedure-photo{aspect-ratio:1/1!important;width:100%!important;object-fit:cover!important}
+.jt-site .maria-service-card .procedure-photo,.maria-service-card .procedure-photo{height:auto!important;flex:0 0 auto!important;aspect-ratio:1/1!important;width:100%!important;object-fit:cover!important}

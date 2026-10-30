@@ -37,14 +37,13 @@ export const Route = createFileRoute("/")({
 
 const WHATSAPP = "https://wa.me/5543991418724";
 const services = [
-  { title: "Realinhamento muscular", image: imgPostura.url, text: "Abordagem fisioterapêutica que considera a organização corporal, a mobilidade e o equilíbrio muscular. Pode integrar o cuidado de pessoas com tensões, dores na coluna, alterações posturais e limitações de movimento.", icon: Activity },
-  { title: "Quiropraxia", image: imgQuiropraxia.url, text: "Abordagem musculoesquelética com técnicas manuais, mobilizações e ajustes articulares específicos quando indicados. A escolha considera histórico, avaliação individual e possíveis contraindicações.", icon: ShieldCheck },
-  { title: "Equilíbrio vascular", image: imgMobilidade.url, text: "Cuidado voltado à avaliação do conforto e da funcionalidade dos membros inferiores. As estratégias podem incluir orientações, exercícios e recursos fisioterapêuticos conforme a necessidade, com encaminhamento médico quando indicado.", icon: HeartPulse },
-  { title: "Projeto Perna Leve", image: imgFascite.url, text: "Atenção individualizada para pessoas com sensação de peso, cansaço ou inchaço nas pernas. O cuidado pode envolver exercícios, orientações de movimento e estratégias para favorecer o retorno venoso, após avaliação das possíveis causas.", icon: Activity },
-  { title: "Ozonioterapia", image: imgOzonioterapia.url, text: "Recurso que utiliza mistura de oxigênio e ozônio. A indicação deve respeitar as normas profissionais aplicáveis, os protocolos de segurança e a avaliação individual. Não substitui tratamentos convencionais comprovados.", icon: ShieldCheck },
-  { title: "PRP — Plasma Rico em Plaquetas", image: imgClinica.url, text: "Concentrado preparado a partir do sangue do próprio paciente, estudado em algumas condições musculoesqueléticas e de reparação tecidual. A indicação depende de diagnóstico, avaliação clínica e análise dos benefícios e limitações.", icon: HeartPulse },
-  { title: "Terapia neural", image: imgDoresColuna.url, text: "Abordagem que utiliza aplicações de anestésicos locais em regiões específicas. A indicação é criteriosa, considerando histórico, riscos e evidências disponíveis; não substitui a investigação da causa da dor.", icon: Stethoscope },
-  { title: "Laserterapia", image: imgMobilidade.url, text: "A fotobiomodulação utiliza luz em comprimentos de onda específicos como recurso complementar em determinados cuidados fisioterapêuticos. Parâmetros e indicação são definidos conforme avaliação e condição tratada.", icon: Check },
+  { title: "Dores na coluna", image: imgDoresColuna.url, text: "Abordagem individualizada para desconfortos na região cervical, torácica e lombar, buscando melhorar a função e a qualidade de vida.", icon: Activity },
+  { title: "Postura e alinhamento muscular", image: imgPostura.url, text: "Orientações e exercícios terapêuticos para consciência corporal, equilíbrio muscular e hábitos posturais mais saudáveis.", icon: ShieldCheck },
+  { title: "Mobilidade e movimento", image: imgMobilidade.url, text: "Recursos de fisioterapia para trabalhar flexibilidade, amplitude de movimento e confiança nas atividades do dia a dia.", icon: HeartPulse },
+  { title: "Quiropraxia", image: imgQuiropraxia.url, text: "Avaliação e técnicas manuais selecionadas conforme as necessidades, o histórico e a segurança de cada pessoa.", icon: Activity },
+  { title: "Fascite plantar", image: imgFascite.url, text: "Cuidado voltado à dor na sola do pé, com avaliação funcional e estratégias para apoiar o movimento e as atividades diárias.", icon: Check },
+  { title: "Fibromialgia e dor persistente", image: imgFibromialgia.url, text: "Acompanhamento adaptado aos limites e objetivos individuais, com foco em movimento gradual, funcionalidade e bem-estar.", icon: HeartPulse },
+  { title: "Ozonioterapia", image: imgOzonioterapia.url, text: "Converse com a profissional sobre indicação, evidências, benefícios esperados, riscos e alternativas para o seu caso.", icon: ShieldCheck },
 ];
 const faqs = [
   ["Quais tratamentos o Instituto Viver sem Dor oferece?", "As abordagens incluem Realinhamento Muscular, Quiropraxia, Equilíbrio Vascular, Projeto Perna Leve, Ozonioterapia, PRP, Terapia Neural e Laserterapia. A indicação de cada recurso depende de avaliação individual."],

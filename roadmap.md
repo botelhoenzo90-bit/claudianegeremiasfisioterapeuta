@@ -13,3 +13,5 @@
 
 - [x] Trocar fotos da area de atuacao, foto da clinica e aplicar a logomarca (topo, rodape, favicon, compartilhamento)
 - [x] Trocar favicon e imagem de compartilhamento pela logomarca atual (domínio correto do site)
+- [x] Quem somos com a Claudiane, galeria da clínica, antes e depois e seção do aparelho
+- [ ] Foto do aparelho (aguardando a imagem)

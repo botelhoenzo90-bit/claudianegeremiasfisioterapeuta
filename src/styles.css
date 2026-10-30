@@ -983,3 +983,4 @@ body,.jt-site{background:#fffaf0!important;color:#203b2a}
 .intro-section .about-photo::before,.intro-section .about-photo::after{display:none!important}
 .intro-section .about-photo img{border-radius:24px!important;clip-path:none!important}
 .intro-copy .about-credentials{width:fit-content;margin-left:auto;margin-right:auto;text-align:left}
+.intro-section .about-photo img{border:0!important}

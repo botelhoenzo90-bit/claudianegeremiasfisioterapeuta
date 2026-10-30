@@ -952,3 +952,35 @@ body,.jt-site{background:#fffaf0!important;color:#203b2a}
 .before-after-placeholder-copy p{margin:0;color:var(--muted);line-height:1.65}
 @keyframes viver-evolucao-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @media(max-width:760px){.before-after-placeholder-card{width:86vw}.before-after-placeholder-image{min-height:180px;font-size:11px}.before-after-placeholder-copy{padding:16px}.before-after-placeholder-copy h3{font-size:17px}}
+
+/* Quem somos / resultados / aparelho */
+.about-photo{padding:0!important;overflow:hidden;border-radius:24px;aspect-ratio:3/4;max-height:620px}
+.about-photo img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.about-credentials{list-style:none;padding:0;margin:14px 0 20px;display:grid;gap:9px}
+.about-credentials li{display:flex;align-items:center;gap:9px;font-weight:600}
+.about-credentials svg{color:#1f6b45;flex:none}
+.clinic-gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.clinic-gallery figure{margin:0;border-radius:18px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 12px 30px rgba(0,0,0,.1)}
+.clinic-gallery img{width:100%;height:100%;object-fit:cover;display:block}
+.results-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.result-card{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 15px 38px rgba(0,0,0,.08);display:flex;flex-direction:column}
+.result-pair{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:12px}
+.result-pair figure{position:relative;margin:0;border-radius:14px;overflow:hidden;aspect-ratio:3/4}
+.result-pair img,.result-single img{width:100%;height:100%;object-fit:cover;display:block}
+.result-pair figcaption{position:absolute;top:10px;left:10px;background:#263f58;color:#fff;font-size:10px;font-weight:800;letter-spacing:1.4px;padding:5px 9px;border-radius:6px}
+.result-pair figcaption.after{background:#b08a22}
+.result-single{padding:12px;height:380px}
+.result-single img{border-radius:14px;object-fit:contain;background:#f4f1ea}
+.result-pair{height:380px}.result-pair figure{aspect-ratio:auto}
+.result-copy{padding:18px 22px 24px;text-align:left}
+.result-copy h3{margin:0 0 8px;font-size:21px}
+.result-copy p{margin:0;line-height:1.7}
+.device-section{background:linear-gradient(145deg,#eef6f1,#fff)}
+.device-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center}
+.device-photo{aspect-ratio:4/3;border:2px dashed #b8a36a;border-radius:24px;display:grid;place-items:center;color:#8e741f;font-weight:700;background:#fffdf8}
+@media(max-width:800px){.results-grid,.device-grid{grid-template-columns:1fr}.result-single,.result-pair{height:300px}.device-grid{gap:24px}}
+.intro-section .about-photo.maria-profile-photo{width:100%!important;max-width:440px!important;height:auto!important;aspect-ratio:3/4!important;margin:0 auto!important;background:none!important;border:0!important;border-radius:24px!important;box-shadow:0 20px 45px rgba(0,0,0,.14)!important}
+.intro-section .about-photo::before,.intro-section .about-photo::after{display:none!important}
+.intro-section .about-photo img{border-radius:24px!important;clip-path:none!important}
+.intro-copy .about-credentials{width:fit-content;margin-left:auto;margin-right:auto;text-align:left}
+.intro-section .about-photo img{border:0!important}

@@ -94,8 +94,8 @@ function Index() {
       <header className="site-header maria-header-hidden">
         <div className="container header-inner">
           <a className="brand maria-brand" href="#inicio" aria-label="Instituto Viver sem Dor">
-            <img className="brand-logo" src={logoClaudiane.url} alt="Logomarca Claudiane Geremias Fisioterapeuta" />
-            <span><strong>INSTITUTO VIVER SEM DOR</strong><small>CLAUDIANE GEREMIAS • FISIOTERAPEUTA</small></span>
+            <img className="brand-logo" src={logoClaudiane.url} alt="Logomarca Claudiane Gerimias Fisioterapeuta" />
+            <span><strong>INSTITUTO VIVER SEM DOR</strong><small>CLAUDIANE GERIMIAS • FISIOTERAPEUTA</small></span>
           </a>
           <nav className="nav maria-nav" aria-label="Navegação principal">
             <a href="#sobre">Sobre</a><a href="#tratamentos">Tratamentos</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Dúvidas</a>
@@ -108,7 +108,7 @@ function Index() {
         <div className="hero-glow"/>
         <div className="container hero-grid">
           <div className="hero-copy center-hero">
-            <div className="physio-brand-lockup hero-logo-only"><img className="physio-brand-logo" src={logoNova.url} alt="Instituto Viver sem Dor — Claudiane Geremias, fisioterapeuta" /></div>
+            <div className="physio-brand-lockup hero-logo-only"><img className="physio-brand-logo" src={logoNova.url} alt="Instituto Viver sem Dor — Claudiane Gerimias, fisioterapeuta" /></div>
             <h1 className="hero-title-fix">Cuidado, experiência e conhecimento <em>a serviço da sua saúde.</em></h1>
             <p className="hero-lead">Há mais de 20 anos dedicados a uma fisioterapia diferenciada e ao cuidado com as pessoas. Atendimento individualizado, avaliação criteriosa e diferentes abordagens terapêuticas para apoiar sua mobilidade, funcionalidade e qualidade de vida.</p>
             <div className="hero-actions">
@@ -148,7 +148,7 @@ function Index() {
           <div className="clinic-space-copy">
             <span className="eyebrow">CONHEÇA A CLÍNICA</span>
             <h2>Um espaço pensado para acolher você e cuidar do seu <em>movimento.</em></h2>
-            <p>O atendimento com Claudiane Geremias começa com escuta e avaliação individual. Cada etapa é conduzida com atenção às suas necessidades, ao seu conforto e aos seus objetivos de movimento.</p>
+            <p>O atendimento com Claudiane Gerimias começa com escuta e avaliação individual. Cada etapa é conduzida com atenção às suas necessidades, ao seu conforto e aos seus objetivos de movimento.</p>
             <p>Entre em contato para conhecer o espaço, tirar dúvidas e confirmar os horários disponíveis.</p>
             
           </div>
@@ -192,7 +192,7 @@ function Index() {
 
       <section className="section final-cta maria-final"><div className="final-glow"/><div className="container narrow center"><span className="eyebrow">VAMOS CONVERSAR?</span><h2>Vamos conversar sobre seus objetivos?</h2><p>Entre em contato para saber mais sobre a avaliação e o atendimento de fisioterapia em Londrina.</p><button className="btn btn-primary" onClick={() => goWhatsapp("conversar sobre atendimento")}><MessageCircle size={18}/> Falar com a equipe pelo WhatsApp</button></div></section>
 
-      <footer className="footer maria-footer"><div className="container footer-grid"><div className="footer-brand"><img className="footer-logo" src={logoNova.url} alt="Logomarca Claudiane Geremias Fisioterapeuta" /><p>Instituto Viver sem Dor<br/>Claudiane Geremias • Fisioterapeuta<br/>CREFITO 199192-F</p></div><div><h4>Navegação</h4><a href="#sobre">Sobre a clínica</a><a href="#tratamentos">Áreas de atuação</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Perguntas frequentes</a></div><div><h4>Contato</h4><button className="footer-contact-button" onClick={() => goWhatsapp("entrar em contato")}><MessageCircle size={14}/> (43) 99141-8724 / (43) 3327-7544</button><span><ShieldCheck size={14}/> Cuidado responsável e individualizado</span></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Instituto Viver sem Dor.</span><span>Fisioterapia • Cuidado individualizado • Qualidade de vida</span></div></footer>
+      <footer className="footer maria-footer"><div className="container footer-grid"><div className="footer-brand"><img className="footer-logo" src={logoNova.url} alt="Logomarca Claudiane Gerimias Fisioterapeuta" /><p>Instituto Viver sem Dor<br/>Claudiane Gerimias • Fisioterapeuta<br/>CREFITO 199192-F</p></div><div><h4>Navegação</h4><a href="#sobre">Sobre a clínica</a><a href="#tratamentos">Áreas de atuação</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Perguntas frequentes</a></div><div><h4>Contato</h4><button className="footer-contact-button" onClick={() => goWhatsapp("entrar em contato")}><MessageCircle size={14}/> (43) 99141-8724 / (43) 3327-7544</button><span><ShieldCheck size={14}/> Cuidado responsável e individualizado</span></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Instituto Viver sem Dor.</span><span>Fisioterapia • Cuidado individualizado • Qualidade de vida</span></div></footer>
 
       <button className="floating-wa maria-floating-wa" onClick={() => goWhatsapp("entrar em contato")} aria-label="Escolher um número para falar pelo WhatsApp"><img src="/whatsapp-flutuante/image.png" alt="" /><span>WhatsApp</span></button>
       {showWhatsappOptions && <div className="whatsapp-choice-overlay" role="presentation" onClick={() => setShowWhatsappOptions(false)}>

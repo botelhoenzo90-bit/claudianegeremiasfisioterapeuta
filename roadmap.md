@@ -16,3 +16,4 @@
 - [x] Quem somos com a Claudiane, galeria da clínica, antes e depois e seção do aparelho
 
 - [x] Foto do aparelho, novas fotos dos tratamentos e ajustes de layout
+- [x] Corrigir o sobrenome para "Gerimias" em todo o site

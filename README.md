@@ -4,7 +4,7 @@ quero um pa´gian em branco se mnenhuma inforamção
 
 This project was built with [Lovable](https://lovable.dev).
 
-**Live app**: https://jaquelineteixeira.lovable.app
+**Live app**: https://claudianegeremiasfisioterapeuta.lovable.app
 
 ## Build with Lovable
 

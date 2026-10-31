@@ -77,7 +77,17 @@ const faqs = [
 
 function Index() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
-  const goWhatsapp = (label: string) => window.open(`${WHATSAPP}?text=${encodeURIComponent(`Olá! Vim pelo site do Instituto Viver sem Dor e gostaria de ${label.toLowerCase()}.`)}`, "_blank", "noopener,noreferrer");
+  const [showWhatsappOptions, setShowWhatsappOptions] = useState(false);
+  const [whatsappIntent, setWhatsappIntent] = useState("agendar um atendimento");
+  const goWhatsapp = (label: string) => {
+    setWhatsappIntent(label.toLowerCase());
+    setShowWhatsappOptions(true);
+  };
+  const openWhatsappNumber = (number: string) => {
+    const message = `Olá! Vim pelo site do Instituto Viver sem Dor e gostaria de ${whatsappIntent}.`;
+    window.open(`https://wa.me/${number}?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
+    setShowWhatsappOptions(false);
+  };
 
   return (
     <main className="jt-site maria-site">

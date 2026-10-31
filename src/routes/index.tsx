@@ -38,10 +38,10 @@ import imgCorcundaDepois from "@/assets/corcunda-depois.jpg.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Instituto Viver sem Dor | Fisioterapia em Londrina" },
-      { name: "description", content: "Instituto Viver sem Dor, em Londrina. Fisioterapia individualizada há mais de 20 anos, com realinhamento muscular, quiropraxia, equilíbrio vascular, Projeto Perna Leve e recursos terapêuticos." },
-      { property: "og:title", content: "Instituto Viver sem Dor | Cuidado, experiência e conhecimento" },
-      { property: "og:description", content: "Cuidado individualizado, experiência e conhecimento a serviço da sua saúde." },
+      { title: "Claudiane Gerimias Fisioterapeuta | Realinhamento Muscular e Quiropraxia em Londrina" },
+      { name: "description", content: "Claudiane Gerimias, fisioterapeuta CREFITO 199192-F, no Instituto Viver sem Dor, em Londrina: atendimento individualizado com realinhamento muscular, quiropraxia, equilíbrio vascular, Projeto Perna Leve, ozonioterapia, PRP, terapia neural e laserterapia." },
+      { property: "og:title", content: "Claudiane Gerimias Fisioterapeuta | Instituto Viver sem Dor" },
+      { property: "og:description", content: "Avaliação criteriosa e atendimento individualizado em fisioterapia, a serviço da sua mobilidade e qualidade de vida." },
       { property: "og:type", content: "website" },
       { property: "og:image", content: `https://claudianegeremiasfisioterapeuta.lovable.app${compartilhamentoClaudiane.url}` },
       { property: "og:image:width", content: "1200" },

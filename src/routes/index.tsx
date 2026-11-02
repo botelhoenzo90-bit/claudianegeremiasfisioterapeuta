@@ -54,7 +54,6 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const WHATSAPP_NUMBERS = [{ number: "5543991418724", label: "(43) 99141-8724" }, { number: "554333277544", label: "(43) 3327-7544" }];
 const services = [
   { title: "Realinhamento muscular", image: tRealinhamento.url, text: "Abordagem fisioterapêutica que considera a organização corporal, a mobilidade e o equilíbrio muscular. Pode integrar o cuidado de pessoas com tensões, dores na coluna, alterações posturais e limitações de movimento.", icon: Activity },
   { title: "Quiropraxia", image: tQuiropraxia.url, text: "Abordagem musculoesquelética com técnicas manuais, mobilizações e ajustes articulares específicos quando indicados. A escolha considera histórico, avaliação individual e possíveis contraindicações.", icon: ShieldCheck },
@@ -77,16 +76,10 @@ const faqs = [
 
 function Index() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
-  const [showWhatsappOptions, setShowWhatsappOptions] = useState(false);
   const [whatsappIntent, setWhatsappIntent] = useState("agendar um atendimento");
   const goWhatsapp = (label: string) => {
-    setWhatsappIntent(label.toLowerCase());
-    setShowWhatsappOptions(true);
-  };
-  const openWhatsappNumber = (number: string) => {
-    const message = `Olá! Vim pelo site do Instituto Viver sem Dor e gostaria de ${whatsappIntent}.`;
-    window.open(`https://wa.me/${number}?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
-    setShowWhatsappOptions(false);
+    const message = `Olá! Vim pelo site do Instituto Viver sem Dor e gostaria de ${label.toLowerCase()}.`;
+    window.open(`https://wa.me/554333277544?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -192,18 +185,10 @@ function Index() {
 
       <section className="section final-cta maria-final"><div className="final-glow"/><div className="container narrow center"><span className="eyebrow">VAMOS CONVERSAR?</span><h2>Vamos conversar sobre seus objetivos?</h2><p>Entre em contato para saber mais sobre a avaliação e o atendimento de fisioterapia em Londrina.</p><button className="btn btn-primary" onClick={() => goWhatsapp("conversar sobre atendimento")}><MessageCircle size={18}/> Falar com a equipe pelo WhatsApp</button></div></section>
 
-      <footer className="footer maria-footer"><div className="container footer-grid"><div className="footer-brand"><img className="footer-logo" src={logoNova.url} alt="Logomarca Claudiane Gerimias Fisioterapeuta" /><p>Instituto Viver sem Dor<br/>Claudiane Gerimias • Fisioterapeuta<br/>CREFITO 199192-F</p></div><div><h4>Navegação</h4><a href="#sobre">Sobre a clínica</a><a href="#tratamentos">Áreas de atuação</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Perguntas frequentes</a></div><div><h4>Contato</h4><button className="footer-contact-button" onClick={() => goWhatsapp("entrar em contato")}><MessageCircle size={14}/> (43) 99141-8724 / (43) 3327-7544</button><span><ShieldCheck size={14}/> Cuidado responsável e individualizado</span></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Instituto Viver sem Dor.</span><span>Fisioterapia • Cuidado individualizado • Qualidade de vida</span></div></footer>
+      <footer className="footer maria-footer"><div className="container footer-grid"><div className="footer-brand"><img className="footer-logo" src={logoNova.url} alt="Logomarca Claudiane Gerimias Fisioterapeuta" /><p>Instituto Viver sem Dor<br/>Claudiane Gerimias • Fisioterapeuta<br/>CREFITO 199192-F</p></div><div><h4>Navegação</h4><a href="#sobre">Sobre a clínica</a><a href="#tratamentos">Áreas de atuação</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Perguntas frequentes</a></div><div><h4>Contato</h4><a className="footer-contact-button" href="tel:+5543991418724"><Activity size={14}/> Telefone: (43) 99141-8724</a><button className="footer-contact-button" onClick={() => goWhatsapp("entrar em contato pelo WhatsApp")}><MessageCircle size={14}/> WhatsApp: (43) 3327-7544</button><span><ShieldCheck size={14}/> Cuidado responsável e individualizado</span></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Instituto Viver sem Dor.</span><span>Fisioterapia • Cuidado individualizado • Qualidade de vida</span></div></footer>
 
-      <button className="floating-wa maria-floating-wa" onClick={() => goWhatsapp("entrar em contato")} aria-label="Escolher um número para falar pelo WhatsApp"><img src="/whatsapp-flutuante/image.png" alt="" /><span>WhatsApp</span></button>
-      {showWhatsappOptions && <div className="whatsapp-choice-overlay" role="presentation" onClick={() => setShowWhatsappOptions(false)}>
-        <section className="whatsapp-choice-modal" role="dialog" aria-modal="true" aria-labelledby="whatsapp-choice-title" onClick={(event) => event.stopPropagation()}>
-          <button className="whatsapp-choice-close" onClick={() => setShowWhatsappOptions(false)} aria-label="Fechar">×</button>
-          <div className="whatsapp-choice-icon"><MessageCircle size={28}/></div>
-          <h2 id="whatsapp-choice-title">Como deseja falar com a clínica?</h2>
-          <p>Escolha um dos números para continuar sua conversa pelo WhatsApp.</p>
-          {WHATSAPP_NUMBERS.map((item) => <button className="whatsapp-number-option" key={item.number} onClick={() => openWhatsappNumber(item.number)}><MessageCircle size={19}/><span><strong>{item.label}</strong><small>Conversar pelo WhatsApp</small></span><ArrowRight size={18}/></button>)}
-        </section>
-      </div>}
+      <button className="floating-wa maria-floating-wa" onClick={() => goWhatsapp("entrar em contato")} aria-label="Falar pelo WhatsApp no número (43) 3327-7544"><img src="/whatsapp-flutuante/image.png" alt="" /><span>WhatsApp</span></button>
+
     </main>
   );
 }

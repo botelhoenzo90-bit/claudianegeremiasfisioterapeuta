@@ -17,3 +17,4 @@
 
 - [x] Foto do aparelho, novas fotos dos tratamentos e ajustes de layout
 - [x] Corrigir o sobrenome para "Gerimias" em todo o site
+- [x] Inverter os numeros: WhatsApp dos botoes passa a usar (43) 99141-8724 e a linha Telefone mostra (43) 3327-7544

@@ -81,6 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Claudiane Gerimias Fisioterapeuta | Instituto Viver sem Dor" },
       { name: "description", content: "Claudiane Gerimias, fisioterapeuta CREFITO 199192-F, em Londrina: atendimento individualizado com realinhamento muscular, quiropraxia, ozonioterapia, PRP, terapia neural e laserterapia." },
       { name: "author", content: "Claudiane Gerimias" },
+      { name: "google-site-verification", content: "9myn0HdI7aGpUZnVvPyhIOqrxVOLgTJA9XtYO1VNmew" },
       { property: "og:title", content: "Claudiane Gerimias Fisioterapeuta | Instituto Viver sem Dor" },
       { property: "og:description", content: "Cuidado individualizado, experiência e conhecimento a serviço da sua saúde." },
       { property: "og:type", content: "website" },

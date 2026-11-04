@@ -39,8 +39,8 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Claudiane Gerimias Fisioterapeuta | Realinhamento Muscular e Quiropraxia em Londrina" },
-      { name: "description", content: "Claudiane Gerimias, fisioterapeuta CREFITO 199192-F, no Instituto Viver sem Dor, em Londrina: atendimento individualizado com realinhamento muscular, quiropraxia, equilíbrio vascular, Projeto Perna Leve, ozonioterapia, PRP, terapia neural e laserterapia." },
-      { property: "og:title", content: "Claudiane Gerimias Fisioterapeuta | Instituto Viver sem Dor" },
+      { name: "description", content: "Claudiane Gerimias, fisioterapeuta CREFITO 199192-F, no Viver sem Dor, em Londrina: atendimento individualizado com realinhamento muscular, quiropraxia, equilíbrio vascular, Projeto Perna Leve, ozonioterapia, PRP, terapia neural e laserterapia." },
+      { property: "og:title", content: "Claudiane Gerimias Fisioterapeuta | Viver sem Dor" },
       { property: "og:description", content: "Avaliação criteriosa e atendimento individualizado em fisioterapia, a serviço da sua mobilidade e qualidade de vida." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "https://claudianegerimiasfisioterapeuta.lovable.app/" },
@@ -67,12 +67,12 @@ const services = [
   { title: "Laserterapia", image: tLaser.url, text: "A fotobiomodulação utiliza luz em comprimentos de onda específicos como recurso complementar em determinados cuidados fisioterapêuticos. Parâmetros e indicação são definidos conforme avaliação e condição tratada.", icon: Check },
 ];
 const faqs = [
-  ["Quais tratamentos o Instituto Viver sem Dor oferece?", "As abordagens incluem Realinhamento Muscular, Quiropraxia, Equilíbrio Vascular, Projeto Perna Leve, Ozonioterapia, PRP, Terapia Neural e Laserterapia. A indicação de cada recurso depende de avaliação individual."],
+  ["Quais tratamentos o Viver sem Dor oferece?", "As abordagens incluem Realinhamento Muscular, Quiropraxia, Equilíbrio Vascular, Projeto Perna Leve, Ozonioterapia, PRP, Terapia Neural e Laserterapia. A indicação de cada recurso depende de avaliação individual."],
   ["Como funciona a primeira avaliação?", "A profissional conversa sobre seu histórico, sintomas, rotina, limitações e objetivos. Em seguida, realiza avaliação fisioterapêutica para compreender as necessidades e discutir as opções de cuidado."],
   ["Os tratamentos são iguais para todos?", "Não. Cada pessoa tem uma história e necessidades diferentes. As estratégias são escolhidas de forma individualizada, considerando indicações, contraindicações e objetivos funcionais."],
   ["O que é o Projeto Perna Leve?", "É uma proposta de cuidado para pessoas com sensação de pernas pesadas, cansadas ou inchadas. Como esses sintomas podem ter diferentes causas, a avaliação ajuda a definir as estratégias adequadas e quando é necessário encaminhamento médico."],
   ["A ozonioterapia, o PRP e a Terapia Neural são indicados para qualquer pessoa?", "Não. São recursos com indicações, limitações e evidências específicas. A profissional deve avaliar cada caso, explicar riscos e benefícios esperados e considerar alternativas. Eles não substituem tratamentos convencionais comprovados."],
-  ["Onde fica o Instituto?", "O atendimento fica na Rua Vigilato José da Cunha, 185, Jardim Alpes, Londrina – PR, CEP 86075-020. Entre em contato para confirmar horários e disponibilidade."],
+  ["Onde fica a clínica?", "O atendimento fica na Rua Vigilato José da Cunha, 185, Jardim Alpes, Londrina – PR, CEP 86075-020. Entre em contato para confirmar horários e disponibilidade."],
   ["Como posso agendar?", "Clique em qualquer botão de WhatsApp desta página para conversar com a equipe e agendar uma avaliação."],
 ];
 
@@ -80,7 +80,7 @@ function Index() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [whatsappIntent, setWhatsappIntent] = useState("agendar um atendimento");
   const goWhatsapp = (label: string) => {
-    const message = `Olá! Vim pelo site do Instituto Viver sem Dor e gostaria de ${label.toLowerCase()}.`;
+    const message = `Olá! Vim pelo site do Viver sem Dor e gostaria de ${label.toLowerCase()}.`;
     window.open(`https://wa.me/5543991418724?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
   };
 
@@ -88,9 +88,9 @@ function Index() {
     <main className="jt-site maria-site">
       <header className="site-header maria-header-hidden">
         <div className="container header-inner">
-          <a className="brand maria-brand" href="#inicio" aria-label="Instituto Viver sem Dor">
+          <a className="brand maria-brand" href="#inicio" aria-label="Viver sem Dor">
             <img className="brand-logo" src={logoClaudiane.url} alt="Logomarca Claudiane Gerimias Fisioterapeuta" />
-            <span><strong>INSTITUTO VIVER SEM DOR</strong><small>CLAUDIANE GERIMIAS • FISIOTERAPEUTA</small></span>
+            <span><strong>VIVER SEM DOR</strong><small>CLAUDIANE GERIMIAS • FISIOTERAPEUTA</small></span>
           </a>
           <nav className="nav maria-nav" aria-label="Navegação principal">
             <a href="#sobre">Sobre</a><a href="#tratamentos">Tratamentos</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Dúvidas</a>
@@ -103,7 +103,7 @@ function Index() {
         <div className="hero-glow"/>
         <div className="container hero-grid">
           <div className="hero-copy center-hero">
-            <div className="physio-brand-lockup hero-logo-only"><img className="physio-brand-logo" src={logoNova.url} alt="Instituto Viver sem Dor — Claudiane Gerimias, fisioterapeuta" /></div>
+            <div className="physio-brand-lockup hero-logo-only"><img className="physio-brand-logo" src={logoNova.url} alt="Viver sem Dor — Claudiane Gerimias, fisioterapeuta" /></div>
             <h1 className="hero-title-fix">Cuidado, experiência e conhecimento <em>a serviço da sua saúde.</em></h1>
             <p className="hero-lead">Há mais de 20 anos dedicados a uma fisioterapia diferenciada e ao cuidado com as pessoas. Atendimento individualizado, avaliação criteriosa e diferentes abordagens terapêuticas para apoiar sua mobilidade, funcionalidade e qualidade de vida.</p>
             <div className="hero-actions">
@@ -121,7 +121,7 @@ function Index() {
 
       <section className="section pain-section"><div className="container narrow center"><span className="eyebrow">QUANDO A DOR COMEÇA A LIMITAR VOCÊ</span><h2>Quando tarefas simples viram um desafio, <em>é hora de olhar para o seu corpo.</em></h2><p>Levantar da cama com desconforto, passar horas sentado sentindo a coluna, evitar caminhadas por causa dos pés ou deixar de fazer o que gosta por medo da dor: esses sinais merecem atenção. A avaliação fisioterapêutica ajuda a compreender o que pode estar acontecendo e quais caminhos de cuidado fazem sentido para você.</p><div className="pain-cards"><article className="pain-card"><span className="pain-card-icon"><Activity size={22}/></span><div><h3>Desconforto na coluna</h3><p>Rigidez ao acordar, tensão no pescoço ou dor lombar depois de passar muito tempo sentado.</p></div></article><article className="pain-card"><span className="pain-card-icon"><HeartPulse size={22}/></span><div><h3>Dificuldade para se movimentar</h3><p>Sentir o corpo travado, perder mobilidade ou ter dificuldade para realizar tarefas do dia a dia.</p></div></article><article className="pain-card"><span className="pain-card-icon"><Activity size={22}/></span><div><h3>Dor nos pés ao caminhar</h3><p>Incômodo na sola do pé ao ficar em pé, dar os primeiros passos ou subir escadas.</p></div></article><article className="pain-card"><span className="pain-card-icon"><ShieldCheck size={22}/></span><div><h3>Tensão muscular e dor persistente</h3><p>Desconfortos que interferem no sono, no trabalho, nas atividades e na sua qualidade de vida.</p></div></article></div><button className="btn btn-primary" onClick={() => goWhatsapp("conversar sobre minhas dores e agendar uma avaliação")}><MessageCircle size={18}/> Vamos conversar sobre sua dor</button></div></section>
 
-      <section className="section procedures-section" id="tratamentos"><div className="container"><div className="section-heading center"><span className="eyebrow">CONHEÇA NOSSOS TRATAMENTOS</span><h2>Diferentes abordagens, com um cuidado que respeita sua individualidade.</h2><p>Conheça os recursos terapêuticos oferecidos pelo Instituto Viver sem Dor. A escolha é feita após avaliação criteriosa, considerando indicações, contraindicações e objetivos de cada pessoa.</p></div><div className="procedure-window"><div className="procedure-track">{[...services,...services].map(({title,text,icon:Icon,image},i)=><article className="procedure-card maria-service-card" key={`${title}-${i}`}><img className="procedure-photo" src={image} alt={title} loading="lazy"/><div className="procedure-content"><div className="procedure-icon"><Icon size={21}/></div><h3>{title}</h3><p>{text}</p></div></article>)}</div></div><div className="section-action center"><button className="btn btn-primary" onClick={() => goWhatsapp("saber qual atendimento pode ser adequado para mim")}><MessageCircle size={18}/> Consultar sobre meu caso</button></div></div></section>
+      <section className="section procedures-section" id="tratamentos"><div className="container"><div className="section-heading center"><span className="eyebrow">CONHEÇA NOSSOS TRATAMENTOS</span><h2>Diferentes abordagens, com um cuidado que respeita sua individualidade.</h2><p>Conheça os recursos terapêuticos oferecidos pelo Viver sem Dor. A escolha é feita após avaliação criteriosa, considerando indicações, contraindicações e objetivos de cada pessoa.</p></div><div className="procedure-window"><div className="procedure-track">{[...services,...services].map(({title,text,icon:Icon,image},i)=><article className="procedure-card maria-service-card" key={`${title}-${i}`}><img className="procedure-photo" src={image} alt={title} loading="lazy"/><div className="procedure-content"><div className="procedure-icon"><Icon size={21}/></div><h3>{title}</h3><p>{text}</p></div></article>)}</div></div><div className="section-action center"><button className="btn btn-primary" onClick={() => goWhatsapp("saber qual atendimento pode ser adequado para mim")}><MessageCircle size={18}/> Consultar sobre meu caso</button></div></div></section>
 
       <section className="section before-after-section" id="evolucao"><div className="container"><div className="section-heading center"><span className="eyebrow">ANTES E DEPOIS</span><h2>Resultados reais de quem <em>confiou no tratamento.</em></h2><p>Registros de pacientes atendidos na clínica. Cada caso é único e a evolução depende da avaliação e da resposta individual de cada pessoa.</p></div><div className="results-grid">
 <article className="result-card"><div className="result-pair"><figure><img src={imgCorcundaAntes.url} alt="Paciente com postura curvada antes do tratamento" loading="lazy"/><figcaption>ANTES</figcaption></figure><figure><img src={imgCorcundaDepois.url} alt="Paciente com postura alinhada depois do tratamento" loading="lazy"/><figcaption className="after">DEPOIS</figcaption></figure></div><div className="result-copy"><h3>Corcunda após 10 anos</h3><p>Paciente com a postura curvada há 10 anos, após carregar uma placa de mármore. Depois de algumas sessões de realinhamento muscular, voltou a ficar em pé com a coluna alinhada.</p></div></article>
@@ -187,7 +187,7 @@ function Index() {
 
       <section className="section final-cta maria-final"><div className="final-glow"/><div className="container narrow center"><span className="eyebrow">VAMOS CONVERSAR?</span><h2>Vamos conversar sobre seus objetivos?</h2><p>Entre em contato para saber mais sobre a avaliação e o atendimento de fisioterapia em Londrina.</p><button className="btn btn-primary" onClick={() => goWhatsapp("conversar sobre atendimento")}><MessageCircle size={18}/> Falar com a equipe pelo WhatsApp</button></div></section>
 
-      <footer className="footer maria-footer"><div className="container footer-grid"><div className="footer-brand"><img className="footer-logo" src={logoNova.url} alt="Logomarca Claudiane Gerimias Fisioterapeuta" /><p>Instituto Viver sem Dor<br/>Claudiane Gerimias • Fisioterapeuta<br/>CREFITO 199192-F</p></div><div><h4>Navegação</h4><a href="#sobre">Sobre a clínica</a><a href="#tratamentos">Áreas de atuação</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Perguntas frequentes</a></div><div><h4>Contato</h4><a className="footer-contact-button" href="tel:+554333277544"><Activity size={14}/> Telefone: (43) 3327-7544</a><button className="footer-contact-button" onClick={() => goWhatsapp("entrar em contato pelo WhatsApp")}><MessageCircle size={14}/> WhatsApp: (43) 99141-8724</button><span><ShieldCheck size={14}/> Cuidado responsável e individualizado</span></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Instituto Viver sem Dor.</span><span>Fisioterapia • Cuidado individualizado • Qualidade de vida</span></div></footer>
+      <footer className="footer maria-footer"><div className="container footer-grid"><div className="footer-brand"><img className="footer-logo" src={logoNova.url} alt="Logomarca Claudiane Gerimias Fisioterapeuta" /><p>Viver sem Dor<br/>Claudiane Gerimias • Fisioterapeuta<br/>CREFITO 199192-F</p></div><div><h4>Navegação</h4><a href="#sobre">Sobre a clínica</a><a href="#tratamentos">Áreas de atuação</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Perguntas frequentes</a></div><div><h4>Contato</h4><a className="footer-contact-button" href="tel:+554333277544"><Activity size={14}/> Telefone: (43) 3327-7544</a><button className="footer-contact-button" onClick={() => goWhatsapp("entrar em contato pelo WhatsApp")}><MessageCircle size={14}/> WhatsApp: (43) 99141-8724</button><span><ShieldCheck size={14}/> Cuidado responsável e individualizado</span></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Viver sem Dor.</span><span>Fisioterapia • Cuidado individualizado • Qualidade de vida</span></div></footer>
 
       <button className="floating-wa maria-floating-wa" onClick={() => goWhatsapp("entrar em contato")} aria-label="Falar pelo WhatsApp no número (43) 99141-8724"><img src="/whatsapp-flutuante/image.png" alt="" /><span>WhatsApp</span></button>
 

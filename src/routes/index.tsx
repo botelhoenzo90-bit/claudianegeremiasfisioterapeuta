@@ -72,7 +72,7 @@ const faqs = [
   ["Os tratamentos são iguais para todos?", "Não. Cada pessoa tem uma história e necessidades diferentes. As estratégias são escolhidas de forma individualizada, considerando indicações, contraindicações e objetivos funcionais."],
   ["O que é o Projeto Perna Leve?", "É uma proposta de cuidado para pessoas com sensação de pernas pesadas, cansadas ou inchadas. Como esses sintomas podem ter diferentes causas, a avaliação ajuda a definir as estratégias adequadas e quando é necessário encaminhamento médico."],
   ["A ozonioterapia, o PRP e a Terapia Neural são indicados para qualquer pessoa?", "Não. São recursos com indicações, limitações e evidências específicas. A profissional deve avaliar cada caso, explicar riscos e benefícios esperados e considerar alternativas. Eles não substituem tratamentos convencionais comprovados."],
-  ["Onde fica a clÃ­énica?", "O atendimento fica na Rua Vigilato José da Cunha, 185, Jardim Alpes, Londrina – PR, CEP 86075-020. Entre em contato para confirmar horários e disponibilidade."],
+  ["Onde fica a clínica?", "O atendimento fica na Rua Vigilato José da Cunha, 185, Jardim Alpes, Londrina – PR, CEP 86075-020. Entre em contato para confirmar horários e disponibilidade."],
   ["Como posso agendar?", "Clique em qualquer botão de WhatsApp desta página para conversar com a equipe e agendar uma avaliação."],
 ];
 
